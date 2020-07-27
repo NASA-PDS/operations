@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<records>
+
+    <!-- ================== -->
+    <!-- VCO-V-SPICE-6-V1.0 -->
+    <!-- ================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>VENUS CLIMATE ORBITER SPICE KERNELS V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>VCO-V-SPICE-6-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2017-07-01</publication_date>
+            <country>USA</country>
+            <description>This data set includes the complete set of Venus Climate Orbiter
+                (VCO, also known as PLANET-C and AKATSUKI) SPICE data files
+                (``kernel files'') for the cruising, the sun orbiting, and the
+                science phase(s) of the mission. The SPICE data files, which can
+                be accessed using SPICE software, contain geometric and other
+                ancillary information needed to recover the full value of the
+                science instrument data. In particular SPICE kernels provide
+                spacecraft and planetary ephemerides, instrument mounting
+                alignments, spacecraft orientation, spacecraft sequences of
+            events, and data needed for relevant time conversions.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=VCO-V-SPICE-6-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>VENUS CLIMATE ORBITER; VENUS; N/A; VCO; PLANET; SPICE; SPICE KERNELS</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>SHIN-YA MURAKAMI</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>UNK Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.vco-v-spice-6-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ==================== -->
+    <!-- MGN-V-RSS-4-BSR-V1.0 -->
+    <!-- ==================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>MAGELLAN BISTATIC RADAR CALIBRATED DATA V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>MGN-V-RSS-4-BSR-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2008-10-31</publication_date>
+            <country>USA</country>
+            <description>Calibrated data from three orbits of S-Band (13 cm wavelength)
+                Magellan bistatic radar data collected with NASA antenna DSS 63
+                on 5 June 1994 when the specular point crossed Maxwell Montes.
+                Similarly processed data were used by Pettengill et al. (SCIENCE,
+                272, 1628-1631, 1996) to infer existence of a semiconductor layer
+                covering anomalously reflecting regions at high altitude on
+                Venus. This new data set includes calibrated time samples of
+                receiver output as well as calibrated power spectra and voltage
+                cross spectra (between the two received polarizations). The data
+                set was written to three DVD+R volumes for delivery to the NASA
+            Planetary Data System (PDS).</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=MGN-V-RSS-4-BSR-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>MAGELLAN; VENUS; RADIO SCIENCE; MGN; PLANET; RSS; RADIO SCIENCE SUBSYSTEM</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>RICHARD A. SIMPSON</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Geosciences Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+                <contributor>
+                    <email/>
+                    <full_name>Radio Science Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.mgn-v-rss-4-bsr-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+</records>
+

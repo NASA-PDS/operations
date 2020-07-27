@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<records>
+
+    <!-- ==================== -->
+    <!-- MO-M-RSS-1-OIDR-V1.0 -->
+    <!-- ==================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>MO MARS RADIO SCIENCE 1 ORIGINAL/INTERMEDIATE DATA REC V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>MO-M-RSS-1-OIDR-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>1994-07-01</publication_date>
+            <country>USA</country>
+            <description>The data set consists of several CD-WO volumes which contain
+                radiometric and open loop data acquired from the Mars Observer
+                spacecraft during its Cruise between Earth and Mars. The basic
+                data are supplemented by ancillary data including DSN weather
+                files and media calibrations, spacecraft maneuver information,
+            and operations schedules. There are fourteen data types.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=MO-M-RSS-1-OIDR-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>MARS OBSERVER; MARS; RADIO SCIENCE; MO; PLANET; RSS; RADIO SCIENCE SUBSYSTEM</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>RICHARD A. SIMPSON</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Engineering Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.mo-m-rss-1-oidr-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- =================== -->
+    <!-- GO-V-RSS-1-TDF-V1.0 -->
+    <!-- =================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>GALILEO VENUS RANGE FIX RAW DATA V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>GO-V-RSS-1-TDF-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2000-01-31</publication_date>
+            <country>USA</country>
+            <description>Raw radio tracking data used to determine the precise distance to
+                Venus (and improve knowledge of the Astronomical Unit) from the
+            Galileo flyby on 10 February 1990.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=GO-V-RSS-1-TDF-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>GALILEO ORBITER; VENUS; RADIO SCIENCE; GO; PLANET; RSS; RADIO SCIENCE SUBSYSTEM</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>GALILEO CELESTIAL MECHANICS TEAM</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Engineering Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.go-v-rss-1-tdf-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+</records>
+

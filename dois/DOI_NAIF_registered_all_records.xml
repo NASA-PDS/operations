@@ -1,0 +1,1664 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<records>
+
+    <!-- ================== -->
+    <!-- MRO-M-SPICE-6-V1.0 -->
+    <!-- ================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>MRO MARS SPICE KERNELS V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>MRO-M-SPICE-6-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2007-06-08</publication_date>
+            <country>USA</country>
+            <description>This data set includes the complete set of Mars Reconnaissance
+                Orbiter SPICE data files (``kernel files''), which can be
+                accessed using SPICE software. The SPICE data contains geometric
+                and other ancillary information needed to recover the full value
+                of science instrument data. In particular SPICE kernels provide
+                spacecraft and planetary ephemerides, instrument mounting
+                alignments, spacecraft orientation, and data needed for relevant
+            time conversions.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=MRO-M-SPICE-6-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>MARS RECONNAISSANCE ORBITER; MARS; N/A; MRO; PLANET; SPICE; SPICE KERNELS</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>BORIS V. SEMENOV</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Navigation and Ancillary Information Facility Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.mro-m-spice-6-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ================== -->
+    <!-- MGS-M-SPICE-6-V1.0 -->
+    <!-- ================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>MGS MARS SPICE KERNELS V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>MGS-M-SPICE-6-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2002-11-01</publication_date>
+            <country>USA</country>
+            <description>This data set includes the complete set of Mars Global Surveyor
+                SPICE data files (``kernel files''), which can be accessed using
+                SPICE software. The SPICE data contains geometric and other
+                ancillary information needed to recover the full value of science
+                instrument data. In particular SPICE kernels provide spacecraft
+                and planetary ephemerides, instrument mounting alignments,
+                spacecraft orientation, spacecraft sequences of events, and data
+            needed for relevant time conversions.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=MGS-M-SPICE-6-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>MARS GLOBAL SURVEYOR; MARS; N/A; MGS; PLANET; SPICE; SPICE KERNELS</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>BORIS V. SEMENOV</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Navigation and Ancillary Information Facility Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.mgs-m-spice-6-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ======================== -->
+    <!-- ROS-E/M/A/C-SPICE-6-V1.0 -->
+    <!-- ======================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>ROSETTA SPICE KERNELS V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>ROS-E/M/A/C-SPICE-6-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2006-12-22</publication_date>
+            <country>USA</country>
+            <description>SPICE deals with ancillary data needed to support the planning
+                for, and analysis of, science instrument data. As well as
+                software (the SPICE toolkit) and documentation, SPICE provides
+                data files, called kernels, that contain ancillary information
+                which has been created in such a way as to allow easy access and
+            correct usage by the space science and engineering communities.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=ROS-E%2FM%2FA%2FC-SPICE-6-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>ROSETTA-ORBITER; UNKNOWN; RO; SPICE; SPICE KERNELS</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>JOSE LUIS VAZQUEZ-GARCIA</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Navigation and Ancillary Information Facility Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.ros-e-m-a-c-spice-6-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ==================== -->
+    <!-- DS1-A/C-SPICE-6-V1.0 -->
+    <!-- ==================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>DEEP SPACE 1 SPICE KERNELS V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>DS1-A/C-SPICE-6-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2003-10-15</publication_date>
+            <country>USA</country>
+            <description>This data set includes the complete set of Deep Space 1 (DS1)
+                SPICE data files (``kernel files''), which can be accessed using
+                SPICE software. The SPICE data contains geometric and other
+                ancillary information needed to recover the full value of science
+                instrument data. In particular SPICE kernels provide spacecraft
+                and planetary ephemerides, instrument mounting alignments,
+                spacecraft orientation, spacecraft sequences of events, and data
+            needed for relevant time conversions.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=DS1-A%2FC-SPICE-6-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>DEEP SPACE 1; 19P/BORRELLY 1 (1904 Y2); 9969 BRAILLE; N/A; DS1; COMET; ASTEROID; SPICE; SPICE KERNELS</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>BORIS V. SEMENOV</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Navigation and Ancillary Information Facility Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.ds1-a-c-spice-6-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- =================== -->
+    <!-- NEAR-A-SPICE-6-V1.0 -->
+    <!-- =================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>NEAR SPICE KERNELS V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>NEAR-A-SPICE-6-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2012-12-31</publication_date>
+            <country>USA</country>
+            <description>This data set includes the complete set of NEAR SPICE data files
+                (``kernel files''), which can be accessed using SPICE software.
+                The SPICE data contain geometric and other ancillary information
+                needed to recover the full value of science instrument data. In
+                particular SPICE kernels provide spacecraft and planetary
+                ephemerides, instrument mounting alignments, spacecraft
+            orientation, and data needed for relevant time conversions.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=NEAR-A-SPICE-6-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>NEAR EARTH ASTEROID RENDEZVOUS; 253 MATHILDE; 433 EROS; N/A; NEAR; ASTEROID; SPICE; SPICE KERNELS</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>BORIS V. SEMENOV</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Navigation and Ancillary Information Facility Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.near-a-spice-6-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ================== -->
+    <!-- HAY-A-SPICE-6-V1.0 -->
+    <!-- ================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>HAYABUSA SPICE KERNELS V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>HAY-A-SPICE-6-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2009-12-01</publication_date>
+            <country>USA</country>
+            <description>This data set includes the complete set of Hayabusa SPICE data
+                files (``kernel files'') for the surveying and collection phases
+                of the mission. The SPICE data files, which can be accessed using
+                SPICE software, contain geometric and other ancillary information
+                needed to recover the full value of the science instrument data.
+                In particular SPICE kernels provide spacecraft and planetary
+                ephemerides, instrument mounting alignments, spacecraft
+                orientation, spacecraft sequences of events, and data needed for
+            relevant time conversions.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=HAY-A-SPICE-6-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>HAYABUSA; 25143 ITOKAWA; N/A; HAY; ASTEROID; SPICE; SPICE KERNELS</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>BORIS V. SEMENOV</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Navigation and Ancillary Information Facility Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.hay-a-spice-6-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- =================== -->
+    <!-- MER2-M-SPICE-6-V1.0 -->
+    <!-- =================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>MARS EXPLORATION ROVER 2 SPICE
+        KERNELS V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>MER2-M-SPICE-6-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2004-08-04</publication_date>
+            <country>USA</country>
+            <description>This data set includes the complete set of Mars Exploration
+                Rover 2 SPICE data files (``kernel files''), which can be
+                accessed using SPICE software. The SPICE data contains geometric
+                and other ancillary information needed to recover the full value
+                of science instrument data. In particular SPICE kernels provide
+                spacecraft and planetary ephemerides, instrument mounting
+                alignments, spacecraft orientation, spacecraft sequences of
+            events, and data needed for relevant time conversions.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=MER2-M-SPICE-6-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>MARS EXPLORATION ROVER 2; MARS; N/A; MER2; PLANET; SPICE; SPICE KERNELS</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>BORIS V. SEMENOV</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Navigation and Ancillary Information Facility Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.mer2-m-spice-6-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ================== -->
+    <!-- SDU-C-SPICE-6-V1.0 -->
+    <!-- ================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>STARDUST SPICE KERNELS V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>SDU-C-SPICE-6-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2003-02-01</publication_date>
+            <country>USA</country>
+            <description>This data set includes the complete set of Stardust SPICE data
+                files (``kernel files''), which can be accessed using SPICE
+                software. The SPICE data contains geometric and other ancillary
+                information needed to recover the full value of science
+                instrument data. In particular SPICE kernels provide spacecraft
+                and planetary ephemerides, instrument mounting alignments,
+                spacecraft orientation, spacecraft sequences of events, and data
+            needed for relevant time conversions.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=SDU-C-SPICE-6-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>STARDUST; 81P/WILD 2 (1978 A2); 5535 ANNEFRANK; 9P/TEMPEL 1 (1867 G1); N/A; SDU; COMET; ASTEROID; SPICE; SPICE KERNELS</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>BORIS V. SEMENOV</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Navigation and Ancillary Information Facility Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.sdu-c-spice-6-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- =================== -->
+    <!-- MER1-M-SPICE-6-V1.0 -->
+    <!-- =================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>MARS EXPLORATION ROVER 1 SPICE
+        KERNELS V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>MER1-M-SPICE-6-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2004-08-04</publication_date>
+            <country>USA</country>
+            <description>This data set includes the complete set of Mars Exploration
+                Rover 1 SPICE data files (``kernel files''), which can be
+                accessed using SPICE software. The SPICE data contains geometric
+                and other ancillary information needed to recover the full value
+                of science instrument data. In particular SPICE kernels provide
+                spacecraft and planetary ephemerides, instrument mounting
+                alignments, spacecraft orientation, spacecraft sequences of
+            events, and data needed for relevant time conversions.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=MER1-M-SPICE-6-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>MARS EXPLORATION ROVER 1; MARS; N/A; MER1; PLANET; SPICE; SPICE KERNELS</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>BORIS V. SEMENOV</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Navigation and Ancillary Information Facility Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.mer1-m-spice-6-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ======================= -->
+    <!-- MESS-E/V/H-SPICE-6-V1.0 -->
+    <!-- ======================= -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>MESSENGER SPICE KERNELS V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>MESS-E/V/H-SPICE-6-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2017-05-12</publication_date>
+            <country>USA</country>
+            <description>This data set includes the complete set of MESSENGER
+                SPICE data files (''kernel files''), which can be accessed using
+                SPICE software. The SPICE data contains geometric and other
+                ancillary information needed to recover the full value of science
+                instrument data. In particular SPICE kernels provide spacecraft
+                and planetary ephemerides, instrument mounting alignments,
+                spacecraft orientation, spacecraft sequences of events, and data
+            needed for relevant time conversions.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=MESS-E%2FV%2FH-SPICE-6-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>MESSENGER; EARTH; VENUS; MERCURY; N/A; MESS; PLANET; SPICE; SPICE KERNELS</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>MIKE REID</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Navigation and Ancillary Information Facility Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.mess-e-v-h-spice-6-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ============================= -->
+    <!-- MESS-E/V/H-GRNS-3-NS-CDR-V2.0 -->
+    <!-- ============================= -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>MESSENGER E/V/H GRNS 3 NEUTRON SPECTROMETER CDR V2.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>MESS-E/V/H-GRNS-3-NS-CDR-V2.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2016-05-06</publication_date>
+            <country>USA</country>
+            <description>Abstract
+                ========
+                This data set consists of the MESSENGER Neutron Spectrometer (NS)
+                calibrated data records (CDRs). The NS experiment is a neutron
+                spectrometer designed to observe spectra of neutrons emitted from
+                Mercury's surface in the energy range from 0.01 eV to 7 MeV. There are
+                five NS CDR data products: raw neutron spectra, NS counter data,
+                galactic cosmic ray (GCR) spectra, engineering data, and gamma-ray
+                burst data. This is version 2 of this data set; version 1 has been
+            superceded.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=MESS-E%2FV%2FH-GRNS-3-NS-CDR-V2.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>MESSENGER; EARTH; VENUS; CALIBRATION; MERCURY; NEUTRON SPECTROMETER; MESS; PLANET; NS</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>DAVID LAWRENCE</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Navigation and Ancillary Information Facility Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.mess-e-v-h-grns-3-ns-cdr-v2.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ====================== -->
+    <!-- NH-J/P/SS-SPICE-6-V1.0 -->
+    <!-- ====================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>NEW HORIZONS SPICE KERNELS V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>NH-J/P/SS-SPICE-6-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2008-02-28</publication_date>
+            <country>USA</country>
+            <description>This data set includes the complete set of New Horizons (NH) SPICE
+                data files (``kernel files''), which can be accessed using SPICE
+                software. The SPICE data contain geometric and other ancillary
+                information needed to recover the full value of the science
+                instrument data. In particular SPICE kernels provide spacecraft
+                and planetary ephemerides, instrument mounting alignments,
+                spacecraft orientation, and data needed for relevant time
+            conversions.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=NH-J%2FP%2FSS-SPICE-6-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>NEW HORIZONS; EARTH; NEPTUNE; HYDRA; J6 HIMALIA; CALLISTO; URANUS; STYX; 136472 MAKEMAKE; J2 EUROPA; KERBEROS; SUN; J7 ELARA; 10199 CHARIKLO; 132524 APL; GANYMEDE; 136108 HAUMEA; J1 IO; J17 CALLIRRHOE; NIX; JUPITER; PLUTO; CHARON; N/A; NH; PLANET; SATELLITE; ASTEROID; SPICE; SPICE KERNELS</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>ANDREW J. STEFFL</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Navigation and Ancillary Information Facility Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.nh-j-p-ss-spice-6-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ==================== -->
+    <!-- GRAIL-L-SPICE-6-V1.0 -->
+    <!-- ==================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>GRAIL SPICE KERNELS V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>GRAIL-L-SPICE-6-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2012-10-30</publication_date>
+            <country>USA</country>
+            <description>This data set includes the complete set of GRAIL SPICE data files
+                (``kernel files''), which can be accessed using SPICE software.
+                The SPICE data contain geometric and other ancillary information
+                needed to recover the full value of science instrument data. In
+                particular SPICE kernels provide spacecraft and planetary
+                ephemerides, instrument mounting alignments, spacecraft
+            orientation, and data needed for relevant time conversions.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=GRAIL-L-SPICE-6-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>GRAVITY RECOVERY AND INTERIOR LABORATORY B; GRAVITY RECOVERY AND INTERIOR LABORATORY A; MOON; GRAIL-B; GRAIL-A; SATELLITE</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>BORIS V. SEMENOV</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Navigation and Ancillary Information Facility Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.grail-l-spice-6-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ==================== -->
+    <!-- CLEM1-L-SPICE-6-V1.0 -->
+    <!-- ==================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>CLEMENTINE MOON SPICE KERNELS V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>CLEM1-L-SPICE-6-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2007-04-01</publication_date>
+            <country>USA</country>
+            <description>This data set includes the complete set of Clementine SPICE data
+                files (``kernel files''), which can be accessed using SPICE
+                software. The SPICE data contains geometric and other ancillary
+                information needed to recover the full value of science
+                instrument data. In particular SPICE kernels provide spacecraft
+                and planetary ephemerides, instrument mounting alignments,
+                spacecraft orientation, spacecraft sequences of events, and data
+            needed for relevant time conversions.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=CLEM1-L-SPICE-6-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>CLEMENTINE 1; MOON; N/A; CLEM1; SATELLITE; SPICE; SPICE KERNELS</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>BORIS V. SEMENOV</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Navigation and Ancillary Information Facility Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.clem1-l-spice-6-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ====================== -->
+    <!-- VO1/VO2-M-SPICE-6-V1.0 -->
+    <!-- ====================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>VO1/VO2 MARS SPICE KERNELS V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>VO1/VO2-M-SPICE-6-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2000-05-01</publication_date>
+            <country>USA</country>
+            <description>This data set includes a substantial collection of navigation and
+                other ancillary data for the Viking Orbiter spacecraft (VO1 and
+                VO2) in the form of SPICE kernels, which can be accessed using
+                SPICE software. The SPICE data contains geometric and other
+                ancillary information needed to recover the full value of science
+                instrument data. In particular SPICE kernels provide spacecraft
+                and planetary ephemerides, instrument mounting alignments,
+                spacecraft orientation, spacecraft sequences of events, and data
+            needed for relevant time conversions.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=VO1%2FVO2-M-SPICE-6-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>VIKING ORBITER 2; VIKING ORBITER 1; MARS; VO2; VO1; PLANET</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>BORIS V. SEMENOV</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Navigation and Ancillary Information Facility Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.vo1-vo2-m-spice-6-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ================== -->
+    <!-- MSL-M-SPICE-6-V1.0 -->
+    <!-- ================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>MSL SPICE KERNELS V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>MSL-M-SPICE-6-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2013-02-27</publication_date>
+            <country>USA</country>
+            <description>This data set includes the MSL SPICE data files (``kernel
+                files''), which can be accessed using SPICE software. The SPICE
+                data contain geometric and other ancillary information needed to
+                recover the full value of science instrument data. In particular
+                SPICE kernels provide rover and planetary ephemerides, instrument
+                mounting alignments, rover orientation, and data needed for
+            relevant time conversions.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=MSL-M-SPICE-6-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>MARS SCIENCE LABORATORY; MARS; N/A; MSL; PLANET; SPICE; SPICE KERNELS</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>BORIS V. SEMENOV</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Navigation and Ancillary Information Facility Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.msl-m-spice-6-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ======================= -->
+    <!-- CO-S/J/E/V-SPICE-6-V1.0 -->
+    <!-- ======================= -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>CASSINI SPICE KERNELS V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>CO-S/J/E/V-SPICE-6-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2002-11-01</publication_date>
+            <country>USA</country>
+            <description>This data set includes the complete set of Cassini SPICE data
+                files (``kernel files''), which can be accessed using SPICE
+                software. The SPICE data contains geometric and other ancillary
+                information needed to recover the full value of science
+                instrument data. In particular SPICE kernels provide spacecraft
+                and planetary ephemerides, instrument mounting alignments,
+                spacecraft orientation, spacecraft sequences of events, and data
+            needed for relevant time conversions.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=CO-S%2FJ%2FE%2FV-SPICE-6-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>CASSINI ORBITER; SATURN; N/A; CO; PLANET; SPICE; SPICE KERNELS</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>LEE ELSON</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Navigation and Ancillary Information Facility Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.co-s-j-e-v-spice-6-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ================== -->
+    <!-- ODY-M-SPICE-6-V1.0 -->
+    <!-- ================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>ODY MARS SPICE KERNELS V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>ODY-M-SPICE-6-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2002-09-30</publication_date>
+            <country>USA</country>
+            <description>This data set includes the complete set of Odyssey SPICE data
+                files (``kernel files''), which can be accessed using SPICE
+                software. The SPICE data contains geometric and other ancillary
+                information needed to recover the full value of science
+                instrument data. In particular SPICE kernels provide spacecraft
+                and planetary ephemerides, instrument mounting alignments,
+                spacecraft orientation, spacecraft sequences of events, and data
+            needed for relevant time conversions.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=ODY-M-SPICE-6-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>2001 MARS ODYSSEY; MARS; N/A; ODY; PLANET; SPICE; SPICE KERNELS</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>BORIS V. SEMENOV</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Navigation and Ancillary Information Facility Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.ody-m-spice-6-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ==================== -->
+    <!-- VEX-E/V-SPICE-6-V1.0 -->
+    <!-- ==================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>VENUS EXPRESS SPICE KERNELS V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>VEX-E/V-SPICE-6-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2008-12-01</publication_date>
+            <country>USA</country>
+            <description>SPICE deals with ancillary data needed to
+                support the planning for, and analysis of,
+                science instrument data.
+                As well as software (the SPICE toolkit) and
+                documentation, SPICE provides data files,
+                called kernels, that contain ancillary
+                information which has been created in such
+                a way as to allow easy access and correct
+                usage by the space science and engineering
+            communities.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=VEX-E%2FV-SPICE-6-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>VENUS EXPRESS; VENUS; N/A; VEX; PLANET; SPICE; SPICE KERNELS</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>JOSE LUIS VAZQUEZ-GARCIA</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Navigation and Ancillary Information Facility Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.vex-e-v-spice-6-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ==================== -->
+    <!-- MEX-E/M-SPICE-6-V1.0 -->
+    <!-- ==================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>MARS EXPRESS SPICE KERNELS V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>MEX-E/M-SPICE-6-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2008-03-15</publication_date>
+            <country>USA</country>
+            <description>SPICE deals with ancillary data needed to
+                support the planning for, and analysis of,
+                science instrument data.
+                As well as software (the SPICE toolkit) and
+                documentation, SPICE provides data files,
+                called kernels, that contain ancillary
+                information which has been created in such
+                a way as to allow easy access and correct
+                usage by the space science and engineering
+            communities.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=MEX-E%2FM-SPICE-6-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>MARS EXPRESS; MARS; N/A; MEX; PLANET; SPICE; SPICE KERNELS</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>JOSE LUIS VAZQUEZ-GARCIA</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Navigation and Ancillary Information Facility Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.mex-e-m-spice-6-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ================== -->
+    <!-- LRO-L-SPICE-6-V1.0 -->
+    <!-- ================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>LRO LUNAR SPICE KERNELS V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>LRO-L-SPICE-6-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2019-12-15</publication_date>
+            <country>USA</country>
+            <description>This data set includes the complete set of Lunar Reconnaissance
+                Orbiter SPICE data files (``kernel files''), which can be
+                accessed using SPICE software. The SPICE data contains geometric
+                and other ancillary information needed to recover the full value
+                of science instrument data. In particular SPICE kernels provide
+                spacecraft and planetary ephemerides, instrument mounting
+                alignments, spacecraft orientation, and data needed for relevant
+            time conversions.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=LRO-L-SPICE-6-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>LUNAR RECONNAISSANCE ORBITER; MOON; N/A; LRO; SATELLITE; SPICE; SPICE KERNELS</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>JASON BURTNICK</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Navigation and Ancillary Information Facility Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.lro-l-spice-6-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ========================== -->
+    <!-- RO/RL-E/M/A/C-SPICE-6-V1.0 -->
+    <!-- ========================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>ROSETTA ORBITER/LANDER SPICE
+        KERNELS V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>RO/RL-E/M/A/C-SPICE-6-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2017-01-10</publication_date>
+            <country>USA</country>
+            <description>This data set includes the complete set of Rosetta mission SPICE
+                data files (``kernel files''), which can be accessed using SPICE
+                software. The SPICE data contains geometric and other ancillary
+                information needed to recover the full value of the science
+                instrument data. In particular SPICE kernels provide spacecraft and
+                planetary ephemerides, instrument mounting alignments, spacecraft
+                orientation, spacecraft sequences of events, and data needed for
+            relevant time conversions.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=RO%2FRL-E%2FM%2FA%2FC-SPICE-6-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>ROSETTA-LANDER; ROSETTA-ORBITER; 2867 STEINS; MARS; 67P/CHURYUMOV-GERASIMENKO 1 (1969 R1); 21 LUTETIA; 9P/TEMPEL 1 (1867 G1); RL; RO; ASTEROID; PLANET; COMET</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>BJOERN GRIEER</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Navigation and Ancillary Information Facility Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.ro-rl-e-m-a-c-spice-6-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ======================= -->
+    <!-- JNO-J/E/SS-SPICE-6-V1.0 -->
+    <!-- ======================= -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>JUNO SPICE KERNELS V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>JNO-J/E/SS-SPICE-6-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2017-06-20</publication_date>
+            <country>USA</country>
+            <description>This data set includes the complete set of JUNO SPICE data files
+                (``kernel files''), which can be accessed using SPICE software.
+                The SPICE data contain geometric and other ancillary information
+                needed to recover the full value of science instrument data. In
+                particular SPICE kernels provide spacecraft and planetary
+                ephemerides, instrument mounting alignments, spacecraft
+            orientation, and data needed for relevant time conversions.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=JNO-J%2FE%2FSS-SPICE-6-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>JUNO; JUPITER; N/A; JNO; PLANET; SPICE; SPICE KERNELS</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>BORIS V. SEMENOV</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Navigation and Ancillary Information Facility Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.jno-j-e-ss-spice-6-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ====================== -->
+    <!-- DIF-C/E/X-SPICE-6-V1.0 -->
+    <!-- ====================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>EPOXI SPICE KERNELS V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>DIF-C/E/X-SPICE-6-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2009-03-01</publication_date>
+            <country>USA</country>
+            <description>This data set includes the complete set of EPOXI SPICE data files
+                (``kernel files''), which can be accessed using SPICE software.
+                The SPICE data contains geometric and other ancillary information
+                needed to recover the full value of the science instrument data.
+                In particular SPICE kernels provide spacecraft and planetary
+                ephemerides, instrument mounting alignments, spacecraft
+                orientation, spacecraft sequences of events, and data needed for
+            relevant time conversions.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=DIF-C%2FE%2FX-SPICE-6-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>DEEP IMPACT FLYBY SPACECRAFT; GJ 436; HAT-P-4; XO-3; XO-2; 103P/HARTLEY 2 (1986 E2); HAT-P-7; TRES-3; TRES-2; WASP-3; N/A; DIF; STAR; COMET; SPICE; SPICE KERNELS</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>BORIS V. SEMENOV</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Navigation and Ancillary Information Facility Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.dif-c-e-x-spice-6-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ===================== -->
+    <!-- DAWN-M/A-SPICE-6-V1.0 -->
+    <!-- ===================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>DAWN SPICE KERNELS V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>DAWN-M/A-SPICE-6-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2012-09-06</publication_date>
+            <country>USA</country>
+            <description>This data set includes the complete set of DAWN SPICE data files
+                (``kernel files''), which can be accessed using SPICE software.
+                The SPICE data contain geometric and other ancillary information
+                needed to recover the full value of science instrument data. In
+                particular SPICE kernels provide spacecraft and planetary
+                ephemerides, instrument mounting alignments, spacecraft
+            orientation, and data needed for relevant time conversions.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=DAWN-M%2FA-SPICE-6-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>DAWN; 1 CERES; MARS; 4 VESTA; N/A; ASTEROID; PLANET; SPICE; SPICE KERNELS</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>BORIS V. SEMENOV</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Navigation and Ancillary Information Facility Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.dawn-m-a-spice-6-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ================= -->
+    <!-- DI-C-SPICE-6-V1.0 -->
+    <!-- ================= -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>DEEP IMPACT SPICE KERNELS V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>DI-C-SPICE-6-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2006-03-01</publication_date>
+            <country>USA</country>
+            <description>This data set includes the complete set of Deep Impact SPICE data
+                files (``kernel files''), which can be accessed using SPICE
+                software. The SPICE data contains geometric and other ancillary
+                information needed to recover the full value of the science
+                instrument data. In particular SPICE kernels provide spacecraft
+                and planetary ephemerides, instrument mounting alignments,
+                spacecraft orientation, spacecraft sequences of events, and data
+            needed for relevant time conversions.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=DI-C-SPICE-6-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>DEEP IMPACT FLYBY SPACECRAFT; DEEP IMPACT IMPACTOR SPACECRAFT; 9P/TEMPEL 1 (1867 G1); DIF; DII; COMET</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>BORIS V. SEMENOV</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Navigation and Ancillary Information Facility Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.di-c-spice-6-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ============================= -->
+    <!-- MESS-E/V/H-GRNS-4-NS-DDR-V2.0 -->
+    <!-- ============================= -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>MESSENGER E/V/H GRNS 4 NEUTRON SPECTROMETER DDR V2.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>MESS-E/V/H-GRNS-4-NS-DDR-V2.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2016-05-06</publication_date>
+            <country>USA</country>
+            <description>Abstract
+                ========
+                This data set consists of the MESSENGER Neutron Spectrometer (NS)
+                'derived' data records (DDRs). The NS experiment is a neutron
+                spectrometer designed to observe neutrons emitted from
+                Mercury's surface in the energy range from 0.01 eV to 7 MeV.
+                
+                There is 1 NS DDR standard data product (Neutron Count Rate,
+                NS_DDR_NCR) and 1 NS DDR special data product (Neutron Composition,
+                NS_DDR_NCP). The NCR data products contain net neutron count rates from
+                the LG1, LG2, and BP sensors and uncertainties from each of these
+                sensors. The NCP data product contains fast and epithermal count rates
+                as a function of latitude, along with simulated count rates for the
+                cases of no hydrogen and for a thick layer of 100 wt. percent water ice
+                in all radar bright regions.
+                
+            This is version 2 of this data set; version 1 has been superceded.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=MESS-E%2FV%2FH-GRNS-4-NS-DDR-V2.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>MESSENGER; MERCURY; NEUTRON SPECTROMETER; MESS; PLANET; NS</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>DAVID LAWRENCE</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Navigation and Ancillary Information Facility Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.mess-e-v-h-grns-4-ns-ddr-v2.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+</records>
+

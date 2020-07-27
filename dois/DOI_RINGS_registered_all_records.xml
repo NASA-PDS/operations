@@ -1,0 +1,1286 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<records>
+
+    <!-- ======================== -->
+    <!-- ESO1M-SR-APPH-4-OCC-V1.0 -->
+    <!-- ======================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>ESO1M SR AP-PHOTOMETER RESAMPLED RING OCCULTATION V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>ESO1M-SR-APPH-4-OCC-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2004-03-30</publication_date>
+            <country>USA</country>
+            <description>TBD</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=ESO1M-SR-APPH-4-OCC-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>EUROPEAN SOUTHERN OBSERVATORY 1-M TELESCOPE; SATURN; S RINGS; PHOTOMETER; ESO1M; PLANET; RING; APPH; APERTURE PHOTOMETER</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>MITCHELL K. GORDON</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Planetary Ring-Room Systems Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.eso1m-sr-apph-4-occ-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ====================== -->
+    <!-- HST-S-WFPC2-3-RPX-V1.0 -->
+    <!-- ====================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>HST SATURN WFPC2 3 RING PLANE CROSSING V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>HST-S-WFPC2-3-RPX-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>1999-06-01</publication_date>
+            <country>USA</country>
+            <description>This data set contains images of the Saturn system taken by the
+                Wide Field/Planetary Camera 2 (WFPC2) aboard the Hubble Space
+                Telescope (HST) through November 1995. This period includes all
+                images taken during the Saturn ring plane crossings of 1995. (No
+                WFPC2 images of Saturn were obtained during the last ring plane
+                crossing in February 1996 because Saturn was too close to the
+            Sun.)</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=HST-S-WFPC2-3-RPX-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>HUBBLE SPACE TELESCOPE; SATURN; S RINGS; ATLAS; CALYPSO; DIONE; ENCELADUS; EPIMETHEUS; HELENE; HYPERION; IAPETUS; JANUS; MIMAS; PAN; PANDORA; PROMETHEUS; RHEA; TELESTO; TETHYS; TITAN; CAMERA; HST; PLANET; RING; SATELLITE; WFPC2; WIDE FIELD PLANETARY CAMERA 2</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>MARK R. SHOWALTER</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Planetary Ring-Room Systems Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.hst-s-wfpc2-3-rpx-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ============================ -->
+    <!-- VG1/VG2-SR/UR-RSS-4-OCC-V1.0 -->
+    <!-- ============================ -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>VG1/VG2 SR/UR RSS RESAMPLED RING OCCULTATION V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>VG1/VG2-SR/UR-RSS-4-OCC-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2003-12-31</publication_date>
+            <country>USA</country>
+            <description>not applicable</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=VG1%2FVG2-SR%2FUR-RSS-4-OCC-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>VOYAGER 1; VOYAGER 2; S RINGS; U RINGS; RADIO SCIENCE; VG1; VG2; RING; RSS-VG1S; RSS-VG2S; RADIO SCIENCE SUBSYSTEM</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>MARK R. SHOWALTER</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Planetary Ring-Room Systems Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.vg1-vg2-sr-ur-rss-4-occ-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ======================= -->
+    <!-- CO-SR-UVIS-2/4-OCC-V2.0 -->
+    <!-- ======================= -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>CASSINI ORBITER SATURN UVIS STELLAR RING OCC 2004-2017</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>CO-SR-UVIS-2/4-OCC-V2.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2019-05-03</publication_date>
+            <country>USA</country>
+            <description>This data set contains derived
+                radial occultation profiles of the rings of Saturn based on stellar
+                occultation observations made with the Cassini UVIS instrument
+            between October 2004 and August 2017.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=CO-SR-UVIS-2%2F4-OCC-V2.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>CASSINI ORBITER; S RINGS; SPECTROGRAPH; CO; RING; UVIS; ULTRAVIOLET IMAGING SPECTROGRAPH</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>MITCHELL K. GORDON</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Planetary Ring-Room Systems Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.co-sr-uvis-2-4-occ-v2.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ======================= -->
+    <!-- CO-SR-UVIS-2/4-OCC-V2.1 -->
+    <!-- ======================= -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>CASSINI ORBITER SATURN UVIS STELLAR RING OCC 2004-2017</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>CO-SR-UVIS-2/4-OCC-V2.1</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2019-05-10</publication_date>
+            <country>USA</country>
+            <description>This data set contains derived
+                radial occultation profiles of the rings of Saturn based on stellar
+                occultation observations made with the Cassini UVIS instrument
+            between October 2004 and August 2017.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=CO-SR-UVIS-2%2F4-OCC-V2.1</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>CASSINI ORBITER; S RINGS; SPECTROGRAPH; CO; RING; UVIS; ULTRAVIOLET IMAGING SPECTROGRAPH</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>MITCHELL K. GORDON</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Planetary Ring-Room Systems Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.co-sr-uvis-2-4-occ-v2.1</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ====================== -->
+    <!-- CO-SR-RSS-4/5-OCC-V2.0 -->
+    <!-- ====================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>CASSINI SATURN RSS RING OCC
+        2005-2010</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>CO-SR-RSS-4/5-OCC-V2.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2019-05-03</publication_date>
+            <country>USA</country>
+            <description>This data set contains derived
+                radial occultation profiles of the rings of Saturn based on radio
+                occultations made with the Cassini RSS instrument during the Cassini
+            nominal mission.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=CO-SR-RSS-4%2F5-OCC-V2.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>CASSINI ORBITER; S RINGS; RADIO SCIENCE; CO; RING; RSS; RADIO SCIENCE SUBSYSTEM</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>MITCHELL K. GORDON</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Planetary Ring-Room Systems Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.co-sr-rss-4-5-occ-v2.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ========================= -->
+    <!-- ESO22M-SR-APPH-4-OCC-V1.0 -->
+    <!-- ========================= -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>ESO22M SR AP-PHOTOMETER RESAMPLED RING OCCULTATION V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>ESO22M-SR-APPH-4-OCC-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2004-03-30</publication_date>
+            <country>USA</country>
+            <description>not applicable</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=ESO22M-SR-APPH-4-OCC-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>EUROPEAN SOUTHERN OBSERVATORY 2.2-M TELESCOPE; SATURN; S RINGS; PHOTOMETER; ESO22M; PLANET; RING; APPH; APERTURE PHOTOMETER</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>MITCHELL K. GORDON</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Planetary Ring-Room Systems Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.eso22m-sr-apph-4-occ-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- =========================== -->
+    <!-- WHT-S-API/ISIS-1/3-RPX-V1.0 -->
+    <!-- =========================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>WHT S API ISIS RAW AND CALIBRATED RING PLANE CROSSING V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>WHT-S-API/ISIS-1/3-RPX-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2004-02-29</publication_date>
+            <country>USA</country>
+            <description>Unknown</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=WHT-S-API%2FISIS-1%2F3-RPX-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>ISAAC NEWTON GROUP 4.2-M WILLIAM HERSCHEL TELESCOPE; SATURN; S RINGS; ATLAS; CALYPSO; DIONE; ENCELADUS; EPIMETHEUS; HELENE; JANUS; MIMAS; PANDORA; PROMETHEUS; RHEA; TELESTO; TETHYS; CAMERA; SPECTROGRAPH; WHT; PLANET; RING; SATELLITE; API; ISIS; AUXILIARY PORT IMAGER; INTERMEDIATE DISPERSION SPECTROGRAPH AND IMAGING SYSTEM</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>MITCHELL K. GORDON</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Planetary Ring-Room Systems Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.wht-s-api-isis-1-3-rpx-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ========================= -->
+    <!-- LICK1M-SR-CCDC-4-OCC-V1.0 -->
+    <!-- ========================= -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>LICK1M SR CCD-CAM RESAMPLED RING OCCULTATION V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>LICK1M-SR-CCDC-4-OCC-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2004-03-30</publication_date>
+            <country>USA</country>
+            <description>not applicable</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=LICK1M-SR-CCDC-4-OCC-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>LICK OBSERVATORY ANNA L. NICKEL 1-METER TELESCOPE; SATURN; S RINGS; CAMERA; LICK1M; PLANET; RING; CCDC; STOVER CCD SPECTROGRAPH CAMERA</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>MITCHELL K. GORDON</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Planetary Ring-Room Systems Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.lick1m-sr-ccdc-4-occ-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ========================= -->
+    <!-- CFHT-S-QUIRC-1/3-RPX-V1.0 -->
+    <!-- ========================= -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>CFHT SR QUIRC RAW AND CALIBRATED RING PLANE CROSSING 1.O</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>CFHT-S-QUIRC-1/3-RPX-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2006-11-01</publication_date>
+            <country>USA</country>
+            <description>This data set contains images of the Saturn system from the
+                CANADA-FRANCE-HAWAII telescope with the Quick Infrared Camera in
+            early August 1995.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=CFHT-S-QUIRC-1%2F3-RPX-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>CANADA-FRANCE-HAWAII TELESCOPE; SATURN; S RINGS; DIONE; TETHYS; TITAN; CAMERA; CFHT; PLANET; RING; SATELLITE; QUIRC; QUICK INFRARED CAMERA</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>DANIEL M. OLSON</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Planetary Ring-Room Systems Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.cfht-s-quirc-1-3-rpx-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ============================= -->
+    <!-- HST-S-WFPC2-4-ASTROM2002-V1.0 -->
+    <!-- ============================= -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>HST S WFPC2 DERIVED ASTROMETRY 2002 V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>HST-S-WFPC2-4-ASTROM2002-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2003-06-03</publication_date>
+            <country>USA</country>
+            <description>not applicable</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=HST-S-WFPC2-4-ASTROM2002-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>HUBBLE SPACE TELESCOPE; DIONE; ENCELADUS; EPIMETHEUS; HELENE; HYPERION; JANUS; MIMAS; PANDORA; PROMETHEUS; RHEA; TETHYS; CAMERA; HST; SATELLITE; WFPC2; WIDE FIELD PLANETARY CAMERA 2</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>MITCHELL K. GORDON</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Planetary Ring-Room Systems Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.hst-s-wfpc2-4-astrom2002-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ============================== -->
+    <!-- VG1/VG2-SR-ISS-4-PROFILES-V1.0 -->
+    <!-- ============================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>VG1/VG2 SR ISS RING PROFILES V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>VG1/VG2-SR-ISS-4-PROFILES-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2006-08-01</publication_date>
+            <country>USA</country>
+            <description>This data set contains derived radial profiles from the finest-
+            resolution Voyager images of Saturn's rings.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=VG1%2FVG2-SR-ISS-4-PROFILES-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>VOYAGER 1; VOYAGER 2; S RINGS; CAMERA; VG1; VG2; RING; ISSN; ISSW; IMAGING SCIENCE SUBSYSTEM - NARROW ANGLE; IMAGING SCIENCE SUBSYSTEM - WIDE ANGLE</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>MARK R. SHOWALTER</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Planetary Ring-Room Systems Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.vg1-vg2-sr-iss-4-profiles-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ============================= -->
+    <!-- VG2-SR/UR/NR-PPS-2/4-OCC-V1.0 -->
+    <!-- ============================= -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>VG2 SR/UR/NR PPS EDITED/RESAMPLED RING OCCULTATION V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>VG2-SR/UR/NR-PPS-2/4-OCC-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2003-10-01</publication_date>
+            <country>USA</country>
+            <description>not applicable</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=VG2-SR%2FUR%2FNR-PPS-2%2F4-OCC-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>VOYAGER 2; N RINGS; S RINGS; U RINGS; PHOTOPOLARIMETER; VG2; RING; PPS; PHOTOPOLARIMETER SUBSYSTEM</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>MARK R. SHOWALTER</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Planetary Ring-Room Systems Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.vg2-sr-ur-nr-pps-2-4-occ-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- =========================== -->
+    <!-- CO-SR-UVIS-HSP-2/4-OCC-V2.0 -->
+    <!-- =========================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>CASSINI ORBITER SATURN UVIS STELLAR RING OCC 2004-2017</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>CO-SR-UVIS-HSP-2/4-OCC-V2.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2019-05-03</publication_date>
+            <country>USA</country>
+            <description>This data set contains derived
+                radial occultation profiles of the rings of Saturn based on stellar
+                occultation observations made with the Cassini UVIS instrument
+            between October 2004 and August 2017.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=CO-SR-UVIS-HSP-2%2F4-OCC-V2.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>CASSINI ORBITER; S RINGS; SPECTROGRAPH; CO; RING; UVIS; ULTRAVIOLET IMAGING SPECTROGRAPH</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>MITCHELL K. GORDON</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Planetary Ring-Room Systems Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.co-sr-uvis-hsp-2-4-occ-v2.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ========================= -->
+    <!-- PAL200-SR-CIRC-4-OCC-V1.0 -->
+    <!-- ========================= -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>PAL200 SR CASS-IR-CAM RESAMPLED RING OCCULTATION V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>PAL200-SR-CIRC-4-OCC-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2004-03-30</publication_date>
+            <country>USA</country>
+            <description>not applicable</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=PAL200-SR-CIRC-4-OCC-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>PALOMAR OBSERVATORY 200-IN HALE TELESCOPE; SATURN; S RINGS; INFRARED IMAGING DEVICE; PAL200; PLANET; RING; CIRC; CASSEGRAIN IR CAMERA</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>MITCHELL K. GORDON</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Planetary Ring-Room Systems Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.pal200-sr-circ-4-occ-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ======================= -->
+    <!-- CO-SR-VIMS-4/5-OCC-V2.1 -->
+    <!-- ======================= -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>CASSINI SATURN VIMS RING OCC 2005-2009</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>CO-SR-VIMS-4/5-OCC-V2.1</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2019-05-03</publication_date>
+            <country>USA</country>
+            <description>This data set contains derived
+                radial occultation profiles of the rings of Saturn based on stellar
+                occultations made with the Cassini VIMS instrument during the Cassini
+            nominal mission.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=CO-SR-VIMS-4%2F5-OCC-V2.1</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>CASSINI ORBITER; S RINGS; SPECTROMETER; CO; RING; VIMS; VISUAL AND INFRARED MAPPING
+                                    SPECTROMETER</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>MITCHELL K. GORDON</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Planetary Ring-Room Systems Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.co-sr-vims-4-5-occ-v2.1</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ======================= -->
+    <!-- CO-SR-VIMS-4/5-OCC-V2.0 -->
+    <!-- ======================= -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>CASSINI SATURN VIMS RING OCC 2005-2009</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>CO-SR-VIMS-4/5-OCC-V2.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2019-05-03</publication_date>
+            <country>USA</country>
+            <description>This data set contains derived
+                radial occultation profiles of the rings of Saturn based on stellar
+                occultations made with the Cassini VIMS instrument during the Cassini
+            nominal mission.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=CO-SR-VIMS-4%2F5-OCC-V2.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>CASSINI ORBITER; S RINGS; SPECTROMETER; CO; RING; VIMS; VISUAL AND INFRARED MAPPING
+                                    SPECTROMETER</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>MITCHELL K. GORDON</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Planetary Ring-Room Systems Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.co-sr-vims-4-5-occ-v2.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ==================== -->
+    <!-- WIYN-S-WI-2-RPX-V1.0 -->
+    <!-- ==================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>WIYN S WI RAW RING PLANE CROSSING V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>WIYN-S-WI-2-RPX-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2008-01-31</publication_date>
+            <country>USA</country>
+            <description>This data set contains images of the Saturn system from the
+                Wisconsin-Indiana-Yale-NOAO(WIYN) using the WIYN Imager in late
+                November 1995. These observations were made during and
+            immediately after the ring plane crossing.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=WIYN-S-WI-2-RPX-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>WISCONSIN-INDIANA-YALE-NOAO TELESCOPE; FLAT FIELD; SATURN; CAMERA; WIYN; CALIBRATION; PLANET; WI; WIYN IMAGER</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>DANIEL M. OLSON</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Planetary Ring-Room Systems Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.wiyn-s-wi-2-rpx-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ================================= -->
+    <!-- VG1/VG2-SR/UR/NR-UVS-2/4-OCC-V1.0 -->
+    <!-- ================================= -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>VG1/VG2 SR/UR/NR UVS EDITED/RESAMPLED RING OCCULTATION V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>VG1/VG2-SR/UR/NR-UVS-2/4-OCC-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2003-12-31</publication_date>
+            <country>USA</country>
+            <description>not applicable</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=VG1%2FVG2-SR%2FUR%2FNR-UVS-2%2F4-OCC-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>VOYAGER 2; N RINGS; S RINGS; U RINGS; ULTRAVIOLET SPECTROMETER; VG2; RING; UVS</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>MARK R. SHOWALTER</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Planetary Ring-Room Systems Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.vg1-vg2-sr-ur-nr-uvs-2-4-occ-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ======================= -->
+    <!-- IRTF-SR-URAC-4-OCC-V1.0 -->
+    <!-- ======================= -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>IRTF SR U-ROCHESTER-ARRY-CAM RESAMPLED RING OCCULTATION V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>IRTF-SR-URAC-4-OCC-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2004-03-30</publication_date>
+            <country>USA</country>
+            <description>not applicable</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=IRTF-SR-URAC-4-OCC-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>NASA INFRARED TELESCOPE FACILITY; SATURN; S RINGS; CAMERA; IRTF; PLANET; RING; URAC; UNIVERSITY OF ROCHESTER ARRAY CAMERA</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>MITCHELL K. GORDON</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Planetary Ring-Room Systems Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.irtf-sr-urac-4-occ-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ================================ -->
+    <!-- HST-S/SA-WFPC2-4-ASTROM2005-V1.0 -->
+    <!-- ================================ -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>HST S WFPC2 DERIVED ASTROMETRY 2005 V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>HST-S/SA-WFPC2-4-ASTROM2005-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2007-08-30</publication_date>
+            <country>USA</country>
+            <description>This dataset contains astrometric data for fourteen Saturn
+                satellites: Calypso, Dione, Enceladus, Epimetheus, Helene,
+                Hyperion, Janus, Mimas, Pandora, Prometheus, Rhea, Telesto,
+                Tethys, and Titan. The data were obtained using the HST/WFPC2
+            over the period 1996-2005.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=HST-S%2FSA-WFPC2-4-ASTROM2005-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>HUBBLE SPACE TELESCOPE; CALYPSO; DIONE; ENCELADUS; EPIMETHEUS; HELENE; HYPERION; JANUS; MIMAS; PANDORA; PROMETHEUS; RHEA; TELESTO; TETHYS; TITAN; CAMERA; HST; SATELLITE; WFPC2; WIDE FIELD PLANETARY CAMERA 2</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>D.M. OLSON</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Planetary Ring-Room Systems Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.hst-s-sa-wfpc2-4-astrom2005-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ========================== -->
+    <!-- MCD27M-SR-IIRAR-4-OCC-V1.0 -->
+    <!-- ========================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>MCD27M SR INSB-IR-ARRY RESAMPLED RING OCCULTATION V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>MCD27M-SR-IIRAR-4-OCC-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2004-03-30</publication_date>
+            <country>USA</country>
+            <description>not applicable</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=MCD27M-SR-IIRAR-4-OCC-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>MCDONALD OBSERVATORY 2.7M HARLAN J. SMITH TELESCOPE; SATURN; S RINGS; CAMERA; MCD27M; PLANET; RING; IIRAR; INSB INFRARED ARRAY</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>MITCHELL K. GORDON</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Planetary Ring-Room Systems Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.mcd27m-sr-iirar-4-occ-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ============================= -->
+    <!-- CO_CAL_ISSNA/ISSWA_2_EDR_V4.2 -->
+    <!-- ============================= -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>CASSINI ORBITER CALIBRATION ISSNA/ISSWA
+        2 EDR VERSION 4.2</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>CO_CAL_ISSNA/ISSWA_2_EDR_V4.2</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2019-06-26</publication_date>
+            <country>USA</country>
+            <description>NULL</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=CO_CAL_ISSNA%2FISSWA_2_EDR_V4.2</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>CASSINI ORBITER; IMAGING SCIENCE SUBSYSTEM; CO; ISSNA; ISSWA; IMAGING SCIENCE SUBSYSTEM -
+                                     NARROW ANGLE; IMAGING SCIENCE SUBSYSTEM -
+                                     WIDE ANGLE</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>CAROLYN C. PORCO</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Planetary Ring-Room Systems Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.co_cal_issna-isswa_2_edr_v4.2</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+</records>
+
