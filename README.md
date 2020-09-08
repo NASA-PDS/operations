@@ -12,6 +12,15 @@ For help with the PDS Engineering Node, you can either create a ticket in [Githu
 
 TBD
 
-2. Go to each Discipline LDD Repo and create Pull Requests for each new branch (branch names like IM_release_1.15.0.0)
+2. Go to each Discipline LDD Repo and create Pull Requests for each new branch (branch names like IM_release_1.15.0.0).
+  * PR Title: PDS4 IM Release <IM_version>
+  * PR Description:
+    ```
+    ## Summary
+    
+    PR for testing LDD with new IM release.
+    ```
+  * PR Labels: `release`
 
 3. If build failed on new branch, contact the LDD Steward to investigate a potential regression test failure or incompatibiliy with the new IM version.
+
