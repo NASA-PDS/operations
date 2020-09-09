@@ -3,8 +3,8 @@ name: PDS LDD Release Request
 about: Request EN to release a new version of an LDD off the nominal build schedule
   or against a past PDS4 IM Version.
 title: "[ldd-release] <LDD Name> LDD Version:<LDD_version> IM Version:<IM_Version>"
-labels: ''
-assignees: elawsgh, c-suh
+labels: ldd-release
+assignees: c-suh, elawsgh
 
 ---
 
