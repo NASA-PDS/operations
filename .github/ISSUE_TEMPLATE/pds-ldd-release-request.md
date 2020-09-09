@@ -9,6 +9,7 @@ assignees: c-suh, elawsgh
 ---
 
 * **Is the LDD IngestLDD in Github?** _Yes or no_
+* **Has the LDD Namespace been registered in the [Namespace Registry](https://pds.nasa.gov/datastandards/schema/pds-namespace-registry.pdf)?** _Yes or no_
 
 ### Ingest LDD is in Github
 * **Local Data Dictionary to Release**: _Link to LDD repo here_
