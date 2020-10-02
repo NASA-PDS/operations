@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<records>
+
+    <!-- ======================== -->
+    <!-- LP-L-ENG-6-ATTITUDE-V1.0 -->
+    <!-- ======================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>LP MOON SPACECRAFT ATTITUDE V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>LP-L-ENG-6-ATTITUDE-V1.0</accession_number>   <!-- LIDVID -->
+        <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+        <publisher>NASA Planetary Data System</publisher>
+        <availability>NASA Planetary Data System</availability>
+        <publication_date>1998-06-01</publication_date>
+        <country>USA</country>
+        <description>The Lunar Prospector attitude data set consists of values for the
+            spacecraft spin rate and spin axis orientation (attitude) as a
+            function of time. These values are determined from spacecraft
+            attitude data (sun and limb crossing sensors) and ephemeris data.
+            Spacecraft orientations are given as right ascension and
+            declination of the spacecraft spin axis in the Mean-of-J2000
+            Ecliptic reference frame. The attitude data set consists of a
+            single, cumulative file for the entire mission. Records are added
+            to this file following each significant change in either the spin
+            rate or spin axis orientation. The spacecraft spin rates and
+            attitudes in this data set are orbit averages. The instantaneous
+            spin rate can be determined from the sun pulse data set. The
+            instantaneous spin rate varies as the spacecraft passes into and
+            out of the Moon's shadow and after each spacecraft maneuver.
+            Generally, an attitude record is included for times immediately
+            before and after each maneuver.</description>
+        <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=LP-L-ENG-6-ATTITUDE-V1.0</site_url>
+        <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+        <product_type>Dataset</product_type>
+        <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+        <keywords>LUNAR PROSPECTOR; MOON; UNKNOWN; LP; SATELLITE; ENG; LP ENGINEERING</keywords>
+        <authors>
+            <author>
+                <email/>
+                <full_name>ALAN B. BINDER</full_name>
+                <affiliations/>
+            </author>
+        </authors>
+        <contributors>
+            <contributor>
+                <email/>
+                <full_name>Planetary Plasma Interactions Node</full_name>
+                <contributor_type>DataCurator</contributor_type>
+                <affiliations/>
+            </contributor>
+        </contributors>
+        <related_identifiers>
+            <related_identifier>
+                <identifier_type>URN</identifier_type>
+                <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.lp-l-eng-6-attitude-v1.0</identifier_value>
+                <relation_type>IsIdenticalTo</relation_type>
+            </related_identifier>
+        </related_identifiers>
+    </record>
+    
+    <!-- ======================= -->
+    <!-- LP-L-ENG-6-COMMAND-V1.0 -->
+    <!-- ======================= -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>LP MOON UPLINK COMMAND V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>LP-L-ENG-6-COMMAND-V1.0</accession_number>   <!-- LIDVID -->
+        <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+        <publisher>NASA Planetary Data System</publisher>
+        <availability>NASA Planetary Data System</availability>
+        <publication_date>1998-06-01</publication_date>
+        <country>USA</country>
+        <description>The command file data set contains a record of all commands sent
+            to the Lunar Prospector spacecraft. The command files document
+            any changes in spacecraft and science instrument operating modes
+            or other settings. The files are ASCII text records of the
+            commands and associated parameters. A complete list of spacecraft
+            commands can be found in Appendix B of the Level 0 Data Product
+            SIS, which is included in the Lunar Prospector Level 0 Data
+            archive.</description>
+        <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=LP-L-ENG-6-COMMAND-V1.0</site_url>
+        <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+        <product_type>Dataset</product_type>
+        <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+        <keywords>LUNAR PROSPECTOR; MOON; UNKNOWN; LP; SATELLITE; ENG; LP ENGINEERING</keywords>
+        <authors>
+            <author>
+                <email/>
+                <full_name>ALAN B. BINDER</full_name>
+                <affiliations/>
+            </author>
+        </authors>
+        <contributors>
+            <contributor>
+                <email/>
+                <full_name>Planetary Plasma Interactions Node</full_name>
+                <contributor_type>DataCurator</contributor_type>
+                <affiliations/>
+            </contributor>
+        </contributors>
+        <related_identifiers>
+            <related_identifier>
+                <identifier_type>URN</identifier_type>
+                <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.lp-l-eng-6-command-v1.0</identifier_value>
+                <relation_type>IsIdenticalTo</relation_type>
+            </related_identifier>
+        </related_identifiers>
+    </record>
+    
+    <!-- ======================== -->
+    <!-- LP-L-ENG-6-SUNPULSE-V1.0 -->
+    <!-- ======================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>LP MOON SUN PULSE DATA V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>LP-L-ENG-6-SUNPULSE-V1.0</accession_number>   <!-- LIDVID -->
+        <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+        <publisher>NASA Planetary Data System</publisher>
+        <availability>NASA Planetary Data System</availability>
+        <publication_date>1998-06-01</publication_date>
+        <country>USA</country>
+        <description>The sun pulse data set is a record of times that the Lunar
+            Prospector sun sensor detects the Sun. These sun pulse times are
+            derived from ground processing of the sun sensor data, earth-moon
+            limb sensor data, and the spacecraft ephemeris. This data set is
+            part of the Lunar Prospector Level 0 data archive. The sun pulse
+            times are used in determining the spacecraft spin rate and
+            orientation as a function of time. Because the Lunar Prospector
+            spacecraft is sometimes in eclipse with the Sun, the sun pulse
+            data set is generated on the ground to include both actual sun
+            pulse times based on the sun sensor measurements and estimated
+            sun pulse times based on the history of spin rate change during
+            all prior eclipses.</description>
+        <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=LP-L-ENG-6-SUNPULSE-V1.0</site_url>
+        <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+        <product_type>Dataset</product_type>
+        <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+        <keywords>LUNAR PROSPECTOR; MOON; UNKNOWN; LP; SATELLITE; ENG; LP ENGINEERING</keywords>
+        <authors>
+            <author>
+                <email/>
+                <full_name>ALAN B. BINDER</full_name>
+                <affiliations/>
+            </author>
+        </authors>
+        <contributors>
+            <contributor>
+                <email/>
+                <full_name>Planetary Plasma Interactions Node</full_name>
+                <contributor_type>DataCurator</contributor_type>
+                <affiliations/>
+            </contributor>
+        </contributors>
+        <related_identifiers>
+            <related_identifier>
+                <identifier_type>URN</identifier_type>
+                <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.lp-l-eng-6-sunpulse-v1.0</identifier_value>
+                <relation_type>IsIdenticalTo</relation_type>
+            </related_identifier>
+        </related_identifiers>
+    </record>
+</records>
