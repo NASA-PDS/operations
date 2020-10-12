@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<records>
+
+    <!-- ============================= -->
+    <!-- MESS-E/V/H-GRNS-3-NS-CDR-V2.0 -->
+    <!-- ============================= -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>MESSENGER E/V/H GRNS 3 NEUTRON SPECTROMETER CDR V2.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>MESS-E/V/H-GRNS-3-NS-CDR-V2.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2016-05-06</publication_date>
+            <country>USA</country>
+            <description>Abstract
+                ========
+                This data set consists of the MESSENGER Neutron Spectrometer (NS)
+                calibrated data records (CDRs). The NS experiment is a neutron
+                spectrometer designed to observe spectra of neutrons emitted from
+                Mercury's surface in the energy range from 0.01 eV to 7 MeV. There are
+                five NS CDR data products: raw neutron spectra, NS counter data,
+                galactic cosmic ray (GCR) spectra, engineering data, and gamma-ray
+                burst data. This is version 2 of this data set; version 1 has been
+            superceded.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=MESS-E%2FV%2FH-GRNS-3-NS-CDR-V2.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>MESSENGER; EARTH; VENUS; CALIBRATION; MERCURY; NEUTRON SPECTROMETER; MESS; PLANET; NS</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>DAVID LAWRENCE</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Navigation and Ancillary Information Facility Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.mess-e-v-h-grns-3-ns-cdr-v2.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ============================= -->
+    <!-- MESS-E/V/H-GRNS-4-NS-DDR-V2.0 -->
+    <!-- ============================= -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>MESSENGER E/V/H GRNS 4 NEUTRON SPECTROMETER DDR V2.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>MESS-E/V/H-GRNS-4-NS-DDR-V2.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2016-05-06</publication_date>
+            <country>USA</country>
+            <description>Abstract
+                ========
+                This data set consists of the MESSENGER Neutron Spectrometer (NS)
+                'derived' data records (DDRs). The NS experiment is a neutron
+                spectrometer designed to observe neutrons emitted from
+                Mercury's surface in the energy range from 0.01 eV to 7 MeV.
+                
+                There is 1 NS DDR standard data product (Neutron Count Rate,
+                NS_DDR_NCR) and 1 NS DDR special data product (Neutron Composition,
+                NS_DDR_NCP). The NCR data products contain net neutron count rates from
+                the LG1, LG2, and BP sensors and uncertainties from each of these
+                sensors. The NCP data product contains fast and epithermal count rates
+                as a function of latitude, along with simulated count rates for the
+                cases of no hydrogen and for a thick layer of 100 wt. percent water ice
+                in all radar bright regions.
+                
+            This is version 2 of this data set; version 1 has been superceded.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=MESS-E%2FV%2FH-GRNS-4-NS-DDR-V2.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>MESSENGER; MERCURY; NEUTRON SPECTROMETER; MESS; PLANET; NS</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>DAVID LAWRENCE</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Navigation and Ancillary Information Facility Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.mess-e-v-h-grns-4-ns-ddr-v2.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+</records>
+
