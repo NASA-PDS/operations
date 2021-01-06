@@ -1,0 +1,1339 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<records>
+
+    <!-- ======================= -->
+    <!-- LRO-L-LEND-4/5-RDR-V1.0 -->
+    <!-- ======================= -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>LRO LUNAR EXPLORATION NEUTRON DETECTOR 4/5 RDR V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>LRO-L-LEND-4/5-RDR-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2010-03-15</publication_date>
+            <country>USA</country>
+            <description>Calibrated or converted housekeeping and scientific data
+                collected from the Lunar Exploration Neutron Detector aboard the
+            Lunar Reconnaissance Orbiter.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=LRO-L-LEND-4%2F5-RDR-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>LUNAR RECONNAISSANCE ORBITER; MOON; CALORIMETER/SPECTROMETER; LRO; SATELLITE; LEND; LUNAR EXPLORATION NEUTRON DETECTOR</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>WILLIAM BOYNTON</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Geosciences Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.lro-l-lend-4-5-rdr-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ===================== -->
+    <!-- LRO-L-LEND-2-EDR-V1.0 -->
+    <!-- ===================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>LRO LUNAR EXPLORATION NEUTRON DETECTOR 2 EDR V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>LRO-L-LEND-2-EDR-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2010-03-15</publication_date>
+            <country>USA</country>
+            <description>Raw, uncalibrated housekeeping and scientific data collected from
+                the Lunar Exploration Neutron Detector (LEND) aboard the Lunar
+            Reconnaissance Orbiter.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=LRO-L-LEND-2-EDR-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>LUNAR RECONNAISSANCE ORBITER; MOON; CALORIMETER/SPECTROMETER; LRO; SATELLITE; LEND; LUNAR EXPLORATION NEUTRON DETECTOR</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>WILLIAM BOYNTON</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Geosciences Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.lro-l-lend-2-edr-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ===================== -->
+    <!-- LRO-L-DLRE-2-EDR-V1.0 -->
+    <!-- ===================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>LRO DLRE LEVEL 2 EDR V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>LRO-L-DLRE-2-EDR-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2019-12-15</publication_date>
+            <country>USA</country>
+            <description>This data set consists of the
+                Diviner Lunar Radiometer Experiment uncalibrated observations,
+                also known as EDRs.   The DLRE is a surface pushbroom mapper that
+                measures emitted thermal radiation and reflected solar radiation
+                from the surface of the moon.
+                
+                Two Diviner solar channels measure 0.3-3 micrometers reflected solar
+                radiation.  Three Diviner channels near 8 micrometers classify
+                regolith mineralogy by mapping the location of the Christiansen
+                feature.  The remaining four Diviner channels measure surface
+                temperature in four spectral bands ranging from 12.5 micrometers
+            to beyond 200 micrometers.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=LRO-L-DLRE-2-EDR-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>LUNAR RECONNAISSANCE ORBITER; MOON; RADIOMETER; LRO; SATELLITE; DLRE; DIVINER LUNAR RADIOMETER EXPERIMENT</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>DAVID PAIGE</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Geosciences Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.lro-l-dlre-2-edr-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ====================== -->
+    <!-- LRO-L-LOLA-3-RADR-V1.0 -->
+    <!-- ====================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>LRO MOON LASER ALTIMETER 3 RADR V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>LRO-L-LOLA-3-RADR-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2015-12-15</publication_date>
+            <country>USA</country>
+            <description>This data set contains archival radiometric data derived from reduced
+                altimetry measured by the Lunar Orbiter Laser Altimeter instrument
+                during LRO's Nominal Mission.  LOLA is a pulse detection, time-of-flight
+                laser altimeter that measures the distance between the LRO spacecraft
+                and the surface of the Moon.
+                
+                LOLA transmits a 5-spot pattern, thus providing 5 simultaneous profiles
+                across the lunar surface whose separation depends on spacecraft altitude.
+                LOLA also measures the energy of the return pulses, which enables the
+            calculation of the surface albedo after calibration.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=LRO-L-LOLA-3-RADR-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>LUNAR RECONNAISSANCE ORBITER; MOON; LASER ALTIMETER; LRO; SATELLITE; LOLA; LUNAR ORBITER LASER ALTIMETER</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>DAVID E. SMITH</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Geosciences Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.lro-l-lola-3-radr-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ===================== -->
+    <!-- LRO-L-LOLA-2-EDR-V1.0 -->
+    <!-- ===================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>LRO MOON LASER ALTIMETER 2 EDR V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>LRO-L-LOLA-2-EDR-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2011-09-15</publication_date>
+            <country>USA</country>
+            <description>This data set contains archival raw experiment data from the
+            Lunar Orbiter Laser Altimeter instrument (LOLA).</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=LRO-L-LOLA-2-EDR-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>LUNAR RECONNAISSANCE ORBITER; MOON; LASER ALTIMETER; LRO; SATELLITE; LOLA; LUNAR ORBITER LASER ALTIMETER</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>GREGORY A. NEUMANN</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Geosciences Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.lro-l-lola-2-edr-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ======================= -->
+    <!-- LRO-L-MRFLRO-1-PDR-V1.0 -->
+    <!-- ======================= -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>LRO MOON MINI-RF 1 PACKETIZED DATA RECORD V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>LRO-L-MRFLRO-1-PDR-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2011-06-15</publication_date>
+            <country>USA</country>
+            <description>This data set contains archival raw data acquired from the
+            Mini-RF instrument during the LRO mission.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=LRO-L-MRFLRO-1-PDR-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>LUNAR RECONNAISSANCE ORBITER; MOON; RADAR MAPPER; LRO; SATELLITE; MRFLRO; MINI-RF LRO</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>D. BEN BUSSEY</full_name>
+                    <affiliations/>
+                </author>
+                <author>
+                    <email/>
+                    <full_name>HELENE WINTERS</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Geosciences Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+                <contributor>
+                    <email/>
+                    <full_name>DAVID LAVALLEE</full_name>
+                    <affiliations/>
+                </contributor>
+                <contributor>
+                    <email/>
+                    <full_name>MIKE REID</full_name>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.lro-l-mrflro-1-pdr-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ===================== -->
+    <!-- LRO-L-LOLA-4-GDR-V1.0 -->
+    <!-- ===================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>LRO MOON LASER ALTIMETER 4 GDR V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>LRO-L-LOLA-4-GDR-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2011-09-15</publication_date>
+            <country>USA</country>
+            <description>This data set contains gridded data products from the Lunar
+            Orbiter Laser Altimeter instrument [SMITHETAL2009].</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=LRO-L-LOLA-4-GDR-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>LUNAR RECONNAISSANCE ORBITER; MOON; LASER ALTIMETER; LRO; SATELLITE; LOLA; LUNAR ORBITER LASER ALTIMETER</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>GREGORY A. NEUMANN</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Geosciences Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.lro-l-lola-4-gdr-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ===================== -->
+    <!-- LRO-L-DLRE-5-PRP-V1.0 -->
+    <!-- ===================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>LRO DLRE 5 POLAR RESOURCE PRODUCT</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>LRO-L-DLRE-5-PRP-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2011-03-15</publication_date>
+            <country>USA</country>
+            <description>This data set consists of the
+                Diviner Lunar Radiometer Experiment Polar Resource Products
+                also known as PRPs.   The DLRE is a surface pushbroom mapper that
+                measures emitted thermal radiation and reflected solar radiation
+                from the surface of the moon.
+                
+                Two Diviner solar channels measure 0.3-3 micrometers reflected solar
+                radiation.  Three Diviner channels near 8 micrometers classify
+                regolith mineralogy by mapping the location of the Christiansen
+                feature.  The remaining four Diviner channels measure surface
+                temperature in four spectral bands ranging from 12.5 micrometers
+            to beyond 200 micrometers.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=LRO-L-DLRE-5-PRP-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>LUNAR RECONNAISSANCE ORBITER; MOON; RADIOMETER; LRO; SATELLITE; DLRE; DIVINER LUNAR RADIOMETER EXPERIMENT</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>DAVID PAIGE</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Geosciences Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.lro-l-dlre-5-prp-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ======================= -->
+    <!-- LRO-L-MRFLRO-4-CDR-V1.0 -->
+    <!-- ======================= -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>LRO MOON MINI-RF 4 CALIBRATED DATA RECORD V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>LRO-L-MRFLRO-4-CDR-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2011-06-15</publication_date>
+            <country>USA</country>
+            <description>This data set contains Level 1 archival calibrated burst mode
+                data acquired from the Mini-RF instrument during the LRO mission
+            and associated ancillary data.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=LRO-L-MRFLRO-4-CDR-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>LUNAR RECONNAISSANCE ORBITER; MOON; RADAR MAPPER; LRO; SATELLITE; MRFLRO; MINI-RF LRO</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>D. BEN BUSSEY</full_name>
+                    <affiliations/>
+                </author>
+                <author>
+                    <email/>
+                    <full_name>HELENE WINTERS</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Geosciences Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+                <contributor>
+                    <email/>
+                    <full_name>DAVID LAVALLEE</full_name>
+                    <affiliations/>
+                </contributor>
+                <contributor>
+                    <email/>
+                    <full_name>MIKE REID</full_name>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.lro-l-mrflro-4-cdr-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ============================== -->
+    <!-- LRO-L-MRFLRO-5-CDR-MOSAIC-V1.0 -->
+    <!-- ============================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>LRO MOON MINI-RF 5 POLAR MOSAIC CALIBRATED DATA REC V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>LRO-L-MRFLRO-5-CDR-MOSAIC-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2012-06-15</publication_date>
+            <country>USA</country>
+            <description>This data set contains lunar polar mosaics composed of calibrated
+                data acquired from the Mini-RF instrument during the LRO mission.
+            The mosaics are made from data collected during multiple orbits.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=LRO-L-MRFLRO-5-CDR-MOSAIC-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>LUNAR RECONNAISSANCE ORBITER; MOON; RADAR MAPPER; LRO; SATELLITE; MRFLRO; MINI-RF LRO</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>JOSHUA T. S. CAHILL</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Geosciences Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.lro-l-mrflro-5-cdr-mosaic-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ================================ -->
+    <!-- LRO-L-MRFLRO-2/3/5-BISTATIC-V2.0 -->
+    <!-- ================================ -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>LRO MOON MINI-RF 2/3/5 BISTATIC RADAR V2.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>LRO-L-MRFLRO-2/3/5-BISTATIC-V2.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2015-03-31</publication_date>
+            <country>USA</country>
+            <description>This data set contains radar data of the lunar surface from
+                bistatic measurements utilizing the Arecibo Observatory
+            transmitter and LRO Mini-RF receiver.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=LRO-L-MRFLRO-2%2F3%2F5-BISTATIC-V2.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>LUNAR RECONNAISSANCE ORBITER; MOON; RADAR MAPPER; LRO; SATELLITE; MRFLRO; MINI-RF LRO</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>G. WESLEY PATTERSON</full_name>
+                    <affiliations/>
+                </author>
+                <author>
+                    <email/>
+                    <full_name>ANDREW SANTO</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Geosciences Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+                <contributor>
+                    <email/>
+                    <full_name>DAVID LAVALLEE</full_name>
+                    <affiliations/>
+                </contributor>
+                <contributor>
+                    <email/>
+                    <full_name>RAY ESPIRITU</full_name>
+                    <affiliations/>
+                </contributor>
+                <contributor>
+                    <email/>
+                    <full_name>ANGELA STICKLE</full_name>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.lro-l-mrflro-2-3-5-bistatic-v2.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ===================== -->
+    <!-- LRO-L-DLRE-5-GDR-V1.0 -->
+    <!-- ===================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>LRO DLRE 5 GRIDDED DATA RECORDS</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>LRO-L-DLRE-5-GDR-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2017-12-15</publication_date>
+            <country>USA</country>
+            <description>This data set consists of the
+                Diviner Lunar Radiometer Experiment Gridded Data Records
+                also known as GDRs.   The DLRE is a surface pushbroom mapper that
+                measures emitted thermal radiation and reflected solar radiation
+                from the surface of the moon.
+                
+                Two Diviner solar channels measure 0.3-3 micrometers reflected solar
+                radiation.  Three Diviner channels near 8 micrometers classify
+                regolith mineralogy by mapping the location of the Christiansen
+                feature.  The remaining four Diviner channels measure surface
+                temperature in four spectral bands ranging from 12.5 micrometers
+            to beyond 200 micrometers.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=LRO-L-DLRE-5-GDR-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>LUNAR RECONNAISSANCE ORBITER; MOON; RADIOMETER; LRO; SATELLITE; DLRE; DIVINER LUNAR RADIOMETER EXPERIMENT</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>DAVID PAIGE</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Geosciences Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.lro-l-dlre-5-gdr-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ========================= -->
+    <!-- LRO-L-RSS-1-TRACKING-V1.0 -->
+    <!-- ========================= -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>LRO MOON RADIO SCIENCE RAW TRACKING DATA V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>LRO-L-RSS-1-TRACKING-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2014-12-15</publication_date>
+            <country>USA</country>
+            <description>This data set contains archival raw, partially processed, and
+                ancillary/supporting radio science data acquired during the Lunar
+                Reconnaissance Orbiter (LRO) mission. The radio observations were
+                carried out using the LRO spacecraft and Earth-based stations of
+                the commercial Universal Space Network (USN), the Ka-band ground
+                station at White Sands, New Mexico (WS1), and the Next Generation
+                Satellite Laser Ranging station in Greenbelt, Maryland (NGSLR).
+                Additional data were provided by the NASA Deep Space Network
+                (DSN) during commissioning. Ongoing participation by the
+                International Laser Ranging Service (ILRS) network of stations
+                provides further LR data that are processed by the Lunar Orbiter
+                Laser Altimeter (LOLA) Science Operations Center (SOC). Of most
+                interest are likely to be the Tracking Data Files in the TRK
+            directory.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=LRO-L-RSS-1-TRACKING-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>LUNAR RECONNAISSANCE ORBITER; MOON; RADIO SCIENCE; LRO; SATELLITE; RSS; RADIO SCIENCE SUBSYSTEM</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>DAVID E. SMITH</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Geosciences Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.lro-l-rss-1-tracking-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- =========================== -->
+    <!-- LRO-L-MRFLRO-5-CDR-MAP-V1.0 -->
+    <!-- =========================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>LRO MOON MINI-RF 5 MAP-PROJECTED CALIBRATED DATA REC V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>LRO-L-MRFLRO-5-CDR-MAP-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2011-06-15</publication_date>
+            <country>USA</country>
+            <description>This data set contains archival map-projected calibrated data
+                acquired from the Mini-RF instrument during the LRO mission and
+            associated ancillary data.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=LRO-L-MRFLRO-5-CDR-MAP-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>LUNAR RECONNAISSANCE ORBITER; MOON; RADAR MAPPER; LRO; SATELLITE; MRFLRO; MINI-RF LRO</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>D. BEN BUSSEY</full_name>
+                    <affiliations/>
+                </author>
+                <author>
+                    <email/>
+                    <full_name>HELENE WINTERS</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Geosciences Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+                <contributor>
+                    <email/>
+                    <full_name>DAVID LAVALLEE</full_name>
+                    <affiliations/>
+                </contributor>
+                <contributor>
+                    <email/>
+                    <full_name>MIKE REID</full_name>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.lro-l-mrflro-5-cdr-map-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ===================== -->
+    <!-- LRO-L-DLRE-5-PRP-V2.0 -->
+    <!-- ===================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>LRO DLRE 5 POLAR RESOURCE PRODUCT</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>LRO-L-DLRE-5-PRP-V2.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2018-03-15</publication_date>
+            <country>USA</country>
+            <description>This data set consists of the
+                Diviner Lunar Radiometer Experiment Polar Resource Products
+                also known as PRPs.   The DLRE is a surface pushbroom mapper that
+                measures emitted thermal radiation and reflected solar radiation
+                from the surface of the moon.
+                
+                Two Diviner solar channels measure 0.3-3 micrometers reflected solar
+                radiation.  Three Diviner channels near 8 micrometers classify
+                regolith mineralogy by mapping the location of the Christiansen
+                feature.  The remaining four Diviner channels measure surface
+                temperature in four spectral bands ranging from 12.5 micrometers
+            to beyond 200 micrometers.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=LRO-L-DLRE-5-PRP-V2.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>LUNAR RECONNAISSANCE ORBITER; MOON; RADIOMETER; LRO; SATELLITE; DLRE; DIVINER LUNAR RADIOMETER EXPERIMENT</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>DAVID PAIGE</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Geosciences Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.lro-l-dlre-5-prp-v2.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ===================== -->
+    <!-- LRO-L-DLRE-4-RDR-V1.0 -->
+    <!-- ===================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>LRO DLRE 4 CALIBRATED RADIANCE V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>LRO-L-DLRE-4-RDR-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2019-12-15</publication_date>
+            <country>USA</country>
+            <description>This data set consists of the
+                Diviner Lunar Radiometer Experiment Reduced Data Records
+                also known as RDRs.   The DLRE is a surface pushbroom mapper that
+                measures emitted thermal radiation and reflected solar radiation
+                from the surface of the moon.
+                
+                Two Diviner solar channels measure 0.3-3 micrometers reflected solar
+                radiation.  Three Diviner channels near 8 micrometers classify
+                regolith mineralogy by mapping the location of the Christiansen
+                feature.  The remaining four Diviner channels measure surface
+                temperature in four spectral bands ranging from 12.5 micrometers
+            to beyond 200 micrometers.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=LRO-L-DLRE-4-RDR-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>LUNAR RECONNAISSANCE ORBITER; MOON; RADIOMETER; LRO; SATELLITE; DLRE; DIVINER LUNAR RADIOMETER EXPERIMENT</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>DAVID PAIGE</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Geosciences Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.lro-l-dlre-4-rdr-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ===================== -->
+    <!-- LRO-L-LOLA-3-RDR-V1.0 -->
+    <!-- ===================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>LRO MOON LASER ALTIMETER 3 RDR V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>LRO-L-LOLA-3-RDR-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2011-09-15</publication_date>
+            <country>USA</country>
+            <description>This data set contains archival reduced data from the Lunar
+            Orbiter Laser Altimeter instrument.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=LRO-L-LOLA-3-RDR-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>LUNAR RECONNAISSANCE ORBITER; MOON; LASER ALTIMETER; LRO; SATELLITE; LOLA; LUNAR ORBITER LASER ALTIMETER</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>GREGORY A. NEUMANN</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Geosciences Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.lro-l-lola-3-rdr-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ================================ -->
+    <!-- LRO-L-MRFLRO-2/3/5-BISTATIC-V3.0 -->
+    <!-- ================================ -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>LRO MOON MINI-RF 2/3/5 BISTATIC RADAR V3.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>LRO-L-MRFLRO-2/3/5-BISTATIC-V3.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2019-12-13</publication_date>
+            <country>USA</country>
+            <description>This data set contains radar data of the lunar surface from bistatic
+                measurements utilizing the Arecibo Observatory transmitter and LRO
+            Mini-RF receiver.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=LRO-L-MRFLRO-2%2F3%2F5-BISTATIC-V3.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>LUNAR RECONNAISSANCE ORBITER; MOON; RADAR MAPPER; LRO; SATELLITE; MRFLRO; MINI-RF LRO</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>G. WESLEY PATTERSON</full_name>
+                    <affiliations/>
+                </author>
+                <author>
+                    <email/>
+                    <full_name>ANDREW SANTO</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Geosciences Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+                <contributor>
+                    <email/>
+                    <full_name>DAVID LAVALLEE</full_name>
+                    <affiliations/>
+                </contributor>
+                <contributor>
+                    <email/>
+                    <full_name>RAY ESPIRITU</full_name>
+                    <affiliations/>
+                </contributor>
+                <contributor>
+                    <email/>
+                    <full_name>ANGELA STICKLE</full_name>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.lro-l-mrflro-2-3-5-bistatic-v3.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+
+    <!-- ======================= -->
+    <!-- LRO-L-LOLA-5-SHADR-V1.0 -->
+    <!-- ======================= -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>LRO MOON LASER ALTIMETER 5 SHADR V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>LRO-L-LOLA-5-SHADR-V1.0</accession_number>   <!-- LIDVID -->
+            <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+            <publisher>NASA Planetary Data System</publisher>
+            <availability>NASA Planetary Data System</availability>
+            <publication_date>2011-03-15</publication_date>
+            <country>USA</country>
+            <description>This data set contains spherical harmonic topographic (shape) and
+                gravity potential models from the Lunar Orbiter Laser Altimeter
+            instrument, LRO Laser Ranging, and radio tracking.</description>
+            <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=LRO-L-LOLA-5-SHADR-V1.0</site_url>
+            <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+            <product_type>Dataset</product_type>
+            <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+            <keywords>LUNAR RECONNAISSANCE ORBITER; MOON; LASER ALTIMETER; LRO; SATELLITE; LOLA; LUNAR ORBITER LASER ALTIMETER</keywords>
+            <authors>
+                <author>
+                    <email/>
+                    <full_name>GREGORY A. NEUMANN</full_name>
+                    <affiliations/>
+                </author>
+            </authors>
+            <contributors>
+                <contributor>
+                    <email/>
+                    <full_name>Geosciences Node</full_name>
+                    <contributor_type>DataCurator</contributor_type>
+                    <affiliations/>
+                </contributor>
+            </contributors>
+            <related_identifiers>
+                <related_identifier>
+                    <identifier_type>URN</identifier_type>
+                    <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.lro-l-lola-5-shadr-v1.0</identifier_value>
+                    <relation_type>IsIdenticalTo</relation_type>
+                </related_identifier>
+            </related_identifiers>
+        </record>
+    
+    <!-- ==================== -->
+    <!-- LRO-L-DLRE-5-GCP-V1.0 -->
+    <!-- ==================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>LRO DLRE 5 GLOBAL CUMULATIVE PRODUCTS</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>LRO-L-DLRE-5-GCP-V1.0</accession_number>   <!-- LIDVID -->
+        <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+        <publisher>NASA Planetary Data System</publisher>
+        <availability>NASA Planetary Data System</availability>
+        <publication_date>2020-07-13</publication_date>
+        <country>USA</country>
+        <description>This data set consists of the
+      Diviner Lunar Radiometer Experiment Global Cumulative Products
+      (GCPs) and Polar Cumulative Products (PCPs).   
+      The DLRE is a surface pushbroom mapper that 
+      measures emitted thermal radiation and reflected solar radiation 
+      from the surface of the moon.
+
+      Two Diviner solar channels measure 0.3-3 micrometers reflected solar
+      radiation.  Three Diviner channels near 8 micrometers classify
+      regolith mineralogy by mapping the location of the Christiansen
+      feature.  The remaining four Diviner channels measure surface
+      temperature in four spectral bands ranging from 12.5 micrometers
+      to beyond 200 micrometers.</description>
+        <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=LRO-L-DLRE-5-GCP-V1.0</site_url>
+        <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+        <product_type>Dataset</product_type>
+        <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+        <keywords>LUNAR RECONNAISSANCE ORBITER; MOON; LRO; SATELLITE</keywords>
+        <authors>
+            <author>
+                <email/>
+                <full_name>DAVID PAIGE</full_name>
+                <affiliations/>
+            </author>
+        </authors>
+        <contributors>
+            <contributor>
+                <email/>
+                <full_name>Geosciences Node</full_name>
+                <contributor_type>DataCurator</contributor_type>
+                <affiliations/>
+            </contributor>
+        </contributors>
+        <related_identifiers>
+            <related_identifier>
+                <identifier_type>URN</identifier_type>
+                <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.lro-l-dlre-5-gcp-v1.0</identifier_value>
+                <relation_type>IsIdenticalTo</relation_type>
+            </related_identifier>
+        </related_identifiers>
+    </record>
+    
+    <!-- ==================== -->
+    <!-- LRO-L-MRFLRO-5-GLOBAL-MOSAIC-V1.0 -->
+    <!-- ==================== -->
+    <record>
+        <!-- The unique identifier for the record (used for updates on submission); Null if initial creation -->
+        <id/>
+        <title>LRO MOON MINI-RF 5 GLOBAL MOSAIC V1.0</title>
+        <sponsoring_organization>National Aeronautics and Space Administration (NASA)</sponsoring_organization>
+        <accession_number>LRO-L-MRFLRO-5-GLOBAL-MOSAIC-V1.0</accession_number>   <!-- LIDVID -->
+        <!--
+            <doi_infix>my-example-infix</doi_infix>
+            <report_numbers>EX-001-2017</report_numbers>
+            <contract_numbers>Example-001-2017</contract_numbers>
+            <other_numbers>OtherIdentifyingNumbers</other_numbers>
+            -->
+        <publisher>NASA Planetary Data System</publisher>
+        <availability>NASA Planetary Data System</availability>
+        <publication_date>2014-09-23</publication_date>
+        <country>USA</country>
+        <description>This data set contains global 
+                    uncontrolled mosaics of the Moon in 
+                    simple cylindrical projection. The images
+                    are derived from the LRO Mini-RF 
+                    Map-projected Calibrated Data Records 
+                    (PDS data set ID LRO-L-MRFLRO-5-CDR-MAP-
+                    V1.0).</description>
+        <site_url>https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=LRO-L-MRFLRO-5-GLOBAL-MOSAIC-V1.0</site_url>
+        <!-- Collection definition:
+            a Collection product may refer to an aggregation of resources and research objects.
+            A Collection probably has items in it which have or will receive their own DOIs and thus be
+            retrievable independently. Therefore the Collection record is a high-level description of
+            the overall group of items.
+            -->
+        <product_type>Dataset</product_type>
+        <product_type_specific>PDS3 Refereed Data Set</product_type_specific>
+        <keywords>LUNAR RECONNAISSANCE ORBITER; MOON; LRO; SATELLITE</keywords>
+        <authors>
+            <author>
+                <email/>
+                <full_name>JOSHUA T. S. CAHILL</full_name>
+                <affiliations/>
+            </author>
+        </authors>
+        <contributors>
+            <contributor>
+                <email/>
+                <full_name>Geosciences Node</full_name>
+                <contributor_type>DataCurator</contributor_type>
+                <affiliations/>
+            </contributor>
+        </contributors>
+        <related_identifiers>
+            <related_identifier>
+                <identifier_type>URN</identifier_type>
+                <identifier_value>urn:nasa:pds:context_pds3:data_set:data_set.lro-l-mrflo-5-global-mosaic-v1.0</identifier_value>
+                <relation_type>IsIdenticalTo</relation_type>
+            </related_identifier>
+        </related_identifiers>
+    </record>
+    
+</records>
+
