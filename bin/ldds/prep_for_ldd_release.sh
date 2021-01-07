@@ -31,8 +31,8 @@ fi
 
 BRANCH_NAME="IM_release_$release$branch_suffix"
 
-# DISCIPLINE_LDD_REPOS="ldd-msss_cam_mh"
-DISCIPLINE_LDD_REPOS="ldd-multi ldd-particle ldd-wave ldd-rings ldd-img ldd-disp ldd-msn ldd-msn_surface ldd-proc ldd-img_surface ldd-ctli ldd-speclib ldd-msss_cam_mh ldd-cart ldd-geom ldd-spectral ldd-nucspec ldd-survey ldd-chan1"
+DISCIPLINE_LDD_REPOS="ldd-wave ldd-particle ldd-multi"
+#DISCIPLINE_LDD_REPOS="ldd-multi ldd-particle ldd-wave ldd-rings ldd-img ldd-disp ldd-msn ldd-msn_surface ldd-proc ldd-img_surface ldd-ctli ldd-speclib ldd-msss_cam_mh ldd-cart ldd-geom ldd-spectral ldd-nucspec ldd-survey ldd-chan1"
 BASE_CLONE_URL=git@github.com:pds-data-dictionaries
 GITHUB_API_URL="https://api.github.com/repos/pds-data-dictionaries"
 
@@ -74,7 +74,7 @@ for repo in $DISCIPLINE_LDD_REPOS; do
     # add the updated
     git status
     git add -A .
-    git commit -m "[$rel_type] PDS4 IM Release $release"
+    git commit --allow-empty -m "[$rel_type] PDS4 IM Release $release"
     git push origin $BRANCH_NAME
 
     # cleanup
