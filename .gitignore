@@ -33,7 +33,6 @@
 # other stuff
 *.xpr
 *.swp
-/bin/
 .*.swp
 *.sublime-*
 
