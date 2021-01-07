@@ -1,7 +1,7 @@
 ---
 name: PDS4 NSSDCA Delivery
 about: Issue to submit new PDS Deep Archive outputs for delivery to NSSDCA
-title: "[NSSDCA] <replace this with bundle lidvid>"
+title: 'NSSDCA Delivery: <replace this with bundle lidvid>'
 labels: nssdca-delivery
 assignees: c-suh, elawsgh
 
