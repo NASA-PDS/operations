@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><!-- InstanceBegin template="/Templates/main.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<!-- InstanceBeginEditable name="doctitle" --><title>PDS: Data Dictionaries - {{pds4_version}}</title><!-- InstanceEndEditable -->
+	<!--#include virtual="/include/includes.html" -->
+	<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+	<!-- InstanceParam name="menu_section" type="text" value="schema" -->
+	<!-- InstanceParam name="menu_item" type="text" value="pds4_schema" -->
+	<!-- InstanceParam name="left_sidebar" type="boolean" value="true" -->
+	<!-- InstanceParam name="standard_sidebar" type="boolean" value="true" -->
+
+	<script type="text/javascript" src="/js/ldd.js"></script>
+	<link href="/css/ldd.css" type="text/css" rel="stylesheet">
+</head>
+
+<body class="sidebar menu_datastandards menu_item_datastandards_schema">
+<!--[if IE]>
+<div id="IE">
+<![endif]--> 
+
+<div id="header-container">
+  <!--#include virtual="/include/header_logo.html" -->
+  <div id="menu-container">
+    <!--#include virtual="/include/main_menu.html" -->
+    <!--#include virtual="/include/datastandards_menu.html" -->
+  </div>
+  <!--#include virtual="/include/header_links.html" -->
+</div>
+
+<!-- Sidebar -->
+<div id="sidebar">
+	<!-- InstanceBeginEditable name="leftSidebar" -->
+	<!--#include virtual="/include/ldd_toc.html" -->
+	<!-- InstanceEndEditable -->
+</div>
+
+<!-- Main content -->
+<div id="content">
+	<h1><a name="mainContent"></a><!-- InstanceBeginEditable name="pageTitle" -->Data Dictionaries - {{pds4_version}}<!-- InstanceEndEditable --></h1>
+    <!-- InstanceBeginEditable name="content" -->
+	<div>
+		<p>
+			The following page links to version {{pds4_version}} of the PDS4 Data Dictionaries, including XML Schema and Schematrons for the applicable PDS4 namespace.
+		</p>
+		<p>
+            <b>Past versions of the data dictionaries can be found <a href="/datastandards/dictionaries/index-versions.shtml">here</a>.</b>
+		</p>
+		
+		<p>
+			Need help with creating a dictionary or where to start, please contact the <a href="mailto:pds_operator@jpl.nasa.gov">PDS Operator</a> at pds_operator@jpl.nasa.gov.
+		</p>
+	</div>
+	<hr />
+	<div id="ldd-search">
+		<h2>Data Dictionary Search</h2>
+		<p><a href="/datastandards/documents/dd/current/PDS4_PDS_DD_{{pds4_alpha_version}}/webhelp/all/">Browse and search</a> all data dictionary classes and attributes online.</p>
+		<hr />
+	</div>
+	<div id="ldd-intro">
+		<h2>What are you looking for?</h2>
+		<ul>
+			<li>The latest release of the main <a href="#pds-common">PDS Common</a> dictionary</li>
+			<li><a href="#discipline-dictionaries">Discipline dictionaries</a> to go with my main dictionary</li>
+			<li>A <a href="#mission-dictionaries">mission or project dictionary</a> from the archive</li>
+			<li>A <a href="#create-dictionary">how-to</a> on creating a dictionary</li>
+			<li>A <a href="#submit-new-version">how-to</a> on submitting my dictionary for archiving</li>
+			<li>Something else? See the <a href="#toc">Table of Contents</a> for more details</li>
+		</ul>
+	</div>
+	<hr />
+	<div id="data-dictionaries">
+		<h2>Data Dictionaries</h2>
+		<div id="compatible-versions">
+			<h3>Compatible Versions</h3>
+			<p>
+				For each version of the PDS Common Data Dictionary, there are specific discipline and mission dictionary that are compatible.
+				You can find this information in our <a href="/datastandards/schema/pds-dictionary-stacks.pdf">Dictionary Stacks</a> database.
+			</p>
+			<p><a class="toTop">Back to top</a></p>
+		</div>
+		<hr class="minihr">
+		<div id="pds-common" class="lddList">
+			<h3>PDS Common</h3>
+			<div>
+				<h4>PDS (pds)</h4>
+				<p>This directory contains the XML Schema and Schematron files under the Planetary Data System (PDS) namespace. The JSON file contains an instance of the data dictionary in JavaScript Object Notation.</p>
+				<ul>
+					<li><b>Last Updated:</b> 01/05/2020</li>
+					<ul>
+						<li><a href="/pds4/pds/v1/PDS4_PDS_{{pds4_alpha_version}}.xsd">PDS4_PDS_{{pds4_alpha_version}}.xsd</a></li>
+						<li><a href="/pds4/pds/v1/PDS4_PDS_{{pds4_alpha_version}}.sch">PDS4_PDS_{{pds4_alpha_version}}.sch</a></li>
+						<li><a href="/pds4/pds/v1/PDS4_PDS_{{pds4_alpha_version}}.xml">PDS4_PDS_{{pds4_alpha_version}}.xml</a></li>
+						<li><a href="/pds4/pds/v1/PDS4_PDS_JSON_{{pds4_alpha_version}}.JSON">PDS4_PDS_JSON_{{pds4_alpha_version}}.JSON</a></li>
+						<li><a href="/pds4/pds/v1/PDS4_PDS_{{pds4_alpha_version}}.zip">PDS4_PDS_{{pds4_alpha_version}}.zip</a></li>
+					</ul>
+				</ul>
+				<a class="toTop">Back to top</a>
+			</div>
+		</div>
+		<hr class="minihr">
+        <div id="discipline-dictionaries" class="lddList">
+            <h3>Discipline Dictionaries</h3>
+            <ul class="lddListToc">
+            {{{ldd_toc}}}
+            </ul>
+
+        {{{ldd_block}}}
+		</div>
+		<hr class="minihr">
+		<div id="mission-dictionaries">
+			<h3>Mission Dictionaries</h3>
+			<p>All versions of the Mission data dictionaries can be found <a href="/datastandards/dictionaries/index-missions.shtml">here</a>.</p>
+			<a class="toTop">Back to top</a>
+		</div>
+	</div>
+	<hr />
+	<div id="namespaces">
+		<h2>Namespaces</h2>
+		<p>
+			The PDS4 XML Schema and Schematron files are organized by namespace.
+			Links to documentation on a particular dictionary can be found <a href="https://github.com/pds-data-dictionaries/PDS-Data-Dictionaries.github.io/blob/master/docs/source/overview.md">here</a>.
+		</p>
+		<p>
+			For a list of existing namespaces, refer to the <a href="/datastandards/dictionaries/pds-namespace-registry.pdf">PDS Namespace Registry</a>.
+		</p>
+
+		<a class="toTop">Back to top</a>
+	</div>
+	<hr />
+	<div id="create-dictionary">
+		<h2>How To Create A Dictionary</h2>
+		<p>
+			Please contact your applicable discipline node to ensure a new dictionary is necessary prior to beginning development.
+			Once agreed upon, there are several places to go when trying to learn how to create a dictionary.
+		</p>
+		<ul>
+			<li>The <a href="https://pds.nasa.gov/datastandards/documents/sr/current/">PDS4 Standards Reference</a> for basic information on schema and schematrons</li><br>
+			<li><a href="https://nasa-pds.github.io/pds4-information-model/model-lddtool/install/index.html">Local Data Dictionary Tool Installation Guide</a></li><br>
+            <li>Wiki pages with some helpful information on creating Local Dictionaries:
+                <ul>
+                    <li><a href="http://sbndev.astro.umd.edu/wiki/Installing_and_Configuring_LDDTool">Installing and Configuring LDDTool</a></li>
+                    <li><a href="http://sbndev.astro.umd.edu/wiki/Creating_the_Ingest_LDD_Dictionary_Input_File">Creating the Ingest LDD Dictionary Input File</a></li>
+                    <li><a href="http://sbndev.astro.umd.edu/wiki/Running_LDDTool_and_Verifying_the_Output">Running LDDTool and Verifying the Output</a></li>
+                </ul>
+            </li><br />
+            <li>Existing <a href="#discipline-dictionaries">Discipline Dictionaries</a> may provide some help in understanding how to data model</li><br />
+		</ul>
+		<p>
+			In order for a newly created dictionary to be published, it must first be registered with the PDS Namespace Registry. 
+			Create a ticket <a href="https://github.com/NASA-PDS/pds4-information-model/issues/new?assignees=c-suh%2C+jshughes&labels=&template=pds-namespace-request.md&title=%5Bnamespace-registry%5D+add+new+namespace+%22%3Cproposed+namespace+ID%3E%22">here</a> to request your new <a href="#namespaces">namespace</a> be added to the registry.
+		</p>
+		
+		<a class="toTop">Back to top</a>
+	</div>
+	<hr />
+    <div id="submit-new-version">
+        <h2>Submitting A New Version</h2>
+        <p>
+            When a Local Data Dictionary (LDD) Steward is ready to submit a new version of an LDD for release,
+            create a request ticket <a href="https://github.com/NASA-PDS/pdsen-operations/issues/new?assignees=c-suh%2C+elawsgh&labels=ldd-release&template=pds-ldd-release-request.md&title=%5Bldd-release%5D+%3CLDD+Name%3E+LDD+Version%3A%3CLDD_version%3E+IM+Version%3A%3CIM_Version%3E">here</a>.
+        </p>
+        <p>
+            <em>Note: Assume <a href="#dictionary-validation">validation</a> has been completed by steward.</em>
+        </p>
+        <div id="dictionary-validation">
+            <h3>Dictionary Validation</h3>
+            <p>
+                The <b><em>LDD steward</em></b> is encouraged to perform test/validation via one/both of the testing mechanisms:
+            </p>
+            <p>
+                <em>Note: Currently, there is no explicit way to run validate to check out the schemas,
+                    but by reading the schemas into the tool, it will raise an error if they are invalid.</em>
+            </p>
+            <ul>
+                <li>Open in Oxygen and click the red checkbox at the top.</li>
+                <li>Execute latest validate (version 1.16.0+) and specify the schemas via the command-line, for example:
+                    <pre>$ validate -x PDS4_CART_1C00_1932.xsd -S PDS4_CART_1C00_1932.xsd -t PDS4_CART_1C00_1932.xml
+                    </pre></li>
+            </ul>
+            <p>
+                The <b><em>PDS Engineering Node</em></b> will also perform some basic testing and validation when a release
+                is requested to ensure nothing makes it out as &quot;released&quot; that is invalid.
+            </p>
+            <p>
+                If there is an error, an email will be sent to the steward with error message(s).
+            </p>
+            <p>
+                If no error is found, the LDD will be posted to both latest and all schemas pages.
+                An email will be sent to the steward indicating posting is completed.
+            </p>
+        </div>
+        <a class="toTop">Back to top</a>
+    </div>
+    <!-- InstanceEndEditable -->
+</div>
+
+<!--#include virtual="/include/footer.html" --
+
+<!--[if IE]>
+</div>
+<![endif]-->
+</body>
+	<!-- InstanceEnd --></html>

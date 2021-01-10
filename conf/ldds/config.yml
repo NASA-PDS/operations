@@ -1,0 +1,67 @@
+ldd-alt:
+  description: |
+    The Alternate dictionary contains classes that describe sets of data values which are
+    interchangeable with each other.
+ldd-cart:
+  description: |
+    The Cartography Dictionary contains classes, elements, attributes, and rules describing map projections, including
+    both cartographic and lander related definitions and descriptions. The PDS Cartography dictionary is based on and
+    with modifications and extensions applied by PDS as needed for planetary mapping application.
+    utilizes the existing Federal Geographic Data Committee (FGDC) Content Standard for Digital Geospatial Metadata,
+ldd-ctli:
+  name: "Context Type List: Instrument"
+  description: |
+    The CTLI dictionary provides a set of type values for instruments for use in instrument context products.
+ldd-disp:
+  description: |
+    The Display Dictionary contains classes, attributes, and rules for specifying how arrays (images) as stored, should be displayed to users. For example, defining the vertical display direction 'Bottom to Top' or horizontal direction 'Left to Right' and it can provide guidance on mapping multiband arrays for color display (red, green, and blue) or as a movie sequence (video).
+ldd-exo:
+  description: |
+    The exoPlanet Dictionary (namespace: exo) contains classes, attributes, and rules for specifying metadata associated with exoPlanet stars and planets. The dictionary can provide guidance on mapping multiband arrays.
+ldd-geom:
+  description: |
+    The Geometry Dictionary contains classes, attributes, and rules for specifying the geometry parameters associated with science observations.
+ldd-img:
+  description: |
+    The Imaging Dictionary contains classes, attributes, and rules for specifying the metadata associated with imaging and spectrometer data products.
+ldd-msn:
+  description: |
+    The sub-directory for the Mission Information class namespace.
+ldd-multi:
+  name: Multidimensional
+  description: |
+    The Multi dictionary contains classes that describe the composition of multidimensional data consisting of Array (and Array subclass) data objects. It provides a way to associated data objects and align the objects in general multi-dimensional structures.
+ldd-nucspec:
+  name: Nuclear Spectroscopy
+  description: |
+    The Nuclear Spectroscopy dictionary provides classes, attributes, and rules for describing the circumstances surrounding nuclear spectroscopy observations.
+ldd-particle:
+  description: |
+    The Particle dictionary contains classes that describe the composition of multidimensional particle data consisting of Array (and Array subclass) data objects.
+ldd-proc:
+  description: |
+    The Processing_Information Dictionary contains detailed information regarding the history of processing performed on data product(s) in order to produce the current product.
+ldd-rings:
+  description: |
+    The Rings Dictionary contains classes supporting planetary ring observations including ring-specific geometric parameters.
+ldd-spectral:
+  description: |
+    The Spectral (sp) Discipline Dictionary contains classes for defining the spectral bin characteristics (in wavelength, frequency, or wave number) of a data product.
+ldd-speclib:
+  description: |
+    The Spectral Library Data Dictionary defines the metadata terms that describe laboratory spectral measurements, including classification of the samples measured.
+ldd-img_surface:
+  description: |
+    The Surface Imaging Dictionary contains classes, attributes, and rules for specifying the metadata associated with imaging and spectrometer data products of surface missions.
+ldd-msn_surface:
+  description: |
+    The Surface Mission Dictionary contains classes, attributes, and rules for specifying metadata elements which are specific to the data products of surface missions but are common among multiple such missions.
+ldd-survey:
+  description: |
+    The Survey dictionary provides classes, attributes, and rules for describing the circumstances surrounding sky survey observations.
+ldd-wave:
+  description: |
+    The Wave dictionary contains classes that describe the composition of multidimensional wave data consisting of Array (and Array subclass) data objects.
+ldd-msss_cam_mh:
+  description: |
+    This dictionary is for a class of cameras developed by Malin Space Science Systems (MSSS) that share a common architecture or digital electronics assembly. Example cameras include Mastcam, MAHLI, MARDI, Mastcam-Z, SHERLOC-Watson and SHERLOC-ACI
