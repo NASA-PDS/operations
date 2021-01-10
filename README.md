@@ -56,11 +56,48 @@ bin/pds-stats.py --github_repos validate mi-label transform --token $GITHUB_TOKE
 
 ---
 
-# LDD Tools
+# ldd-corral.py
 
-## PDS4 IM Development Release
+This utility is used to autonomously generate the [data dictionaries web page](https://pds.nasa.gov/datastandards/dictionaries/index.shtml) for each PDS4 Build.
 
-1. Execute `ldds/prep_for_ldd_release.sh` script as follows to create new branches in all Discipline LDD repos:
+This software determines all the discipline LDDs to be included with this release, auto-generates the web page, and downloads and stages all the discipline LDDs from the LDD Github repos.
+
+## Config
+
+The [ldd-corral config](https://github.com/NASA-PDS/pdsen-operations/blob/master/conf/ldds/config.yml) can be modified to add additional discipline LDDs to the workflow.
+
+Format:
+
+```
+<github-repo-name>:
+  name: a title to be used in the output web page that overrides the <name> from the repo IngestLDD
+  description: |
+    description here
+```
+
+## Usage
+
+For latest usage capabilities:
+```
+ bin/ldds/ldd-corral.py  --help
+```
+
+Base usage example (note: GITHUB_TOKEN must be set):
+```
+bin/ldds/ldd-corral.py  --pds4_version 1.15.0.0 --token $GITHUB_TOKEN
+```
+
+**Default outputs:**
+* Web page:  /tmp/ldd-release/dd-summary.html
+* Discipline LDDs: /tmp/ldd-release/pds4
+
+---
+
+# LDD Utility Scripts
+
+## prep_for_ldd_release.sh
+
+1. Execute `bin/prep_for_ldd_release.sh` script as follows to create new branches in all Discipline LDD repos:
 
 TBD
 
