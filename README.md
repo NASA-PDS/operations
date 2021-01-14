@@ -84,6 +84,7 @@ For latest usage capabilities:
 
 Base usage example (note: GITHUB_TOKEN must be set):
 ```
+source $HOME/.virtualenvs/pdsen-ops/bin/activate
 bin/ldds/ldd-corral.py  --pds4_version 1.15.0.0 --token $GITHUB_TOKEN
 ```
 
