@@ -31,7 +31,8 @@ branch_suffix=
 
 BRANCH_NAME="IM_release_$release$branch_suffix"
 
-DISCIPLINE_LDD_REPOS="ldd-m2020 ldd-mess"
+#DISCIPLINE_LDD_REPOS="ldd-m2020 ldd-mess"
+DISCIPLINE_LDD_REPOS="ldd-multi ldd-particle ldd-wave ldd-rings ldd-img ldd-disp ldd-msn ldd-msn_surface ldd-proc ldd-img_surface ldd-ctli ldd-speclib ldd-msss_cam_mh ldd-cart ldd-spectral ldd-nucspec ldd-survey ldd-chan1"
 #DISCIPLINE_LDD_REPOS="ldd-multi ldd-particle ldd-wave ldd-rings ldd-img ldd-disp ldd-msn ldd-msn_surface ldd-proc ldd-img_surface ldd-ctli ldd-speclib ldd-msss_cam_mh ldd-cart ldd-geom ldd-spectral ldd-nucspec ldd-survey ldd-chan1"
 BASE_CLONE_URL=git@github.com:pds-data-dictionaries
 GITHUB_API_URL="https://api.github.com/repos/pds-data-dictionaries"
@@ -56,7 +57,6 @@ for repo in $DISCIPLINE_LDD_REPOS; do
 
     echo "copying github action and new versions file"
     cp ldd-template/.github/workflows/*.yml ${repo}/.github/workflows/
-    cp ldd-template/pds4_versions.txt ${repo}/
 
     cd ${repo}
 
@@ -75,7 +75,7 @@ for repo in $DISCIPLINE_LDD_REPOS; do
     # add the updated
     git status
     git add -A .
-    git commit -m "Updated workflows to better manage pds4 versions"
+    git commit -m "Updated release CI/CD workflow"
     git push origin master
 
     # cleanup
