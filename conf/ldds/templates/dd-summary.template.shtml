@@ -30,7 +30,7 @@
 <!-- Sidebar -->
 <div id="sidebar">
 	<!-- InstanceBeginEditable name="leftSidebar" -->
-	<!--#include virtual="/include/ldd_toc.html" -->
+	<!--#include virtual="/include/toc_ldd.html" -->
 	<!-- InstanceEndEditable -->
 </div>
 
