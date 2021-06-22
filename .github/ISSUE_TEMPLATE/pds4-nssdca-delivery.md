@@ -13,6 +13,8 @@ assignees: c-suh, elawsgh
 
 **NSSDCA Delivery Package**: _please upload the files output by PDS Deep Archive as a TAR.GZ or ZIP file here, or supply a URL to download from_
 
+**Validation report**: _please upload a TXT report or screenshot of PDS4 Validate Tool run on your bundle. NSSDCA only accepts valid PDS4 bundles. be sure you run validate with the `-R pds4.bundle` flag enabled to ensure all integrity checks are completed successfully._
+
 ----
 
 ## Engineering Node Process

@@ -30,7 +30,7 @@
 <!-- Sidebar -->
 <div id="sidebar">
 	<!-- InstanceBeginEditable name="leftSidebar" -->
-	<!--#include virtual="/include/ldd_toc.html" -->
+	<!--#include virtual="/include/toc_ldd.html" -->
 	<!-- InstanceEndEditable -->
 </div>
 
@@ -85,14 +85,11 @@
 				<h4>PDS (pds)</h4>
 				<p>This directory contains the XML Schema and Schematron files under the Planetary Data System (PDS) namespace. The JSON file contains an instance of the data dictionary in JavaScript Object Notation.</p>
 				<ul>
-					<li><b>Last Updated:</b> 01/05/2020</li>
-					<ul>
-						<li><a href="/pds4/pds/v1/PDS4_PDS_{{pds4_alpha_version}}.xsd">PDS4_PDS_{{pds4_alpha_version}}.xsd</a></li>
-						<li><a href="/pds4/pds/v1/PDS4_PDS_{{pds4_alpha_version}}.sch">PDS4_PDS_{{pds4_alpha_version}}.sch</a></li>
-						<li><a href="/pds4/pds/v1/PDS4_PDS_{{pds4_alpha_version}}.xml">PDS4_PDS_{{pds4_alpha_version}}.xml</a></li>
-						<li><a href="/pds4/pds/v1/PDS4_PDS_JSON_{{pds4_alpha_version}}.JSON">PDS4_PDS_JSON_{{pds4_alpha_version}}.JSON</a></li>
-						<li><a href="/pds4/pds/v1/PDS4_PDS_{{pds4_alpha_version}}.zip">PDS4_PDS_{{pds4_alpha_version}}.zip</a></li>
-					</ul>
+				  <li><a href="/pds4/pds/v1/PDS4_PDS_{{pds4_alpha_version}}.xsd">PDS4_PDS_{{pds4_alpha_version}}.xsd</a></li>
+				  <li><a href="/pds4/pds/v1/PDS4_PDS_{{pds4_alpha_version}}.sch">PDS4_PDS_{{pds4_alpha_version}}.sch</a></li>
+				  <li><a href="/pds4/pds/v1/PDS4_PDS_{{pds4_alpha_version}}.xml">PDS4_PDS_{{pds4_alpha_version}}.xml</a></li>
+				  <li><a href="/pds4/pds/v1/PDS4_PDS_JSON_{{pds4_alpha_version}}.JSON">PDS4_PDS_JSON_{{pds4_alpha_version}}.JSON</a></li>
+				  <li><a href="/pds4/pds/v1/PDS4_PDS_{{pds4_alpha_version}}.zip">PDS4_PDS_{{pds4_alpha_version}}.zip</a></li>
 				</ul>
 				<a class="toTop">Back to top</a>
 			</div>
