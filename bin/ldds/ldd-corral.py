@@ -249,7 +249,8 @@ def generate_report(ldd_summary, pds4_version, pds4_alpha_version, output, confi
                 'zip_path': _assets['zip'].replace(OUTPUT_PATH, ''),
                 'zip_fname': os.path.basename(_assets['zip']),
                 'issues_url': ISSUES_URL,
-                'github_url': _ldd_summary_repo['repo'].homepage or _ldd_summary_repo['repo'].clone_url.replace('.git', '')
+                'github_url': _ldd_summary_repo['repo'].homepage or
+                              _ldd_summary_repo['repo'].clone_url.replace('.git', '')
             }
             _renderer = Renderer()
             _template = resource_string(__name__, os.path.join(LDD_TEMPLATES_DIR, 'ldd.template.html'))
@@ -323,7 +324,7 @@ def main():
         # get all the discipline repos
         generate_release(token, gh, args)
 
-    except Exception as e:
+    except Exception:
         traceback.print_exc()
         sys.exit(1)
 
