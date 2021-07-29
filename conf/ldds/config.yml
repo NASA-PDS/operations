@@ -17,6 +17,9 @@ ldd-ctli:
 ldd-disp:
   description: |
     The Display Dictionary contains classes, attributes, and rules for specifying how arrays (images) as stored, should be displayed to users. For example, defining the vertical display direction 'Bottom to Top' or horizontal direction 'Left to Right' and it can provide guidance on mapping multiband arrays for color display (red, green, and blue) or as a movie sequence (video).
+ldd-ebt:
+  description: |
+    The Earth-Based Telescope Dictionary contains classes, attributes, and rules for specifying the metadata associated with observing parameters, provenance, and geometry relevant to ground-based telescopes on Earth and for Earth-orbiting (or Lagrange point) telescopes.
 ldd-exo:
   description: |
     The exoPlanet Dictionary (namespace: exo) contains classes, attributes, and rules for specifying metadata associated with exoPlanet stars and planets. The dictionary can provide guidance on mapping multiband arrays.
