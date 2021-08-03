@@ -114,11 +114,8 @@
 	<div id="namespaces">
 		<h2>Namespaces</h2>
 		<p>
-			The PDS4 XML Schema and Schematron files are organized by namespace.
-			Links to documentation on a particular dictionary can be found <a href="https://github.com/pds-data-dictionaries/PDS-Data-Dictionaries.github.io/blob/master/docs/source/overview.md">here</a>.
-		</p>
-		<p>
-			For a list of existing namespaces, refer to the <a href="/datastandards/dictionaries/pds-namespace-registry.pdf">PDS Namespace Registry</a>.
+			The PDS4 XML Schema and Schematron files are organized by namespace. 
+			For a list of existing namespaces, refer to the <a href="https://github.com/NASA-PDS/pds4-information-model/raw/main/docs/namespace-registry/pds-namespace-registry.pdf">PDS Namespace Registry</a>.
 		</p>
 
 		<a class="toTop">Back to top</a>
@@ -131,6 +128,7 @@
 			Once agreed upon, there are several places to go when trying to learn how to create a dictionary.
 		</p>
 		<ul>
+            <li>The <a href="https://pds-data-dictionaries.github.io/development/ldd-create.html">PDS Data Dictionaries GitHub page</a></li><br>
 			<li>The <a href="https://pds.nasa.gov/datastandards/documents/sr/current/">PDS4 Standards Reference</a> for basic information on schema and schematrons</li><br>
 			<li><a href="https://nasa-pds.github.io/pds4-information-model/model-lddtool/install/index.html">Local Data Dictionary Tool Installation Guide</a></li><br>
             <li>Wiki pages with some helpful information on creating Local Dictionaries:
@@ -142,10 +140,9 @@
             </li><br />
             <li>Existing <a href="#discipline-dictionaries">Discipline Dictionaries</a> may provide some help in understanding how to data model</li><br />
 		</ul>
-		<p>
-			In order for a newly created dictionary to be published, it must first be registered with the PDS Namespace Registry. 
-			Create a ticket <a href="https://github.com/NASA-PDS/pds4-information-model/issues/new?assignees=c-suh%2C+jshughes&labels=&template=pds-namespace-request.md&title=%5Bnamespace-registry%5D+add+new+namespace+%22%3Cproposed+namespace+ID%3E%22">here</a> to request your new <a href="#namespaces">namespace</a> be added to the registry.
-		</p>
+        <p>
+            Once all information is gathered, create a ticket <a href="https://github.com/NASA-PDS/pdsen-operations/issues/new?assignees=c-suh&labels=enhancement%2C+ldd-request%2C+p.must-have&template=-ldd-request--initialize-new-pds-ldd.md&title=%5Bldd-request%5D+Create+new+LDD+%22%3Cproposed+namespace+ID%3E%22">here</a> to initialize a new PDS LDD and register it with the PDS Namespace Registry.
+        </p>
 		
 		<a class="toTop">Back to top</a>
 	</div>
@@ -153,8 +150,10 @@
     <div id="submit-new-version">
         <h2>Submitting A New Version</h2>
         <p>
-            When a Local Data Dictionary (LDD) Steward is ready to submit a new version of an LDD for release,
-            create a request ticket <a href="https://github.com/NASA-PDS/pdsen-operations/issues/new?assignees=c-suh%2C+elawsgh&labels=ldd-release&template=pds-ldd-release-request.md&title=%5Bldd-release%5D+%3CLDD+Name%3E+LDD+Version%3A%3CLDD_version%3E+IM+Version%3A%3CIM_Version%3E">here</a>.
+            When a Local Data Dictionary (LDD) Steward is ready to submit a new version of an LDD for release:
+        </p>
+        <p>
+            <a class="button" href="https://github.com/NASA-PDS/pdsen-operations/issues/new?assignees=c-suh%2C+elawsgh&labels=ldd-release&template=-ldd-request--pds-ldd-release.md&title=%5Bldd-release%5D+%3CLDD+Name%3E+LDD+Version%3A%3CLDD_version%3E+IM+Version%3A%3CIM_Version%3E">Submit LDD Release Request</a>
         </p>
         <p>
             <em>Note: Assume <a href="#dictionary-validation">validation</a> has been completed by steward.</em>
