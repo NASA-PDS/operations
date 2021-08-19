@@ -20,7 +20,8 @@ from pds_github_util.branches.git_actions import clone_checkout_branch
 
 GIT_URL_BASE = 'git@github.com:{}.git'
 BASE_DIR = '/tmp'
-BASE_REPO = 'pds-template-repo-generic'
+BASE_REPO = 'pds-template-repo-java'
+IGNORE_REPOS = ['PDS-Data-Dictionaries.github.io', 'PDS4-LDD-Issue-Repo']
 
 GITHUB_ORG = 'NASA-PDS'
 
@@ -53,22 +54,38 @@ def clone_repo(path, git_url):
     cmd = [f'git clone {git_url} {path}']
     run_cmd(cmd)
 
+
 def update_action(token, gh, args, base_repo):
     """Update Github Actions
 
     Loop through all repos and update their github actions with the template
     """
     for _repo in gh.repositories_by(args.github_org):
-        if _repo.name != base_repo:
+        if _repo.name != base_repo and _repo.name not in IGNORE_REPOS:
             logger.info(f'updating {_repo.name}')
             output_dir = os.path.join(BASE_DIR, _repo.name)
-            clone_repo(output_dir, _repo.git_url)
+            clone_repo(output_dir, _repo.ssh_url)
 
             # update action
-            cmd = [f'./update_action.sh {output_dir}']
+            cmd = [f'./update_action.sh {os.path.join(BASE_DIR, args.base_repo)} {output_dir} {args.token}']
             run_cmd(cmd)
 
-            sys.exit(0)
+
+def update_templates(token, gh, args, base_repo):
+    """Update Github Issue Templates.
+
+    Loop through all repos and update their github issue templates with the template repo
+    """
+    for _repo in gh.repositories_by(args.github_org):
+        if _repo.name != base_repo and _repo.name not in IGNORE_REPOS:
+            logger.info(f'updating {_repo.name}')
+            output_dir = os.path.join(BASE_DIR, _repo.name)
+            clone_repo(output_dir, _repo.ssh_url)
+
+            # update action
+            cmd = [f'./update_templates.sh {os.path.join(BASE_DIR, args.base_repo)} {output_dir} {args.token}']
+            run_cmd(cmd)
+
 
 def main():
     """main"""
@@ -108,6 +125,8 @@ def main():
 
         if args.update_action:
             update_action(token, gh, args, base_repo)
+        if args.update_templates:
+            update_templates(token, gh, args, base_repo)
 
     except Exception as e:
         traceback.print_exc()

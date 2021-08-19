@@ -69,6 +69,9 @@ for repo in "${dLDDs[@]}"; do
     echo "copying github action"
     cp ldd-template/.github/workflows/*.yml "${repo}"/.github/workflows/
 
+    echo "copying pull request template"
+    cp ldd-template/.github/pull_request_template.md "${repo}"/.github/pull_request_template.md
+
     cd "${repo}" || exit
 
     # set admin user
@@ -101,7 +104,6 @@ for repo in "${dLDDs[@]}"; do
 
     echo
     echo
-    exit
 done
 
 rm -fr ldd-template
