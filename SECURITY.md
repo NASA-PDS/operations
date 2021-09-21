@@ -1,16 +1,12 @@
-# Security Policy
+# 👮‍♀️ Security Policy
 
-## Supported Versions
+This document describes the security policy of PDS Engineering Node Operations.
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+## 📀 Supported Versions
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 1.18.2   | :white_check_mark: |
-| 1.17.5   | :white_check_mark: |
-| < 1.17.5   | :x: |
+No versions of this software are supported at the present time.
 
-## Reporting a Vulnerability
 
-Please create a new issue using the [Vulnerability Issue template](https://github.com/NASA-PDS-Incubator/validate/issues/new?assignees=jordanpadams&labels=triage-needed%2C+security&template=vulnerability-issue.md&title=%5BSECURITY%5D+Title+Here)
+## 🚨 Reporting a Vulnerability
+
+To report a vulnerability, [please submit an issue on our tracker](https://github.com/NASA-PDS/pdsen-operations/issues/new?template=vulnerability-issue.md).

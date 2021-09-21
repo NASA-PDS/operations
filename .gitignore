@@ -1,7 +1,25 @@
+# Python build, virtual environments, and buildouts
+venv
+__pycache__/
+dist/
+build/
+*.egg-info
+.*.cfg
+develop-eggs/
+.python-eggs/
+.eggs/
+pip-selfcheck.json
+.python-version
+
+# Python testing artifacts
+.coverage
+htmlcov
+.tox/
+
 # Object files
 *.o
 *.pkl
-*.pyc
+*.py[ocd]
 
 # Libraries
 *.lib
@@ -12,15 +30,20 @@
 *.project
 *.classpath
 
-# IntelliJ files
+# Editor support
 .idea/
 *.iml
+.vscode
+*.sublime-*
+
 
 # Shared objects (inc. Windows DLLs)
 *.dll
 *.so
 *.so.*
 *.dylib
+lib/
+lib64/
 
 # Executables
 *.exe
@@ -29,16 +52,22 @@
 
 # Temporary files
 *~
+.*.swp
+var/
 
 # other stuff
+*.log
 *.xpr
-*.swp
+bin/
 .*.swp
-*.sublime-*
-*.DS_Store
-**\#*
 
-# Java stuff
-*.javac
-.gwt/
-target/
+# OS-specific artifacts
+.DS_Store
+._*
+
+# Exclusions
+!.coveragerc
+!.editorconfig
+!.gitattributes
+!.gitignore
+!.gitkeep
