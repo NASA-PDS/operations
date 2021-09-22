@@ -4,12 +4,12 @@ about: Request EN to release a new version of an LDD off the nominal build sched
   or against a past PDS4 IM Version.
 title: "[ldd-release] <LDD Name> LDD Version:<LDD_version> IM Version:<IM_Version>"
 labels: ldd-release
-assignees: c-suh, elawsgh
+assignees: c-suh, elawsgh, viviant100
 
 ---
 
 * **Is the LDD IngestLDD in Github?** _Yes or no_
-* **Has the LDD Namespace been registered in the [Namespace Registry](https://pds.nasa.gov/datastandards/schema/pds-namespace-registry.pdf)?** _Yes or no_
+* **Has the LDD Namespace been registered in the [Namespace Registry](https://github.com/NASA-PDS/pds4-information-model/raw/main/docs/namespace-registry/pds-namespace-registry.pdf)?** _Yes or no_
 * **Need-by date**: _Please indicate a drop-dead need-by date for this release_
 * **Need-by date rationale**: _For quick turnarounds of releases, please indicate a rationale for the condensed schedule_
 
