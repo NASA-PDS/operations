@@ -49,6 +49,9 @@ ldd-particle:
 ldd-proc:
   description: |
     The Processing_Information Dictionary contains detailed information regarding the history of processing performed on data product(s) in order to produce the current product.
+ldd-radar:
+  description: |
+    The Radar dictionary describes the circumstances surrounding radar observations.
 ldd-rings:
   description: |
     The Rings Dictionary contains classes supporting planetary ring observations including ring-specific geometric parameters.
