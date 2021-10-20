@@ -14,9 +14,6 @@ ldd-ctli:
   name: "Context Type List: Instrument"
   description: |
     The CTLI dictionary provides a set of type values for instruments for use in instrument context products.
-ldd-dart:
-  description: |
-    The Double Asteroid Redirection Test Dictionary contains classes specific to the NASA DART mission and, potentially, the concurrent LICIACube mission.
 ldd-disp:
   description: |
     The Display Dictionary contains classes, attributes, and rules for specifying how arrays (images) as stored, should be displayed to users. For example, defining the vertical display direction 'Bottom to Top' or horizontal direction 'Left to Right' and it can provide guidance on mapping multiband arrays for color display (red, green, and blue) or as a movie sequence (video).
