@@ -25,9 +25,6 @@ from pds_github_util.assets.assets import unzip_asset
 from pds_github_util.branches.git_actions import clone_checkout_branch
 from pds_github_util.utils.ldd_gen import find_primary_ingest_ldd, convert_pds4_version_to_alpha
 
-# LDDs In Development
-IN_DEV_LDDS = ['ldd-ml']
-
 # Github Org containing Discipline LDDs
 GITHUB_ORG = 'pds-data-dictionaries'
 
