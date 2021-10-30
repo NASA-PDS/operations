@@ -30,8 +30,8 @@ release=$1
 #rel_type="release"
 #branch_suffix=
 
-if [ -z "$PDSEN_CI_TOKEN" ]; then
-  echo "Must set PDSEN_CI_TOKEN environment variable prior to execution"
+if [ -z "$PDSEN_OPS_TOKEN" ]; then
+  echo "Must set PDSEN_OPS_TOKEN environment variable prior to execution"
 fi
 
 BRANCH_NAME="release/$release"
@@ -75,8 +75,8 @@ for repo in "${dLDDs[@]}"; do
     cd "${repo}" || exit
 
     # set admin user
-    git config --local user.email "pdsen-ci@jpl.nasa.gov"
-    git config --local user.name "PDSEN CI Bot"
+    git config --local user.email "pds-ops@jpl.nasa.gov"
+    git config --local user.name "PDSEN Ops"
 
     # delete branch if it exists
     # NOTE: errors may be thrown here if branch doesn't exist
@@ -100,7 +100,7 @@ for repo in "${dLDDs[@]}"; do
     rm -fr "${repo}"
 
     # create PR
-    curl -X POST -u "pdsen-ci:${PDSEN_CI_TOKEN}" -d "$PR_JSON" "$GITHUB_API_URL/${repo}/pulls"
+    curl -X POST -u "pds-ops:${PDSEN_OPS_TOKEN}" -d "$PR_JSON" "$GITHUB_API_URL/${repo}/pulls"
 
     echo
     echo
