@@ -64,6 +64,8 @@ var/
 .DS_Store
 ._*
 
+\#*\#
+
 # Exclusions
 !.coveragerc
 !.editorconfig
