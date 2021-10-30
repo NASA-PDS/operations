@@ -100,8 +100,7 @@ for repo in "${dLDDs[@]}"; do
     rm -fr "${repo}"
 
     # create PR
-    echo curl -X POST -u "pdsen-ci:${PDSEN_CI_TOKEN}" -d "$PR_JSON" "$GITHUB_API_URL/${repo}/pulls"
-    #curl -X POST -u "pdsen-ci:${PDSEN_CI_TOKEN}" -d "$PR_JSON" "$GITHUB_API_URL/${repo}/pulls"
+    curl -X POST -u "pdsen-ci:${PDSEN_CI_TOKEN}" -d "$PR_JSON" "$GITHUB_API_URL/${repo}/pulls"
 
     echo
     echo
