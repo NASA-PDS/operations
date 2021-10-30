@@ -58,7 +58,6 @@ var/
 # other stuff
 *.log
 *.xpr
-bin/
 .*.swp
 
 # OS-specific artifacts

@@ -6,7 +6,7 @@
 # * loop through discipline LDD repos and:
 #   * clone the repo
 #   * copy the github action from the template repo to the LDD repo
-#   * push to master
+#   * push to main
 #   
 
 usage () {
@@ -52,7 +52,7 @@ PR_JSON="{
   \"title\": \"PDS4 IM Release $release\",
   \"body\": \"Prep for release of LDD for IM Release $release\",
   \"head\": \"$BRANCH_NAME\",
-  \"base\": \"master\"
+  \"base\": \"main\"
 }"
 
 cd /tmp || exit
@@ -100,7 +100,8 @@ for repo in "${dLDDs[@]}"; do
     rm -fr "${repo}"
 
     # create PR
-    curl -X POST -u "pdsen-ci:${PDSEN_CI_TOKEN}" -d "$PR_JSON" "$GITHUB_API_URL/${repo}/pulls"
+    echo curl -X POST -u "pdsen-ci:${PDSEN_CI_TOKEN}" -d "$PR_JSON" "$GITHUB_API_URL/${repo}/pulls"
+    #curl -X POST -u "pdsen-ci:${PDSEN_CI_TOKEN}" -d "$PR_JSON" "$GITHUB_API_URL/${repo}/pulls"
 
     echo
     echo
