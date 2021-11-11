@@ -1,7 +1,7 @@
 ---
 name: "[lid-request] Reserve PDS4 Bundle LID"
 about: Submit a PDS4 Bundle LID for approval
-title: "[lid-request] <replaced this with proposed bundle LID>"
+title: "[lid-request] <replace this with proposed bundle LID>"
 labels: lid-request
 assignees: rchenatjpl
 
