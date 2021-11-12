@@ -17,4 +17,4 @@ assignees: rchenatjpl
 
 ---
 
-See the list of PDS4 Bundle LIDs at https://pds-engineering.jpl.nasa.gov/content/lids/bundle.
+See all PDS4 Bundle LIDs at https://pds-engineering.jpl.nasa.gov/content/bundle-lids.
