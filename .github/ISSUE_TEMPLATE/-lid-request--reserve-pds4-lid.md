@@ -1,13 +1,13 @@
 ---
 name: "[lid-request] Reserve PDS4 LID"
 about: Submit a PDS4 LID for approval
-title: "[lid-request] <replace this with proposed LID>"
+title: "[lid-request] <replace this with proposed LID or common string of multiple LIDs>"
 labels: lid-request
 assignees: rchenatjpl
 
 ---
 
-* **PDS4 LID:** _proposed LID_
+* **PDS4 LID:** _proposed LID or LIDs_
 
 * **LID Type:** _e.g. Bundle, Context_
   
