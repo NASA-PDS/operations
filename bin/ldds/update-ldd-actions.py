@@ -81,8 +81,6 @@ def update_actions(token, gh, args):
                 copyfile(os.path.join(_template_repo_path, GITHUB_ACTION_PATH, _filename), _action_file)
                 commit(_action_file, 'Apply latest LDD Generation updates')
 
-        break
-
 
 def cleanup_dir(path):
     if os.path.isdir(path):
