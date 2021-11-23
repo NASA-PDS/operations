@@ -3,13 +3,15 @@ name: Deploy System Build
 about: Template for deploying system build
 title: ''
 labels: ''
-assignees: c-suh, viviant100, jordanpadams, tloubrieu-jpl
+assignees: c-suh, jordanpadams, tloubrieu-jpl, viviant100
 
 ---
 
 - [ ] Update latest software release on nasa-pds.github.io
 
-- [ ] [Discipline LDD Release](https://wiki.jpl.nasa.gov/display/PDSEN/dLDD+Release+Procedures#dLDDReleaseProcedures-StageLDDRelease)
+- [ ] Discipline LDD Release
+   - [ ] [Stage LDD Release](https://wiki.jpl.nasa.gov/display/PDSEN/dLDD+Release+Procedures#dLDDReleaseProcedures-StageLDDRelease)
+   - [ ] [Post Release Updates](https://wiki.jpl.nasa.gov/display/PDSEN/dLDD+Release+Procedures#dLDDReleaseProcedures-PostReleaseUpdates)
 
 - [ ] Deployment of Test Environment
     - [ ] TBD components to deploy
