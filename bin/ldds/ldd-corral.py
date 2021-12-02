@@ -174,7 +174,7 @@ def extract_metadata(ingest_ldd):
 
 
 def is_discipline_ldd(repo, dict_type, config):
-    if dict_type == DISC_LDD_DICT_TYPE or repo.name in config.keys():
+    if dict_type == DISC_LDD_DICT_TYPE and repo.name in config.keys():
         return True
 
     return False
