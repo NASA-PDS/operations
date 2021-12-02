@@ -135,7 +135,7 @@ def get_ingest_ldd(token, repo):
     cleanup_dir(_staging)
 
     _remote_url = repo.git_url.replace('git://', f'https://{token}:x-oauth-basic@')
-    cloned_repo = clone_checkout_branch(_remote_url, _staging, 'master')
+    cloned_repo = clone_checkout_branch(_remote_url, _staging, 'main')
 
     return find_primary_ingest_ldd(f'{cloned_repo.working_tree_dir}/src')
 
@@ -174,9 +174,8 @@ def extract_metadata(ingest_ldd):
 
 
 def is_discipline_ldd(repo, dict_type, config):
-    if repo.name not in IN_DEV_LDDS:
-        if dict_type == DISC_LDD_DICT_TYPE or repo.name in config.keys():
-            return True
+    if dict_type == DISC_LDD_DICT_TYPE or repo.name in config.keys():
+        return True
 
     return False
 
