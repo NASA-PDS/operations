@@ -43,7 +43,7 @@ SKIP_REPOS = ['ldd-template', 'PDS-Data-Dictionaries.github.io', 'dd-library']
 ISSUES_URL = "https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues"
 
 # LDD configuration base directory
-GITHUB_ACTION_PATH = os.path.join('.github', 'workflows')
+GITHUB_ACTION_PATH = os.path.join('github', 'workflows')
 
 # Quiet github3 logging
 _logger = logging.getLogger('github3')
@@ -96,7 +96,7 @@ def invoke(argv):
     '''
     _logger.debug('🏃‍♀️ Running «%r»', argv)
     try:
-        cp = subprocess.run(argv, stdin=subprocess.DEVNULL, capture_output=True, check=True)
+        cp = subprocess.run(argv, stdin=subprocess.DEVNULL, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
         _logger.debug('🏁 Run complete, rc=%d', cp.returncode)
         _logger.debug('Stdout = «%s»', cp.stdout.decode('utf-8'))
         _logger.debug('Stderr = «%s»', cp.stderr.decode('utf-8'))
