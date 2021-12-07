@@ -38,4 +38,6 @@ assignees: c-suh
 <!-- For internal use by PDS EN Operations Team-->
 **Engineering Details**
 - [ ] Complete [Initializing New LDD procedure](https://pds-data-dictionaries.github.io/development/ldd-create.html#initializing-new-ldd)
-- [ ] Update [LDD script config](https://github.com/NASA-PDS/pdsen-operations/blob/master/conf/ldds/config.yml)
+- [ ] If discipline LDD
+  - [ ] update [LDD script config](https://github.com/NASA-PDS/pdsen-operations/blob/master/conf/ldds/config.yml)
+  - [ ] create directory, index files, and symlink on relevant machine
