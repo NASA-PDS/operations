@@ -40,4 +40,5 @@ assignees: c-suh
 - [ ] Complete [Initializing New LDD procedure](https://pds-data-dictionaries.github.io/development/ldd-create.html#initializing-new-ldd)
 - [ ] If discipline LDD
   - [ ] update [LDD script config](https://github.com/NASA-PDS/pdsen-operations/blob/master/conf/ldds/config.yml)
-  - [ ] create directory, index files, and symlink on relevant machine
+  - [ ] create directory and index files for Git
+  - [ ] create symlink on all machines
