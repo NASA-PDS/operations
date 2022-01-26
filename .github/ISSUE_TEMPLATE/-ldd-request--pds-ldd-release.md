@@ -4,7 +4,7 @@ about: Request EN to release a new version of an LDD off the nominal build sched
   or against a past PDS4 IM Version.
 title: "[ldd-release] <LDD Name> LDD Version:<LDD_version> IM Version:<IM_Version>"
 labels: ldd-release
-assignees: c-suh, elawsgh, viviant100
+assignees: c-suh, viviant100
 
 ---
 
