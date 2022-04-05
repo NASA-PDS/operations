@@ -3,7 +3,7 @@ name: Task
 about: Low level task or action that is often too granular for testing, but helps
   towards progress on an Epic or parent story
 title: ''
-labels: B12.1, skip-i&t
+labels: B13.0, skip-i&t
 assignees: ''
 
 ---
