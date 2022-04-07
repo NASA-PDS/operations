@@ -25,6 +25,10 @@ from pds_github_util.assets.assets import unzip_asset
 from pds_github_util.branches.git_actions import clone_checkout_branch
 from pds_github_util.utils.ldd_gen import find_primary_ingest_ldd, convert_pds4_version_to_alpha
 
+
+# LDDs In Development
+IN_DEV_LDDS = ['ldd-wave']
+
 # Github Org containing Discipline LDDs
 GITHUB_ORG = 'pds-data-dictionaries'
 
@@ -174,8 +178,9 @@ def extract_metadata(ingest_ldd):
 
 
 def is_discipline_ldd(repo, dict_type, config):
-    if dict_type == DISC_LDD_DICT_TYPE and repo.name in config.keys():
-        return True
+    if repo.name not in IN_DEV_LDDS:
+        if dict_type == DISC_LDD_DICT_TYPE and repo.name in config.keys():
+            return True
 
     return False
 
