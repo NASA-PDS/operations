@@ -33,11 +33,12 @@ assignees: c-suh, viviant100
 * **GitHub Tagged Release of LDD**:
 
 <!-- PDS4 IM version here -->
-* **PDS4 IM version to release with88:
+* **PDS4 IM version to release with**:
 
 _NOTE: A code freeze is expected for this LDD repo as soon as this request is submitted in order to avoid collision with additional changes. Once this ticket has been closed, active development may resume. If the LDD to release is not in the repo, PDS Operations will upload those files to the repo._
 
 ### Latest LDD is NOT in Github
+
 * **LDD**: _Name of LDD Ready for release_
 * **LDD Submission Package (.zip)**: _zip consisting of the following files generated from LDDTool_
     * .xsd – XML Schema file
