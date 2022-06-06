@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Script to update discipline LDD repos with the ldd-template Github action:
+# Script to update discipline LDD repos with the template Github action:
 # 
-# * clone ldd-template repo
+# * clone template repo
 # * loop through discipline LDD repos and:
 #   * clone the repo
 #   * copy the github action from the template repo to the LDD repo
@@ -10,7 +10,7 @@
 #   
 
 usage () {
-    echo "$(basename $0) <pds4_release_number>"
+    echo "$(basename $0) <pds4_release_number> [<repo-name>]"
     echo "          * pds4_release_number - e.g. 1.15.0.0"
     echo
     exit 1
@@ -21,14 +21,7 @@ if [ $# -lt 1 ]; then
 fi
 
 release=$1
-
-#release_alpha=$(python << END
-#from pds_github_util.utils.ldd_gen import convert_pds4_version_to_alpha
-#print(convert_pds4_version_to_alpha("$release"))
-#END
-#)
-#rel_type="release"
-#branch_suffix=
+repo=$2
 
 if [ -z "$PDSEN_OPS_TOKEN" ]; then
   echo "Must set PDSEN_OPS_TOKEN environment variable prior to execution"
@@ -37,40 +30,43 @@ fi
 BRANCH_NAME="release/$release"
 
 dLDDs=()
-while read -r line; do
-  if [[ "$line" == ldd-*: ]]; then
-    dLDDs+=("${line%?}")
-  fi
-done < ../../conf/ldds/config.yml
 
-#DISCIPLINE_LDD_REPOS="ldd-wave ldd-particle ldd-multi"
-#DISCIPLINE_LDD_REPOS="ldd-multi ldd-particle ldd-wave ldd-rings ldd-img ldd-disp ldd-msn ldd-msn_surface ldd-proc ldd-img_surface ldd-ctli ldd-speclib ldd-msss_cam_mh ldd-cart ldd-geom ldd-spectral ldd-nucspec ldd-survey ldd-chan1"
+if [ -z "$repo" ]; then
+    while read -r line; do
+        if [[ "$line" == ldd-*: ]]; then
+            dLDDs+=("${line%?}")
+        fi
+    done < ../../conf/ldds/config.yml
+else
+    dLDDs+=("$repo")
+fi
+
 BASE_CLONE_URL=git@github.com:pds-data-dictionaries
 GITHUB_API_URL="https://api.github.com/repos/pds-data-dictionaries"
 
 PR_JSON="{
-  \"title\": \"PDS4 IM Release $release\",
-  \"body\": \"Prep for release of LDD for IM Release $release\",
+  \"title\": \"PDS4 Information Model Release $release\",
+  \"body\": \"Automated tagging of repo for nominal release of sub-model for PDS4 Release $release\",
   \"head\": \"$BRANCH_NAME\",
   \"base\": \"main\"
 }"
 
 cd /tmp || exit
 
-echo ">> cloning ldd-template repo"
-rm -fr ldd-template
-git clone $BASE_CLONE_URL/ldd-template.git
+echo ">> cloning template repo"
+rm -fr template
+git clone $BASE_CLONE_URL/template.git
 
 for repo in "${dLDDs[@]}"; do
     rm -fr "$repo"
     echo ">> cloning $repo repo"
     git clone $BASE_CLONE_URL/${repo}.git || continue
-
+    
     echo "copying github action"
-    cp ldd-template/.github/workflows/*.yml "${repo}"/.github/workflows/
+    cp template/.github/workflows/*.yml "${repo}"/.github/workflows/
 
     echo "copying pull request template"
-    cp ldd-template/.github/pull_request_template.md "${repo}"/.github/pull_request_template.md
+    cp template/.github/pull_request_template.md "${repo}"/.github/pull_request_template.md
 
     cd "${repo}" || exit
 
@@ -87,12 +83,15 @@ for repo in "${dLDDs[@]}"; do
     git checkout -b "$BRANCH_NAME"
 
     # add new PDS4 version to config file
-    echo "$release" >> pds4_versions.txt
+    check=$(grep "$release" pds4_versions.txt)
+    if [ -z "$check" ]; then
+        echo "$release" >> pds4_versions.txt
+    fi
 
     # add the updated
     git status
     git add -A .
-    git commit --allow-empty -m "Prep for tagging PDS4 IM Release $release"
+    git commit --allow-empty -m "Prep for tagging PDS4 Release $release"
     git push origin "$BRANCH_NAME"
 
     # cleanup
@@ -104,8 +103,9 @@ for repo in "${dLDDs[@]}"; do
 
     echo
     echo
+    sleep 30
 done
 
-rm -fr ldd-template
+rm -fr template
 
 exit 0

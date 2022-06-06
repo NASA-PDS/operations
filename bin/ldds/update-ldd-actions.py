@@ -19,6 +19,7 @@ import subprocess
 from github3 import login
 from lxml import etree
 from shutil import rmtree, copyfile
+from time import sleep
 
 from pkg_resources import resource_string
 from pystache import Renderer
@@ -30,19 +31,19 @@ from pds_github_util.utils.ldd_gen import find_primary_ingest_ldd, convert_pds4_
 # Github Org containing Discipline LDDs
 GITHUB_ORG = 'pds-data-dictionaries'
 
-ACTIONS_FILENAMES = ['ldd-ci.yml', 'release-ldd.yml']
+ACTIONS_FILENAMES = ['ldd-ci.yml', 'submod-ci.yml', 'release-ldd.yml', 'build-docs.yml']
 
-TEMPLATE_REPO = 'ldd-template'
+TEMPLATE_REPO = 'template'
 TEMPLATE_CLONE_URL = f'git@github.com:pds-data-dictionaries/{TEMPLATE_REPO}.git'
 
 STAGING_PATH = '/tmp/action-updates'
 
-SKIP_REPOS = ['ldd-template', 'PDS-Data-Dictionaries.github.io', 'dd-library', 'PDS4-LDD-Issue-Repo']
+SKIP_REPOS = ['template', 'PDS-Data-Dictionaries.github.io', 'dd-library', 'PDS4-LDD-Issue-Repo']
 
 # Default Issues URL
 ISSUES_URL = "https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues"
 
-# LDD configuration base directory
+# Sub-Model configuration base directory
 GITHUB_ACTION_PATH = os.path.join('.github', 'workflows')
 
 # Quiet github3 logging
@@ -55,11 +56,15 @@ _logger = logging.getLogger(__name__)
 
 def update_actions(token, gh, args):
     """Get repos from Org.
-    Loop through repos in Github org and update LDD actions
+    Loop through repos in Github org and update sub-model automation
+    :param token:
+    :param gh:
+    :param args:
+    :return:
     """
 
     # clone template repo
-    _template_repo_path = os.path.join(STAGING_PATH, 'ldd-template')
+    _template_repo_path = os.path.join(STAGING_PATH, 'template')
     clone(TEMPLATE_CLONE_URL, _template_repo_path)
 
     for _repo in gh.repositories_by(args.github_org):
@@ -75,13 +80,19 @@ def update_actions(token, gh, args):
             _action_file = os.path.join(_repo_path, GITHUB_ACTION_PATH, _filename)
             _logger.info(_action_file)
 
-            # check if ldd repo has the actions
-            if os.path.exists(_action_file):
+            # check if SubMod repo has the actions
+            if _filename == 'ldd-ci.yml':
+                if os.path.exists(_action_file):
+                    os.remove(_action_file)
+                    os.chdir(_repo_path)
+                    commit(_action_file, 'Apply latest Sub-Model Automation updates')
+            else:
                 _logger.info(f'Copying {_action_file} to {_template_repo_path}')
                 copyfile(os.path.join(_template_repo_path, GITHUB_ACTION_PATH, _filename), _action_file)
                 os.chdir(_repo_path)
-                commit(_action_file, 'Apply latest LDD Generation updates')
+                commit(_action_file, 'Apply latest Sub-Model Automation updates')
 
+        sleep(15)
 
 def cleanup_dir(path):
     if os.path.isdir(path):
@@ -91,10 +102,13 @@ def cleanup_dir(path):
 
 
 def invoke(argv):
-    '''Execute a command within the operating system, returning its output. On any error,
+    """Execute a command within the operating system, returning its output. On any error,
     raise ane exception. The command is the first element of ``argv``, with remaining elements
     being arguments to the command.
-    '''
+
+    :param argv:
+    :return:
+    """
     _logger.debug('🏃‍♀️ Running «%r»', argv)
     try:
         cp = subprocess.run(argv, stdin=subprocess.DEVNULL, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
@@ -109,42 +123,57 @@ def invoke(argv):
         raise Exception(ex)
 
 
-def invokeGIT(gitArgs):
-    '''Execute the ``git`` command with the given ``gitArgs``.'''
-    argv = ['git'] + gitArgs
+def invoke_git(git_args):
+    """Execute the ``git`` command with the given ``gitArgs``.
+
+    :param git_args:
+    :return:
+    """
+    argv = ['git'] + git_args
     return invoke(argv)
 
 
 def git_config():
     '''Prepare necessary git configuration or else thing might fail'''
-    invokeGIT(['config', '--local', 'user.email', 'pdsen-ci@jpl.nasa.gov'])
-    invokeGIT(['config', '--local', 'user.name', 'PDSEN CI Bot'])
+    invoke_git(['config', '--local', 'user.email', 'pdsen-ci@jpl.nasa.gov'])
+    invoke_git(['config', '--local', 'user.name', 'PDSEN CI Bot'])
+
 
 def clone(clone_url, path):
-    '''Clone repo to local server.
-    '''
+    """Clone repo to local server.
+
+    :param clone_url:
+    :param path:
+    :return:
+    """
     _logger.debug('🥼 Cloning repo %s to path «%s»', clone_url, path)
     cleanup_dir(path)
     git_config()
-    invokeGIT(['clone', clone_url, path])
+    invoke_git(['clone', clone_url, path])
+
 
 def git_pull():
     # 😮 TODO: Use Python GitHub API
     # But I'm in a rush:
     git_config()
-    invokeGIT(['pull', 'origin', 'main'])
+    invoke_git(['pull', 'origin', 'main'])
 
 
 def commit(filename, message):
-    '''Commit the file named ``filename`` to the local Git repository with the given ``message``.
-    '''
+    """Commit the file named ``filename`` to the local Git repository with the given ``message``.
+
+    :param filename:
+    :param message:
+    :return:
+    """
     _logger.info('🥼 Committing file %s with message «%s»', filename, message)
     git_config()
-    invokeGIT(['add', filename])
-    invokeGIT(['commit', '--allow-empty', '--message', message])
+    invoke_git(['add', '--all', filename])
+    invoke_git(['commit', '--allow-empty', '--message', message])
     # TODO: understand why a simple push does not work and make it work
     # see bug https://github.com/actions/checkout/issues/317
-    invokeGIT(['push', 'origin',  'HEAD:main', '--force'])
+    invoke_git(['push', 'origin',  'HEAD:main'])
+
 
 def main():
     """main"""
@@ -152,7 +181,7 @@ def main():
                             description=__doc__)
 
     parser.add_argument('--github_org',
-                        help=('github org to search repos for discipline LDDs. NOTE: these repos must contain ' +
+                        help=('github org to search repos for pds4 sub-models. NOTE: these repos must contain ' +
                               'src/IngestLDD'),
                         default=GITHUB_ORG)
 
