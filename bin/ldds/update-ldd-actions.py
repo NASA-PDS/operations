@@ -94,6 +94,7 @@ def update_actions(token, gh, args):
 
         sleep(15)
 
+
 def cleanup_dir(path):
     if os.path.isdir(path):
         rmtree(path)
@@ -135,8 +136,8 @@ def invoke_git(git_args):
 
 def git_config():
     '''Prepare necessary git configuration or else thing might fail'''
-    invoke_git(['config', '--local', 'user.email', 'pdsen-ci@jpl.nasa.gov'])
-    invoke_git(['config', '--local', 'user.name', 'PDSEN CI Bot'])
+    invoke_git(['config', '--local', 'user.email', 'pds-ops@jpl.nasa.gov'])
+    invoke_git(['config', '--local', 'user.name', 'PDSEN Ops'])
 
 
 def clone(clone_url, path):
