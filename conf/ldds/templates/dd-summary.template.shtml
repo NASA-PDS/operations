@@ -88,7 +88,7 @@
 				  <li><a href="/pds4/pds/v1/PDS4_PDS_{{pds4_alpha_version}}.xsd">PDS4_PDS_{{pds4_alpha_version}}.xsd</a></li>
 				  <li><a href="/pds4/pds/v1/PDS4_PDS_{{pds4_alpha_version}}.sch">PDS4_PDS_{{pds4_alpha_version}}.sch</a></li>
 				  <li><a href="/pds4/pds/v1/PDS4_PDS_{{pds4_alpha_version}}.xml">PDS4_PDS_{{pds4_alpha_version}}.xml</a></li>
-				  <li><a href="/pds4/pds/v1/PDS4_PDS_JSON_{{pds4_alpha_version}}.JSON">PDS4_PDS_JSON_{{pds4_alpha_version}}.JSON</a></li>
+				  <li><a href="/pds4/pds/v1/PDS4_PDS_{{pds4_alpha_version}}.JSON">PDS4_PDS_{{pds4_alpha_version}}.JSON</a></li>
 				  <li><a href="/pds4/pds/v1/PDS4_PDS_{{pds4_alpha_version}}.zip">PDS4_PDS_{{pds4_alpha_version}}.zip</a></li>
 				</ul>
 				<a class="toTop">Back to top</a>
