@@ -33,7 +33,7 @@ GITHUB_ORG = 'pds-data-dictionaries'
 
 ACTIONS_FILENAMES = ['ldd-ci.yml', 'submod-ci.yml', 'release-ldd.yml', 'build-docs.yml']
 
-TEMPLATE_REPO = 'template'
+TEMPLATE_REPO = 'ldd-template'
 TEMPLATE_CLONE_URL = f'git@github.com:pds-data-dictionaries/{TEMPLATE_REPO}.git'
 
 STAGING_PATH = '/tmp/action-updates'
