@@ -38,8 +38,8 @@ PDS_NS_URI = 'http://pds.nasa.gov/pds4/pds/v1'
 # Discipline LDD Dictionary Type Value
 DISC_LDD_DICT_TYPE = 'Discipline'
 
-STAGING_PATH = '/tmp/ldd-staging'
-OUTPUT_PATH = '/tmp/ldd-release'
+STAGING_PATH = '/data/tmp/ldd-staging'
+OUTPUT_PATH = '/data/tmp/ldd-release'
 
 RELEASE_SUBDIR = "pds4"
 
@@ -204,6 +204,7 @@ def prep_assets_for_release(release, output_path):
                         if 'ingestldd' not in file.lower():
                             for _suffix in LDD_FILES_THAT_MATTER:
                                 if file.lower().endswith(_suffix):
+                                    path = check_ldd_version(root, file)
                                     _ldd_assets[_suffix] = (os.path.join(root, file))
 
     return _ldd_assets
