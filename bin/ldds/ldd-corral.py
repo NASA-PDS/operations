@@ -204,7 +204,6 @@ def prep_assets_for_release(release, output_path):
                         if 'ingestldd' not in file.lower():
                             for _suffix in LDD_FILES_THAT_MATTER:
                                 if file.lower().endswith(_suffix):
-                                    path = check_ldd_version(root, file)
                                     _ldd_assets[_suffix] = (os.path.join(root, file))
 
     return _ldd_assets
