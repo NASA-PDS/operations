@@ -38,8 +38,8 @@ PDS_NS_URI = 'http://pds.nasa.gov/pds4/pds/v1'
 # Discipline LDD Dictionary Type Value
 DISC_LDD_DICT_TYPE = 'Discipline'
 
-STAGING_PATH = '/tmp/data/tmp/ldd-staging'
-OUTPUT_PATH = '/tmp/data/tmp/ldd-release'
+STAGING_PATH = '/data/tmp/ldd-staging'
+OUTPUT_PATH = '/data/tmp/ldd-release'
 
 RELEASE_SUBDIR = "pds4"
 
