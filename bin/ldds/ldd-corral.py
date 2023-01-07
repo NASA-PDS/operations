@@ -85,7 +85,7 @@ def generate_release(token, gh, args):
         _dldd_repo = None
 
         # get the ingestLDD file from the repo
-        _ingest_ldd = get_ingest_ldd(token, _repo)
+        _ingest_ldd = get_ingest_ldd(token, _repo, args.base_path + STAGING_PATH)
 
         if _ingest_ldd and _repo.name != "ldd-template":
             _ldd_assets = []
@@ -111,7 +111,7 @@ def generate_release(token, gh, args):
 
                 # let's download and unpack the release assets
                 _ldd_assets = prep_assets_for_release(_ldd_summary_repo['release'],
-                                                      os.path.join(args.output, RELEASE_SUBDIR,
+                                                      os.path.join(args.base_path + args.output, RELEASE_SUBDIR,
                                                                    _ldd_summary_repo['ns_id'],
                                                                    'v' + _ns_version))
 
@@ -128,11 +128,11 @@ def cleanup_dir(path):
     os.makedirs(path)
 
 
-def get_ingest_ldd(token, repo):
+def get_ingest_ldd(token, repo, staging_path):
     """Get ingest ldd from repo.
     """
     # Cleanup in case repo already exists
-    _staging = f'{STAGING_PATH}/{repo}'
+    _staging = f'{staging_path}/{repo}'
     cleanup_dir(_staging)
 
     _remote_url = repo.git_url.replace('git://', f'https://{token}:x-oauth-basic@')
@@ -314,6 +314,9 @@ def main():
                         required=True)
     parser.add_argument('--token',
                         help='github token.')
+    parser.add_argument('--base_path',
+                        help='Base file path for the staging and output paths.',
+                        required=True)
 
     args = parser.parse_args()
 
