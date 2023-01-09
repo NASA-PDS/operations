@@ -26,8 +26,8 @@ from pds_github_util.branches.git_actions import clone_checkout_branch
 from pds_github_util.utils.ldd_gen import find_primary_ingest_ldd, convert_pds4_version_to_alpha
 
 
-# LDDs In Development
-IN_DEV_LDDS = ['ldd-wave']
+# LDDs In Development or repos to ignore
+SKIP_REPOS = ['dd-library', 'ldd-wave', 'ldd-template']
 
 # Github Org containing Discipline LDDs
 GITHUB_ORG = 'pds-data-dictionaries'
@@ -42,9 +42,6 @@ STAGING_PATH = '/data/tmp/ldd-staging'
 OUTPUT_PATH = '/data/tmp/ldd-release'
 
 RELEASE_SUBDIR = "pds4"
-
-# default LDD Version currently set to v1 since unsure how LDDTool handles this
-LDD_VERSION_DEFAULT = 'v1'
 
 # LDD package file name suffix (Zip file)
 LDD_PACKAGE_SUFFIX = 'zip'
@@ -88,13 +85,13 @@ def generate_release(token, gh, args):
         _dldd_repo = None
 
         # get the ingestLDD file from the repo
-        _ingest_ldd = get_ingest_ldd(token, _repo)
+        _ingest_ldd = get_ingest_ldd(token, _repo, args.base_path + STAGING_PATH)
 
         if _ingest_ldd and _repo.name != "ldd-template":
             _ldd_assets = []
 
             # extract dictionary type and namespace id from ingestLDD
-            _ldd_name, _dict_type, _ns_id = extract_metadata(_ingest_ldd)
+            _ldd_name, _dict_type, _ns_id, _ns_version = extract_metadata(_ingest_ldd)
 
             # check if this is a discipline LDD
             if is_discipline_ldd(_repo, _dict_type, _config):
@@ -114,9 +111,9 @@ def generate_release(token, gh, args):
 
                 # let's download and unpack the release assets
                 _ldd_assets = prep_assets_for_release(_ldd_summary_repo['release'],
-                                                      os.path.join(args.output, RELEASE_SUBDIR,
+                                                      os.path.join(args.base_path + args.output, RELEASE_SUBDIR,
                                                                    _ldd_summary_repo['ns_id'],
-                                                                   LDD_VERSION_DEFAULT))
+                                                                   'v' + _ns_version))
 
                 _ldd_summary_repo['assets'] = _ldd_assets
 
@@ -131,11 +128,11 @@ def cleanup_dir(path):
     os.makedirs(path)
 
 
-def get_ingest_ldd(token, repo):
+def get_ingest_ldd(token, repo, staging_path):
     """Get ingest ldd from repo.
     """
     # Cleanup in case repo already exists
-    _staging = f'{STAGING_PATH}/{repo}'
+    _staging = f'{staging_path}/{repo}'
     cleanup_dir(_staging)
 
     _remote_url = repo.git_url.replace('git://', f'https://{token}:x-oauth-basic@')
@@ -151,10 +148,12 @@ def extract_metadata(ingest_ldd):
     * //Ingest_LDD/dictionary_name
     * //Ingest_LDD/dictionary_type
     * //Ingest_LDD/namespace_id
+    * //Ingest_LDD/ldd_version_id
     """
     _dict_name = None
     _dict_type = None
     _ns_id = None
+    _ns_version = None
     with open(ingest_ldd[0], 'r') as f:
         _tree = etree.parse(f)
         _root = _tree.getroot()
@@ -174,11 +173,16 @@ def extract_metadata(ingest_ldd):
             if _matches:
                 _ns_id = _matches[0].text.strip()
 
-    return _dict_name, _dict_type, _ns_id
+            # get version
+            _matches = _root.findall(f'./{{{PDS_NS_URI}}}ldd_version_id')
+            if _matches:
+                _ns_version = _matches[0].text.strip().split('.')[0]
+
+    return _dict_name, _dict_type, _ns_id, _ns_version
 
 
 def is_discipline_ldd(repo, dict_type, config):
-    if repo.name not in IN_DEV_LDDS:
+    if repo.name not in SKIP_REPOS:
         if dict_type == DISC_LDD_DICT_TYPE and repo.name in config.keys():
             return True
 
@@ -310,6 +314,9 @@ def main():
                         required=True)
     parser.add_argument('--token',
                         help='github token.')
+    parser.add_argument('--base_path',
+                        help='Base file path for the staging and output paths.',
+                        required=True)
 
     args = parser.parse_args()
 
