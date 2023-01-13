@@ -53,6 +53,10 @@ ldd-radar:
 ldd-rings:
   description: |
     The Rings Dictionary contains classes supporting planetary ring observations including ring-specific geometric parameters.
+ldd-sb:
+  name: Small Bodies
+  description: |
+    This dictionary will provide classes to support the documentation, support, discovery, and reuse of data from, by, and for small bodies research.
 ldd-spectral:
   description: |
     The Spectral (sp) Discipline Dictionary contains classes for defining the spectral bin characteristics (in wavelength, frequency, or wave number) of a data product.
