@@ -2,7 +2,7 @@
 name: I&T Bug Report
 about: Report a bug found or test case failure during PDS System I&T
 title: "<system feature> <is not/does not> <expected behaviour>"
-labels: "B13.1,bug,i&t.issue,needs:triage"
+labels: B13.1, bug, i&t.issue, needs:triage
 assignees: jordanpadams
 
 ---
