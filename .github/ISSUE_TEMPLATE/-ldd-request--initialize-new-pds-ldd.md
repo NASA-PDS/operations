@@ -2,7 +2,7 @@
 name: "[ldd-request] Initialize New PDS LDD"
 about: Describe this issue template's purpose here.
 title: '[ldd-request] Create new LDD "<proposed namespace ID>"'
-labels: enhancement, ldd-request, p.must-have
+labels: enhancement, ldd-request, p.must-have, sprint-backlog
 assignees: c-suh
 
 ---

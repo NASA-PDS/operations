@@ -3,7 +3,7 @@ name: "[ldd-request] PDS LDD Release"
 about: Request EN to release a new version of an LDD off the nominal build schedule
   or against a past PDS4 IM Version.
 title: "[ldd-release] <LDD Name> LDD Version:<LDD_version> IM Version:<IM_Version>"
-labels: ldd-release
+labels: ldd-release, sprint-backlog
 assignees: c-suh, viviant100
 
 ---
