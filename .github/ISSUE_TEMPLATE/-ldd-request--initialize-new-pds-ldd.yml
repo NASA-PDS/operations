@@ -1,44 +1,101 @@
----
 name: "[ldd-request] Initialize New PDS LDD"
-about: Describe this issue template's purpose here.
+description: Describe this issue template's purpose here.
 title: '[ldd-request] Create new LDD "<proposed namespace ID>"'
-labels: enhancement, ldd-request, p.must-have, sprint-backlog
-assignees: c-suh
+labels: "enhancement,ldd-request,needs:triage,p.must-have,sprint-backlog"
+assignees: jordanpadams
 
----
+body:
+  - type: textarea
+    id: ldd-name
+    attributes:
+      label: Local Data Dictionary Name
+      description: Long name of the proposed LDD. For example, Imaging, Spectral, Survey, Geometry, Mars 2020
+    validations:
+      required: true
+ 
+  - type: textarea
+    id: identifier
+    attributes:
+      label: LDD Short Name Identifier Requested
+      description: Short name used as identifier for LDD. Use dashes (-) and underscores (_) for whitespace. examples: img, geom, spectral, mars2020, ladee, etc.
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: ldd-type
+    attributes:
+      label: Discipline or Mission Local Data Dictionary?
+      description: Is the planned LDD a mission-specific dictionary, or a multi-mission / discipline dictionary?
+      multiple: false
+      options:
+        - "Discipline"
+        - "Mission"
+        - "I don't know"
+    validations:
+      required: yes
+ 
+  - type: textarea
+    id: steward-org
+    attributes:
+      label: LDD Steward Organization
+      description: NASA PDS Node or IPDA Organization sponsoring the development and stewardship of this LDD? 
+    validations:
+      required: yes
+ 
+  - type: textarea
+    id: steward-name
+    attributes:
+      label: LDD Steward Name
+      description: Name of lead point of contact from steward organization
+    validations:
+      required: yes
+      
+  - type: textarea
+    id: steward-email
+    attributes:
+      label: LDD Steward Email
+      description: Email address of LDD Steward
+    validations:
+      required: yes
+      
+  - type: textarea
+    id: steward-team
+    attributes:
+      label: LDD Steward Team Members
+      description: Github usernames for all members of the LDD Stewardship Team. For more information on the responsibilities of the LDD Stewardship Team, see https://pds-data-dictionaries.github.io/development/ldd-create.html#who-is-the-ldd-stewardship-team
+    validations:
+      required: yes
+      
+  - type: textarea
+    id: description
+    attributes:
+      label: LDD Description
+      description: Brief description of the LDD. This description will be used on the PDS Data Dictionaries website here: https://pds.nasa.gov/datastandards/dictionaries/
+    validations:
+      required: yes
+      
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Rationale for creation of new LDD
+      description: Describe why this LDD is needed
+    validations:
+      required: yes
 
-* **Local Data Dictionary Name:**
-<!-- Long name of the proposed LDD. For example, Imaging, Spectral, Survey, Geometry, Mars 2020-->
+  - type: markdown
+    attributes:
+      value: |
+        ## For Internal Operations Team To Complete
 
-* **Namespace ID Requested:**
-<!-- examples: img, geom, spectral, mars2020, ladee, etc. -->
-
-* **Discipline or Mission LDD?** 
-<!-- Is the planned LDD a mission-specific dictionary, or a multi-mission, discipline dictionary? -->
-
-* **Steward Organization Name:** 
-<!-- examples: PDS PPI Node, PDS EN Node, PDS RMS Node, PSA, JAXA -->
-
-* **LDD Steward Name:** 
-<!-- Name of lead point of contact from steward organization -->
-
-* **LDD Steward Email:** 
-<!-- email address of LDD Steward -->
-
-* **LDD Stewardship Team Members:** 
-<!-- Github usernames for all members of the LDD Stewardship Team. For more information on the responsibilities of the LDD Stewardship Team, see https://pds-data-dictionaries.github.io/development/ldd-create.html#who-is-the-ldd-stewardship-team -->
-
-* **LDD Description:**
-<!--  Brief description of the LDD. This description will be used on the PDS Data Dictionaries website here: https://pds.nasa.gov/datastandards/dictionaries/ -->
-
-* **Rationale for creation of new LDD:**
-<!-- Describe why this LDD is needed -->
-
----
-<!-- For internal use by PDS EN Operations Team-->
-**Engineering Details**
-- [ ] Complete [Initializing New LDD procedure](https://pds-data-dictionaries.github.io/development/ldd-create.html#initializing-new-ldd)
-- [ ] If discipline LDD
-  - [ ] update [LDD script config](https://github.com/NASA-PDS/pdsen-operations/blob/master/conf/ldds/config.yml)
-  - [ ] create directory and index files for Git
-  - [ ] create symlink on all machines
+  - type: textarea
+    id: details
+    attributes:
+       label: ⚙️ Engineering Details
+       value: |
+        - [ ] Complete [Initializing New LDD procedure](https://pds-data-dictionaries.github.io/development/ldd-create.html#initializing-new-ldd)
+        - [ ] If Discipline LDD
+          - [ ] add Steward to pdsddstewards@jpl.nasa.gov email list if they are not already on the list
+          - [ ] update [LDD script config](https://github.com/NASA-PDS/pdsen-operations/blob/master/conf/ldds/config.yml)
+          - [ ] create directory and index files for Git
+          - [ ] create symlink on all machines
+          - [ ] work with @jordanpadams to ping DD Stewards to establish CCB
