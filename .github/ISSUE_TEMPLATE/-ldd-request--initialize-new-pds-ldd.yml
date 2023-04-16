@@ -17,7 +17,8 @@ body:
     id: identifier
     attributes:
       label: LDD Short Name Identifier Requested
-      description: Short name used as identifier for LDD. Use dashes (-) and underscores (_) for whitespace. examples: img, geom, spectral, mars2020, ladee, etc.
+      description: |
+        Short name used as identifier for LDD. Use dashes (-) and underscores (_) for whitespace. examples: img, geom, spectral, mars2020, ladee, etc.
     validations:
       required: true
       
