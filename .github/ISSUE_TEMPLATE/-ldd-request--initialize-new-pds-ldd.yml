@@ -71,7 +71,8 @@ body:
     id: description
     attributes:
       label: LDD Description
-      description: Brief description of the LDD. This description will be used on the PDS Data Dictionaries website here: https://pds.nasa.gov/datastandards/dictionaries/
+      description: |
+        Brief description of the LDD. This description will be used on the PDS Data Dictionaries website here: https://pds.nasa.gov/datastandards/dictionaries/
     validations:
       required: yes
       
