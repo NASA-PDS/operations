@@ -12,6 +12,7 @@ ldd-disp:
   description: |
     The Display Dictionary contains classes, attributes, and rules for specifying how arrays (images) as stored, should be displayed to users. For example, defining the vertical display direction 'Bottom to Top' or horizontal direction 'Left to Right' and it can provide guidance on mapping multiband arrays for color display (red, green, and blue) or as a movie sequence (video).
 ldd-ebt:
+  name: "Earth-Based Telescope"
   description: |
     The Earth-Based Telescope Dictionary contains classes, attributes, and rules for specifying the metadata associated with observing parameters, provenance, and geometry relevant to ground-based telescopes on Earth and for Earth-orbiting (or Lagrange point) telescopes.
 ldd-exo:
@@ -48,9 +49,11 @@ ldd-proc:
   description: |
     The Processing_Information Dictionary contains detailed information regarding the history of processing performed on data product(s) in order to produce the current product.
 ldd-radar:
+  name: Radar
   description: |
     The Radar dictionary describes the circumstances surrounding radar observations.
 ldd-rings:
+  name: Rings
   description: |
     The Rings Dictionary contains classes supporting planetary ring observations including ring-specific geometric parameters.
 ldd-sb:
@@ -58,6 +61,7 @@ ldd-sb:
   description: |
     This dictionary will provide classes to support the documentation, support, discovery, and reuse of data from, by, and for small bodies research.
 ldd-spectral:
+  name: Spectral
   description: |
     The Spectral (sp) Discipline Dictionary contains classes for defining the spectral bin characteristics (in wavelength, frequency, or wave number) of a data product.
 ldd-speclib:
