@@ -31,10 +31,17 @@ BRANCH_NAME="release/$release"
 
 dLDDs=()
 
+# LDDs in development to ignore for prepping release
+DEV_LDDS=( "ldd-wave" )
+
 if [ -z "$repo" ]; then
     while read -r line; do
         if [[ "$line" == ldd-*: ]]; then
-            dLDDs+=("${line%?}")
+            for dev_ldd in "${DEV_LDDS[@]}"; do
+                if [[ "$line" != "$dev_ldd": ]]; then
+                    dLDDs+=("${line%?}")
+                fi
+            done
         fi
     done < ../../conf/ldds/config.yml
 else
