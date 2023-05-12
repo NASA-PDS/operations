@@ -11,9 +11,6 @@ import sys
 import traceback
 
 from argparse import ArgumentParser, RawDescriptionHelpFormatter
-from datetime import datetime
-
-import yaml
 import subprocess
 
 from github3 import login
@@ -26,7 +23,6 @@ from pystache import Renderer
 
 from pds_github_util.assets.assets import unzip_asset
 from pds_github_util.branches.git_actions import clone_checkout_branch
-from pds_github_util.utils.ldd_gen import find_primary_ingest_ldd, convert_pds4_version_to_alpha
 
 # Github Org containing Discipline LDDs
 GITHUB_ORG = 'pds-data-dictionaries'
@@ -38,13 +34,16 @@ TEMPLATE_CLONE_URL = f'git@github.com:pds-data-dictionaries/{TEMPLATE_REPO}.git'
 
 STAGING_PATH = '/tmp/action-updates'
 
-SKIP_REPOS = ['template', 'PDS-Data-Dictionaries.github.io', 'dd-library', 'PDS4-LDD-Issue-Repo']
+SKIP_REPOS = ['ldd-template', 'PDS-Data-Dictionaries.github.io', 'dd-library', 'PDS4-LDD-Issue-Repo']
 
 # Default Issues URL
 ISSUES_URL = "https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues"
 
 # Sub-Model configuration base directory
 GITHUB_ACTION_PATH = os.path.join('.github', 'workflows')
+
+# Sub-Model configuration base directory
+DOC_CONFIG_FILEPATH = os.path.join('docs', 'source', 'conf.py')
 
 # Quiet github3 logging
 _logger = logging.getLogger('github3')
@@ -90,8 +89,19 @@ def update_actions(token, gh, args):
                 _logger.info(f'Copying {_action_file} to {_template_repo_path}')
                 copyfile(os.path.join(_template_repo_path, GITHUB_ACTION_PATH, _filename), _action_file)
                 os.chdir(_repo_path)
-                commit(_action_file, 'Apply latest Sub-Model Automation updates')
+                commit(_action_file, 'Apply latest LDD Automation updates')
 
+        # copy doc config
+        _doc_config = os.path.join(_repo_path, DOC_CONFIG_FILEPATH)
+        if os.path.exists(_doc_config):
+            _template_doc_config = os.path.join(_template_repo_path, DOC_CONFIG_FILEPATH)
+            _logger.info(f'Copying {_template_doc_config} to {_doc_config}')
+            copyfile(_template_doc_config, _doc_config)
+            os.chdir(_repo_path)
+            commit(_doc_config, 'Apply latest LDD Doc Gen Config updates')
+
+        os.chdir(STAGING_PATH)
+        cleanup_dir(_repo_path)
         sleep(15)
 
 
@@ -100,7 +110,6 @@ def cleanup_dir(path):
         rmtree(path)
 
     os.makedirs(path)
-
 
 def invoke(argv):
     """Execute a command within the operating system, returning its output. On any error,
@@ -149,7 +158,6 @@ def clone(clone_url, path):
     """
     _logger.debug('🥼 Cloning repo %s to path «%s»', clone_url, path)
     cleanup_dir(path)
-    git_config()
     invoke_git(['clone', clone_url, path])
 
 
