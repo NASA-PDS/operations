@@ -23,7 +23,8 @@ from pystache import Renderer
 
 from pds_github_util.assets.assets import unzip_asset
 from pds_github_util.branches.git_actions import clone_checkout_branch
-from pds_github_util.release.ldd_release import find_primary_ingest_ldd, convert_pds4_version_to_alpha
+from pds.ldd_manager.release import find_primary_ingest_ldd
+from pds.ldd_manager.util import convert_pds4_version_to_alpha
 
 
 # LDDs In Development or repos to ignore

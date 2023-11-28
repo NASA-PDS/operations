@@ -14,15 +14,8 @@ from argparse import ArgumentParser, RawDescriptionHelpFormatter
 import subprocess
 
 from github3 import login
-from lxml import etree
 from shutil import rmtree, copyfile
 from time import sleep
-
-from pkg_resources import resource_string
-from pystache import Renderer
-
-from pds_github_util.assets.assets import unzip_asset
-from pds_github_util.branches.git_actions import clone_checkout_branch
 
 # Github Org containing Discipline LDDs
 GITHUB_ORG = 'pds-data-dictionaries'

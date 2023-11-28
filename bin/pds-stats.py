@@ -8,19 +8,10 @@ Github3 API
 '''
 import argparse
 import github3
-import glob
 import logging
 import os
-import requests
-import shutil
 import sys
 import traceback
-
-from datetime import datetime
-from subprocess import Popen, CalledProcessError, PIPE, STDOUT
-
-from pds_github_util.tags.tags import Tags
-from pds_github_util.assets.assets import download_asset, unzip_asset
 
 GITHUB_ORG = 'NASA-PDS'
 

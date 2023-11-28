@@ -16,8 +16,6 @@ from shutil import rmtree
 from github3 import login
 from subprocess import Popen, CalledProcessError, PIPE, STDOUT
 
-from pds_github_util.branches.git_actions import clone_checkout_branch
-
 GIT_URL_BASE = 'git@github.com:{}.git'
 BASE_DIR = '/tmp'
 BASE_REPO = 'pds-template-repo-java'
