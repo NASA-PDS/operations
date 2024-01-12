@@ -58,30 +58,4 @@ body:
     validations:
       required: false
 
-  - type: markdown
-    attributes:
-      value: |
-        ---
-        ## LDD is in GitHub
-        If LDD is in GitHub, complete this section, otherwise skip to following section
-
-  - type: textarea
-    id: rationale
-    attributes:
-      label: GitHub Tagged Release of LDD
-      description: |
-          Link to LDD's tagged version under the repo's Releases.
-          e.g. https://github.com/pds-data-dictionaries/ldd-geom/releases.
-    validations:
-      required: false
-
-  - type: textarea
-    id: rationale
-    attributes:
-      label: PDS4 IM Versions to Release
-      description: |
-          Which versions of the PDS4 IM the LDD was built with would you like released?
-    validations:
-      required: false
-
 
