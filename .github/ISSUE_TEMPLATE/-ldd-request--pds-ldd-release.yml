@@ -62,7 +62,7 @@ body:
     attributes:
       value: |
         ## LDD is in GitHub
-        If LDD is in GitHub, complete this section, otherwise skip to following section
+        _If LDD is in GitHub, complete this section, otherwise skip to following section_
 
   - type: textarea
     id: tag-url
@@ -87,7 +87,7 @@ body:
     attributes:
       value: |
         ## LDD Not In GitHub
-        If LDD is not GitHub, complete this section.
+        _If LDD is not GitHub, complete this section._
 
   - type: textarea
     id: submission-package
