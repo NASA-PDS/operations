@@ -6,6 +6,7 @@ assignees: jordanpadams,c-suh
 
 body:
   - type: markdown
+    id: intro
     attributes:
       value: |
           The following questionnaire should be filled out by the
@@ -57,42 +58,4 @@ body:
     validations:
       required: false
 
-  - type: markdown
-    attributes:
-      value: |
-        ---
-        ## LDD is in GitHub
-        If LDD is in GitHub, complete this section, otherwise skip to following section
 
-  - type: textarea
-    id: rationale
-    attributes:
-      label: GitHub Tagged Release of LDD
-      description: |
-          Link to LDD's tagged version under the repo's Releases.
-          e.g. https://github.com/pds-data-dictionaries/ldd-geom/releases.
-    validations:
-      required: false
-
-  - type: textarea
-    id: rationale
-    attributes:
-      label: PDS4 IM Versions to Release
-      description: |
-          Which versions of the PDS4 IM the LDD was built with would you like released?
-    validations:
-      required: false
-
-- type: markdown
-    attributes:
-      value: |
-        ---
-        ## LDD Not In GitHub
-        If LDD is not GitHub, complete this section.
-
-  - type: textarea
-    attributes:
-      label: LDD Submission Package
-      description: Please indicate **the name of LDD Ready for release** and include a **zip** of the following files: .xsd, .sch, .json, .xml, and the IngestLDD.
-    validations:
-      required: false
