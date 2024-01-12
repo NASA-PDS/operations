@@ -1,0 +1,98 @@
+name: "[ldd-request] PDS LDD Release"
+description: Describe this issue template's purpose here.
+title: '[ldd-release] <LDD Name> LDD Version:<LDD_version> IM Version:<IM_Version>'
+labels: "ldd-release,needs:triage,p.must-have,sprint-backlog"
+assignees: jordanpadams,c-suh
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+          The following questionnaire should be filled out by the
+          LDD Steward and only submitted for Off-Nominal Releases.
+          See the [online documentation](https://pds-data-dictionaries.github.io/development/ldd-release.html#off-nominal-release) for more details.
+
+  - type: dropdown
+    id: ldd-github
+    attributes:
+      label: Is the LDD IngestLDD in Github?
+      description: Do you have a GitHub repo for this LDD?
+      multiple: false
+      options:
+        - "Yes"
+        - "No"
+        - "I don't know"
+    validations:
+      required: yes
+
+  - type: dropdown
+    id: ldd-registered
+    attributes:
+      label: Has the LDD Namespace been registered in the Namespace Registry?
+      description: |
+            See the [online registry](https://github.com/NASA-PDS/pds4-information-model/raw/main/docs/namespace-registry/pds-namespace-registry.pdf) for details
+      multiple: false
+      options:
+        - "Yes"
+        - "No"
+        - "I don't know"
+    validations:
+      required: yes
+
+  - type: textarea
+    id: due-date
+    attributes:
+      label: Need by date?
+      description: Please indicate a drop-dead need-by date for this release
+    validations:
+      required: false
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Need by date rationale
+      description: |
+          For quick turnarounds of releases, please indicate a
+          rationale for the condensed schedule
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ## LDD is in GitHub
+        If LDD is in GitHub, complete this section, otherwise skip to following section
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: GitHub Tagged Release of LDD
+      description: |
+          Link to LDD's tagged version under the repo's Releases.
+          e.g. https://github.com/pds-data-dictionaries/ldd-geom/releases.
+    validations:
+      required: false
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: PDS4 IM Versions to Release
+      description: |
+          Which versions of the PDS4 IM the LDD was built with would you like released?
+    validations:
+      required: false
+
+- type: markdown
+    attributes:
+      value: |
+        ---
+        ## LDD Not In GitHub
+        If LDD is not GitHub, complete this section.
+
+  - type: textarea
+    attributes:
+      label: LDD Submission Package
+      description: Please indicate **the name of LDD Ready for release** and include a **zip** of the following files: .xsd, .sch, .json, .xml, and the IngestLDD.
+    validations:
+      required: false
