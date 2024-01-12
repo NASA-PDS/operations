@@ -74,20 +74,6 @@ body:
     validations:
       required: false
 
-  - type: textarea
-    id: im-versions
-    attributes:
-      label: PDS4 IM Versions to Release
-      description: |
-          Which versions of the PDS4 IM the LDD was built with would you like released?
-    validations:
-      required: false
-
-- type: markdown
-    attributes:
-      value: |
-        ## LDD Not In GitHub
-        If LDD is not GitHub, complete this section.
 
   - type: textarea
     id: submission-package
