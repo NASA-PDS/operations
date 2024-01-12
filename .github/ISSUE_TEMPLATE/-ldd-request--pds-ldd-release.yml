@@ -6,6 +6,7 @@ assignees: jordanpadams,c-suh
 
 body:
   - type: markdown
+    id: intro
     attributes:
       value: |
           The following questionnaire should be filled out by the
@@ -60,12 +61,11 @@ body:
   - type: markdown
     attributes:
       value: |
-        ---
         ## LDD is in GitHub
-        If LDD is in GitHub, complete this section, otherwise skip to following section
+        _If LDD is in GitHub, complete this section, otherwise skip to following section_
 
   - type: textarea
-    id: rationale
+    id: tag-url
     attributes:
       label: GitHub Tagged Release of LDD
       description: |
@@ -75,7 +75,7 @@ body:
       required: false
 
   - type: textarea
-    id: rationale
+    id: im-versions
     attributes:
       label: PDS4 IM Versions to Release
       description: |
@@ -83,16 +83,17 @@ body:
     validations:
       required: false
 
-- type: markdown
+  - type: markdown
     attributes:
       value: |
-        ---
         ## LDD Not In GitHub
-        If LDD is not GitHub, complete this section.
+        _If LDD is not GitHub, complete this section._
 
   - type: textarea
+    id: submission-package
     attributes:
       label: LDD Submission Package
-      description: Please indicate **the name of LDD Ready for release** and include a **zip** of the following files: .xsd, .sch, .json, .xml, and the IngestLDD.
+      description: |
+        Please indicate **the name of LDD Ready for release** and include a **zip** of the following files: .xsd, .sch, .json, .xml, and the IngestLDD.
     validations:
       required: false
