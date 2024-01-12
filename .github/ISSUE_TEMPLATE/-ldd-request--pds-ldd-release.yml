@@ -93,6 +93,7 @@ body:
     id: submission-package
     attributes:
       label: LDD Submission Package
-      description: Please indicate **the name of LDD Ready for release** and include a **zip** of the following files: .xsd, .sch, .json, .xml, and the IngestLDD.
+      description: |
+        Please indicate **the name of LDD Ready for release** and include a **zip** of the following files: .xsd, .sch, .json, .xml, and the IngestLDD.
     validations:
       required: false
