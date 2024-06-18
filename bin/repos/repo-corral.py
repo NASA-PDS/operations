@@ -1,6 +1,5 @@
 #!/usr/bin/env python
-"""
-LDD Corral
+"""Repo Corral.
 
 Tool to corral all the LDDs 
 """

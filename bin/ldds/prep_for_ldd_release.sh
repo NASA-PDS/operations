@@ -61,8 +61,8 @@ PR_JSON="{
 cd /tmp || exit
 
 echo ">> cloning template repo"
-rm -fr template
-git clone $BASE_CLONE_URL/template.git
+rm -fr ldd-template
+git clone $BASE_CLONE_URL/ldd-template.git
 
 for repo in "${dLDDs[@]}"; do
     rm -fr "$repo"
@@ -70,10 +70,10 @@ for repo in "${dLDDs[@]}"; do
     git clone $BASE_CLONE_URL/${repo}.git || continue
     
     echo "copying github action"
-    cp template/.github/workflows/*.yml "${repo}"/.github/workflows/
+    cp ldd-template/.github/workflows/*.yml "${repo}"/.github/workflows/
 
     echo "copying pull request template"
-    cp template/.github/pull_request_template.md "${repo}"/.github/pull_request_template.md
+    cp ldd-template/.github/pull_request_template.md "${repo}"/.github/pull_request_template.md
 
     cd "${repo}" || exit
 
@@ -110,9 +110,9 @@ for repo in "${dLDDs[@]}"; do
 
     echo
     echo
-    sleep 30
+    sleep 10
 done
 
-rm -fr template
+rm -fr ldd-template
 
 exit 0

@@ -1,11 +1,9 @@
 #!/usr/bin/env python
-'''
-PDS Stats Script
+"""PDS Stats Script.
 
 Simple script to get some download metrics for PDS software tools using
 Github3 API
-
-'''
+"""
 import argparse
 import github3
 import logging

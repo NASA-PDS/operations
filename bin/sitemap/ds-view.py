@@ -1,6 +1,9 @@
-# https://github.com/NASA-PDS/operations/issues/378
-# enhance PDS sitemap with data set landing page URLs (results for ds-view)
-# written May 2023 by csuh (with minor contributions by kelly)
+""" DS View Wrangler
+
+Enhance PDS sitemap with data set landing page URLs (results for ds-view)
+Written May 2023 by csuh (with minor contributions by kelly)
+https://github.com/NASA-PDS/operations/issues/378
+"""
 from datetime import datetime
 from git import Repo
 import os
@@ -10,7 +13,6 @@ import previous_run
 import logging
 import shutil
 import pathlib
-
 
 increment_slash_number_of_rows = 1000
 total_number_of_docs = None

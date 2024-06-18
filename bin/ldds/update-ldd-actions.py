@@ -1,6 +1,5 @@
 #!/usr/bin/env python
-"""
-LDD Corral
+"""LDD Corral.
 
 Tool to corral all the LDDs 
 """
@@ -35,8 +34,11 @@ ISSUES_URL = "https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issue
 # Sub-Model configuration base directory
 GITHUB_ACTION_PATH = os.path.join('.github', 'workflows')
 
-# Sub-Model configuration base directory
-DOC_CONFIG_FILEPATH = os.path.join('docs', 'source', 'conf.py')
+# Doc gen configuration
+#DOC_CONFIG_FILEPATH = os.path.join('docs', 'source', 'conf.py')
+
+# Doc gen requirements
+DOC_CONFIG_FILEPATH = os.path.join('docs', 'requirements.txt')
 
 # Quiet github3 logging
 _logger = logging.getLogger('github3')
@@ -72,17 +74,17 @@ def update_actions(token, gh, args):
             _action_file = os.path.join(_repo_path, GITHUB_ACTION_PATH, _filename)
             _logger.info(_action_file)
 
-            # check if SubMod repo has the actions
-            if _filename == 'ldd-ci.yml':
+            # check if LDD repo has the actions
+            if _filename == 'submod-ci.yml':
                 if os.path.exists(_action_file):
                     os.remove(_action_file)
                     os.chdir(_repo_path)
-                    commit(_action_file, 'Apply latest Sub-Model Automation updates')
+                    commit(_action_file, 'Removing submod-ci.yml for rename to ldd-ci.yml')
             else:
                 _logger.info(f'Copying {_action_file} to {_template_repo_path}')
                 copyfile(os.path.join(_template_repo_path, GITHUB_ACTION_PATH, _filename), _action_file)
                 os.chdir(_repo_path)
-                commit(_action_file, 'Apply latest LDD Automation updates')
+                commit(_action_file, f'Apply latest LDD Automation updates for {_filename}')
 
         # copy doc config
         _doc_config = os.path.join(_repo_path, DOC_CONFIG_FILEPATH)
@@ -91,7 +93,7 @@ def update_actions(token, gh, args):
             _logger.info(f'Copying {_template_doc_config} to {_doc_config}')
             copyfile(_template_doc_config, _doc_config)
             os.chdir(_repo_path)
-            commit(_doc_config, 'Apply latest LDD Doc Gen Config updates')
+            commit(_doc_config, f'Apply latest LDD Doc Gen Config updates')
 
         os.chdir(STAGING_PATH)
         cleanup_dir(_repo_path)

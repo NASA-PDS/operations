@@ -1,6 +1,5 @@
 #!/usr/bin/env python
-"""
-LDD Corral
+"""LDD Corral.
 
 Tool to corral all the LDDs 
 """
@@ -21,10 +20,8 @@ from shutil import rmtree
 from pkg_resources import resource_string
 from pystache import Renderer
 
-from pds_github_util.assets.assets import unzip_asset
-from pds_github_util.branches.git_actions import clone_checkout_branch
-from pds.ldd_manager.release import find_primary_ingest_ldd
-from pds.ldd_manager.util import convert_pds4_version_to_alpha
+from pds.ldd_manager.util import Assets, LDDs, convert_pds4_version_to_alpha
+from lasso.reports.branches.git_actions import clone_checkout_branch
 
 
 # LDDs In Development or repos to ignore
@@ -139,7 +136,7 @@ def get_ingest_ldd(token, repo, staging_path):
     _remote_url = repo.git_url.replace('git://', f'https://{token}:x-oauth-basic@')
     cloned_repo = clone_checkout_branch(_remote_url, _staging, 'main')
 
-    return find_primary_ingest_ldd(f'{cloned_repo.working_tree_dir}/src')
+    return LDDs.find_primary_ingest_ldd(f'{cloned_repo.working_tree_dir}/src')
 
 
 def extract_metadata(ingest_ldd):
@@ -202,7 +199,7 @@ def prep_assets_for_release(release, output_path):
                 _output = os.path.join(output_path, _asset.name)
                 _asset.download(path=_output)
 
-                unzip_asset(_output, output_path)
+                Assets.unzip_asset(_output, output_path)
 
                 for root, dirs, files in os.walk(output_path):
                     for file in files:

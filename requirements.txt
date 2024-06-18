@@ -1,7 +1,6 @@
 github3.py~=1.3.0
-lxml~=4.6.2
-pds-github-util~=0.29.0
-pds.ldd-manager~=0.3.0
-pystache~=0.5.4
+lxml~=4.6.3
+pds.ldd-manager~=1.0.1
+pystache~=0.6.0
 pyyaml~=6.0
-requests~=2.23.0
+requests~=2.31.0
