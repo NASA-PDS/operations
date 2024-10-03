@@ -73,8 +73,7 @@
 		<div id="compatible-versions">
 			<h3>Compatible Versions</h3>
 			<p>
-				For each version of the PDS Common Data Dictionary, there are specific discipline and mission dictionary that are compatible.
-				You can find this information in our <a href="/datastandards/schema/pds-dictionary-stacks.pdf">Dictionary Stacks</a> database.
+                          For each version of the PDS Common Data Dictionary, all Discipline Dictionaries are built with the same version of the Common to ensure validity and compatibility. Use this page to find compatible version. If the dictionary does not appear on this page, please contact the <a href="mailto:pds-operator@jpl.nasa.gov">PDS Help Desk</a> to have it generated.
 			</p>
 			<p><a class="toTop">Back to top</a></p>
 		</div>
