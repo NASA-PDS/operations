@@ -25,7 +25,7 @@ NS_MAP = {'xsi': XML_SCHEMA_INSTANCE_URI}
 _logger = logging.getLogger(__name__)
 _search_key = 'ops:Harvest_Info.ops:harvest_date_time'
 _query_page_size = 50
-_psa_query = '(product_class eq "Product_Context" and ops:Harvest_Info.ops:node_name like "PSA")'
+_psa_query = '((product_class eq "Product_Context" or  product_class eq "Product_Bundle" or product_class eq "Product_Collection") and ops:Harvest_Info.ops:node_name like "PSA")'
 _bufsiz = 512
 
 
