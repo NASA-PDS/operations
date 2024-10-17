@@ -17,16 +17,18 @@ from lxml import etree
 from http import HTTPStatus
 
 
-PDS_XSD_URL = 'https://github.com/NASA-PDS/harvest/blob/main/src/main/resources/conf/configuration.xsd'
-PROD_SEARCH_API_URL = 'https://pds.mcp.nasa.gov/api/search/1/products'
+# Handy constants
+PDS_XSD_URL             = 'https://github.com/NASA-PDS/harvest/blob/main/src/main/resources/conf/configuration.xsd'
+PROD_SEARCH_API_URL     = 'https://pds.mcp.nasa.gov/api/search/1/products'
 XML_SCHEMA_INSTANCE_URI = 'http://www.w3.org/2001/XMLSchema-instance'
-NS_MAP = {'xsi': XML_SCHEMA_INSTANCE_URI}
+NS_MAP                  = {'xsi': XML_SCHEMA_INSTANCE_URI}
 
-_logger = logging.getLogger(__name__)
-_search_key = 'ops:Harvest_Info.ops:harvest_date_time'
+# Implementation-private constants
+_logger          = logging.getLogger(__name__)
+_search_key      = 'ops:Harvest_Info.ops:harvest_date_time'
 _query_page_size = 50
-_psa_query = '((product_class eq "Product_Context" or  product_class eq "Product_Bundle" or product_class eq "Product_Collection") and ops:Harvest_Info.ops:node_name like "PSA")'
-_bufsiz = 512
+_psa_query       = '((product_class eq "Product_Context" or  product_class eq "Product_Bundle" or product_class eq "Product_Collection") and ops:Harvest_Info.ops:node_name like "PSA")'
+_bufsiz          = 512
 
 
 def _get_lidvid(product: dict) -> str:
