@@ -95,8 +95,8 @@ body:
        label: ⚙️ Engineering Details
        value: |
         - [ ] Complete [Initializing New LDD procedure](https://pds-data-dictionaries.github.io/development/ldd-create.html#initializing-new-ldd)
+        - [ ] Add Steward to pdsddstewards@jpl.nasa.gov email list if they are not already on the list. Contact @c-suh if you are not able to do this.
         - [ ] If Discipline LDD
-          - [ ] add Steward to pdsddstewards@jpl.nasa.gov email list if they are not already on the list
           - [ ] update [LDD script config](https://github.com/NASA-PDS/pdsen-operations/blob/master/conf/ldds/config.yml)
           - [ ] create directory and index files for Git
           - [ ] create symlink on all machines
