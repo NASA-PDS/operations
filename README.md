@@ -112,9 +112,26 @@ TBD
     - PR Description:
     ```
     ## Summary
-
-    PR for testing LDD with new IM release.
     ```
     - PR Labels: `release`
+    - PR for testing LDD with new IM release.
 
 3.  If build failed on new branch, contact the LDD Steward to investigate a potential regression test failure or incompatibility with the new IM version.
+
+# Portal Scripts
+
+### pds-sync-api.py
+```
+Download ESA PSA product XML files from search API
+
+options:
+  -h, --help            show this help message and exit
+  -n NODE_NAME, --node-name NODE_NAME
+                        Name of the node (default psa)
+  -p DOWNLOAD_PATH, --download-path DOWNLOAD_PATH
+                        Where to create the XML files (default download)
+  -u URL, --url URL     URL of the PDS product search API (default
+                        https://pds.mcp.nasa.gov/api/search/1/products)
+  -c CONFIG, --config CONFIG
+                        What to call the harvest XML config output (default harvest.cfg)
+```
