@@ -107,8 +107,8 @@ def generate_release(token, gh, args):
             _ldd_name, _dict_type, _ns_id, _ns_version = extract_metadata(_ingest_ldd)
 
             # check if this is a discipline LDD
-            if is_discipline_ldd(_repo, _dict_type, _config):
-                logger.info(f'discipline LDD found {_repo.name}')
+            if args.all_repos or is_discipline_ldd(_repo, _dict_type, _config):
+                logger.info(f'LDD found {_repo.name}')
                 _ldd_summary_repo = _ldd_summary[_repo.name] = {}
                 _ldd_summary_repo['repo'] = _repo
 
@@ -430,6 +430,9 @@ def main():
     parser.add_argument('--base_path',
                         help='Base file path for the staging and output paths.',
                         required=True)
+    parser.add_argument('--all_repos',
+                        help='Clone and include all repos in corral run.',
+                        action='store_true')
 
     args = parser.parse_args()
 
