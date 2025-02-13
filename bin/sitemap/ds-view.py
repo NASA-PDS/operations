@@ -184,7 +184,12 @@ def convert_string_to_date(timestamp_string):
     :param timestamp_string:
     :return: date object
     """
-    return datetime.strptime(timestamp_string, '%Y-%m-%dT%H:%M:%SZ').date()
+    try:
+        # without milliseconds
+        return datetime.strptime(timestamp_string, '%Y-%m-%dT%H:%M:%SZ').date()
+    except ValueError:
+        # with milliseconds
+        return datetime.strptime(timestamp_string, '%Y-%m-%dT%H:%M:%S.%fZ').date()
 
 
 def get_most_recent_lastmod_date(list_of_lastmod_dates):
@@ -210,8 +215,8 @@ def parse_response(list_of_docs):
     :param list_of_docs: query's json response's `docs`
     """
     for doc in list_of_docs:
-        if doc['resLocation'].startswith('/ds-view'):
-            location = 'https://pds.nasa.gov' + doc['resLocation'].replace(
+        if doc['resLocation'][0].startswith('/ds-view'):
+            location = 'https://pds.nasa.gov' + doc['resLocation'][0].replace(
                 '&', '&amp;')
             if 'modification_date' not in doc:
                 parsed_response[location] = None
