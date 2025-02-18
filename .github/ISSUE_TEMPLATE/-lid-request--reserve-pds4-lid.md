@@ -3,7 +3,8 @@ name: "[lid-request] Reserve PDS4 LID"
 about: Submit a PDS4 LID for approval
 title: "[lid-request] <replace this with proposed LID>"
 labels: lid-request, sprint-backlog
-assignees: c-suh, rchenatjpl
+assignees: c-suh, rchenatjpl, jordanpadams
+projects: "NASA-PDS/19"
 
 ---
 
