@@ -3,6 +3,7 @@ description: Describe this issue template's purpose here.
 title: '[ldd-release] <LDD Name> LDD Version:<LDD_version> IM Version:<IM_Version>'
 labels: "ldd-release,needs:triage,p.must-have,sprint-backlog"
 assignees: jordanpadams,c-suh
+projects: "NASA-PDS/19"
 
 body:
   - type: markdown
