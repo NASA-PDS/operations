@@ -46,7 +46,6 @@ body:
         2.
         3.
         ...
-      render: bash
  
   - type: textarea
     id: environment
