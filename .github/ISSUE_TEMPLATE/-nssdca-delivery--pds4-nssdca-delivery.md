@@ -2,8 +2,8 @@
 name: "[nssdca-delivery] PDS4 NSSDCA Delivery"
 about: Issue to submit new PDS Deep Archive outputs for delivery to NSSDCA
 title: "[nssdca-delivery] <replace this with bundle lidvid>"
-labels: nssdca-delivery,sprint-backlog
-assignees: c-suh,jordanpadams
+labels: nssdca-delivery
+assignees: c-suh
 projects: "NASA-PDS/19"
 
 ---
