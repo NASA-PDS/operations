@@ -1,0 +1,64 @@
+name: "[lid-request] Reserve PDS4 LID"
+about: Submit a PDS4 LID for approval
+title: "[lid-request] <replace this with proposed LID>"
+labels: lid-request, sprint-backlog
+assignees: c-suh, rchenatjpl, jordanpadams
+projects: "NASA-PDS/19"
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        See all PDS4 Bundle LIDs here: https://pds-engineering.jpl.nasa.gov/content/bundle-lids.
+        See all PDS4 Context LIDs here: https://pds-engineering.jpl.nasa.gov/discipline-node-help/context-lids/.
+
+  - type: textarea
+    id: pds4-lid
+    attributes:
+      label: PDS4 Logical Identifier
+      description: Proposed LID or LIDs
+    validations:
+      required: true
+
+  - type: dropdown
+    id: lid-type
+    attributes:
+      label: LID Type
+      description: What type of LID are your requesting?
+      multiple: false
+      options:
+        - "Bundle"
+        - "Context Product"
+    validations:
+      required: yes
+
+  - type: textarea
+    id: mission
+    attributes:
+      label: Mission / Investigation
+      description: If applicable
+    validations:
+      required: false
+
+  - type: dropdown
+    id: node
+    attributes:
+      label: Curating Node / Organization
+      description: Node/organization responsible for this bundle/context product
+      multiple: false
+      options:
+        - "ATM"
+        - "EN"
+        - "GEO"
+        - "IMG"
+        - "ISRO"
+        - "JAXA"
+        - "NAIF"
+        - "PPI"
+        - "PSA"
+        - "RMS"
+        - "RSSN"
+        - "SBN"
+    validations:
+      required: yes
+
