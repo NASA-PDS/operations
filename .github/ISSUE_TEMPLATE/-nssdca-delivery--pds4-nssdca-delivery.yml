@@ -1,0 +1,55 @@
+name: "[nssdca-delivery] PDS4 NSSDCA Delivery"
+description: Issue to submit new PDS Deep Archive outputs for delivery to NSSDCA
+title: "[nssdca-delivery] <replace this with bundle lidvid>"
+labels: nssdca-delivery
+assignees: c-suh
+projects: "NASA-PDS/19"
+assignees: jordanpadams
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        If you have multiple delivery packages, we strongly encourage you to submit these in batches of 3 to 10 
+        per issue with one ZIP file of the packages and another ZIP file of the validation reports. 
+        Please use a descriptive title, such as `Node Mission misc batch #`.
+
+  - type: dropdown
+    id: node
+    attributes:
+      label: Delivering Node
+      description: Node/organization responsible for this delivery
+      multiple: false
+      options:
+        - "ATM"
+        - "EN"
+        - "GEO"
+        - "IMG"
+        - "NAIF"
+        - "PPI"
+        - "RMS"
+        - "SBN"
+    validations:
+      required: yes
+
+  - type: textarea
+    id: description
+    attributes:
+      label: NSSDCA Delivery Package
+      description: Please upload the files output by PDS Deep Archive as a TAR.GZ or ZIP file here, or supply a URL to download from
+    validations:
+      required: true
+
+  - type: textarea
+    id: report
+    attributes:
+      label: Validation Report
+      description: Please upload a TXT report or screenshot of PDS4 Validate Tool run on your bundle. NSSDCA only accepts valid PDS4 bundles. be sure you run validate with the `-R pds4.bundle` flag enabled to ensure all integrity checks are completed successfully.
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Engineering Node Process
+        See the internal EN process at https://pds-engineering.jpl.nasa.gov/content/nssdca_interface_process
