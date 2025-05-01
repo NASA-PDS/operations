@@ -275,6 +275,13 @@ def get_latest_tag_for_pds4_version(dldd_repo, pds4_alpha_version):
     return _latest_release
 
 
+def get_webhelp_chapter_string(chapter_number):
+    if chapter_number < 10:
+        return '0' + str(chapter_number)
+    else:
+        return str(chapter_number)
+
+
 def get_webhelp_chapter_number(ns_id, specification):
     """Determines what the webhelp chapter number will be, based off the list of IngestLDDs, which Steve uses to make the WebHelp files
     """
@@ -283,11 +290,13 @@ def get_webhelp_chapter_number(ns_id, specification):
     chapter_offset = 6
     try:
         ingest_ldd_index = QUALIFYING_INGEST_LDDS.index(ns_id)
-        webhelp_chapter_number_basis = ingest_ldd_index + chapter_offset
+        webhelp_chapter_number = ingest_ldd_index + chapter_offset
         if specification == 'classes':
-            return webhelp_chapter_number_basis
+            webhelp_chapter_string = get_webhelp_chapter_string(webhelp_chapter_number)
         elif specification == 'attributes':
-            return webhelp_chapter_number_basis + 1
+            webhelp_chapter_string = get_webhelp_chapter_string(webhelp_chapter_number + 1)
+
+        return webhelp_chapter_string
     except ValueError:
         print(f'ERROR: {ns_id} not recognized as having an IngestLDD')
 
