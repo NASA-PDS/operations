@@ -335,11 +335,16 @@ def generate_report(ldd_summary, pds4_version, pds4_alpha_version, output, confi
                 'webhelp_url_attributes': WEBHELP_URL.format(
                     pds4_alpha_version, get_webhelp_chapter_number(_ldd_summary_repo['ns_id'], 'attributes'))
             }
-            _renderer = Renderer()
-            _template = resource_string(__name__, os.path.join(LDD_TEMPLATES_DIR, 'ldd.template.html'))
-            _ldd_html_block += _renderer.render(_template, _pystache_dict)
+            partial_template = """
+                        <ul>
+                            <li><a href="{{xsd_path}}">{{xsd_fname}}</a></li>
+                            <li><a href="{{sch_path}}">{{sch_fname}}</a></li>
+                            <li><a href="{{xml_path}}">{{xml_fname}}</a></li>
+                            <li><a href="{{json_path}}">{{json_fname}}</a></li>
+                            <li><a href="{{zip_path}}">{{zip_fname}}</a></li>
+                        </ul>"""
         else:
-            # Discipline LDD was not release. use alternate template
+            # Discipline LDD was not released. use alternate template
             _pystache_dict = {
                 'ns_id': _ldd_summary_repo['ns_id'],
                 'title': _ldd_summary_repo['name'],
@@ -357,9 +362,14 @@ def generate_report(ldd_summary, pds4_version, pds4_alpha_version, output, confi
                 'webhelp_url_attributes': WEBHELP_URL.format(
                     pds4_alpha_version, get_webhelp_chapter_number(_ldd_summary_repo['ns_id'], 'attributes'))
             }
-            _renderer = Renderer()
-            _template = resource_string(__name__, os.path.join(LDD_TEMPLATES_DIR, 'ldd-alternate.template.html'))
-            _ldd_html_block += _renderer.render(_template, _pystache_dict)
+            partial_template = ('<i>A new version of this Local Data Dictionary was not generated with this version of '
+                                'the PDS4 Information Model. To submit a request to have the LDD generated, please '
+                                'submit a request to the <a href="https://pds.nasa.gov/?feedback=true">PDS Help Desk</a>, '
+                                'or create an issue in the <a href="{{issues_url}}">PDS4 LDD Issues Repository</a></i>')
+        # Render this LDD section
+        _renderer = Renderer(partials={'ldd_files': partial_template})
+        _template = resource_string(__name__, os.path.join(LDD_TEMPLATES_DIR, 'ldd.template.html'))
+        _ldd_html_block += _renderer.render(_template, _pystache_dict)
 
         # Build up LDD TOC
         _ldd_toc += LDD_TOC_TEMPLATE.format(_ldd_summary_repo['ns_id'], _ldd_summary_repo['name'])
