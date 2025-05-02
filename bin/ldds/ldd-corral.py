@@ -58,13 +58,14 @@ ISSUES_URL = "https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issue
 # WebHelp URL for each namespace's specification of classes or attributes
 WEBHELP_URL = "https://pds.nasa.gov/datastandards/documents/dd/v1/PDS4_PDS_DD_{}/webhelp/all/#ch{}.html"
 
-# regex to get the filename, without file extension, of the IngestLDD from the path
-INGEST_LDD_FILENAME_REGEX = re.compile(r'(?<=src/).*(?=\.xml$)')
-# regex to get the namespace from the IngestLDD filename
-NAMESPACE_FROM_INGEST_LDD_FILENAME_REGEX = re.compile(r'(?<=PDS4_).*(?=_IngestLDD)')
+# regex to get the namespace from the IngestLDD path
+# NOTE: DART (and DAWN) has an irregular filename (and different directory structure)
+# thus, it won't match this regex, but DART is not on the mission LDD page anyway, which disqualifies it
+NAMESPACE_FROM_INGEST_LDD_FILENAME_REGEX = re.compile(r'(?<=src/PDS4_).*(?=_IngestLDD\.xml)')
 
 # Intersection of (1) nominally valid IngestLDDs and (2) mission and discipline LDDs posted on PDS LDD pages
-# 'DAWN' namespace is manually added because its IngestLDD does not follow the directory structure and thus isn't found
+# NOTE: DAWN namespace is manually added because its IngestLDD doesn't follow the directory structure and thus isn't
+# found (but even if it were found, its filename is irregular and wouldn't match the regex above)
 QUALIFYING_INGEST_LDDS = ['dawn']
 
 # HTML list template
@@ -99,37 +100,37 @@ def generate_release(token, gh, args):
         # get the ingestLDD file from the repo
         _ingest_ldd = get_ingest_ldd(token, _repo, args.base_path + STAGING_PATH)
 
-        if _ingest_ldd:
+        if _ingest_ldd and _repo.name not in SKIP_REPOS:
             assess_ingest_ldd(_ingest_ldd)
-            if _repo.name not in SKIP_REPOS:
-                _ldd_assets = []
 
-                # extract dictionary type and namespace id from ingestLDD
-                _ldd_name, _dict_type, _ns_id, _ns_version = extract_metadata(_ingest_ldd)
+            _ldd_assets = []
 
-                # check if this is a discipline LDD
-                if is_discipline_ldd(_repo, _dict_type, _config):
-                    logger.info(f'discipline LDD found {_repo.name}')
-                    _ldd_summary_repo = _ldd_summary[_repo.name] = {}
-                    _ldd_summary_repo['repo'] = _repo
+            # extract dictionary type and namespace id from ingestLDD
+            _ldd_name, _dict_type, _ns_id, _ns_version = extract_metadata(_ingest_ldd)
 
-                    _ldd_summary_repo['name'] = _ldd_name
-                    if 'name' in _config[_repo.name]:
-                        _ldd_summary_repo['name'] = _config[_repo.name]['name'] or _ldd_name
+            # check if this is a discipline LDD
+            if is_discipline_ldd(_repo, _dict_type, _config):
+                logger.info(f'discipline LDD found {_repo.name}')
+                _ldd_summary_repo = _ldd_summary[_repo.name] = {}
+                _ldd_summary_repo['repo'] = _repo
 
-                    _ldd_summary_repo['ns_id'] = _ns_id
-                    _dldd_repo = _repo.refresh()
+                _ldd_summary_repo['name'] = _ldd_name
+                if 'name' in _config[_repo.name]:
+                    _ldd_summary_repo['name'] = _config[_repo.name]['name'] or _ldd_name
 
-                    # get latest release
-                    _ldd_summary_repo['release'] = get_latest_tag_for_pds4_version(_dldd_repo, _pds4_alpha_version)
+                _ldd_summary_repo['ns_id'] = _ns_id
+                _dldd_repo = _repo.refresh()
 
-                    # let's download and unpack the release assets
-                    _ldd_assets = prep_assets_for_release(_ldd_summary_repo['release'],
-                                                          os.path.join(args.base_path + args.output, RELEASE_SUBDIR,
-                                                                       _ldd_summary_repo['ns_id'],
-                                                                       'v' + _ns_version))
+                # get latest release
+                _ldd_summary_repo['release'] = get_latest_tag_for_pds4_version(_dldd_repo, _pds4_alpha_version)
 
-                    _ldd_summary_repo['assets'] = _ldd_assets
+                # let's download and unpack the release assets
+                _ldd_assets = prep_assets_for_release(_ldd_summary_repo['release'],
+                                                      os.path.join(args.base_path + args.output, RELEASE_SUBDIR,
+                                                                   _ldd_summary_repo['ns_id'],
+                                                                   'v' + _ns_version))
+
+                _ldd_summary_repo['assets'] = _ldd_assets
 
     # sort list so that its order matches what's expected in WebHelp
     global QUALIFYING_INGEST_LDDS
@@ -163,27 +164,24 @@ def assess_ingest_ldd(ingest_ldd):
     """Assess if ns_id (1) has nominally valid IngestLDD and (2) appears on either the discipline or mission LDD pages
     """
     if len(ingest_ldd) == 1:
-        # yes, this format is inconsistent with SKIP_REPOS (e.g., 'DART' rather than 'ldd-dart')
-        MISSIONS_ABSENT_FROM_PDS_PAGE = ['DART', 'IRAS', 'LT', 'MGN', 'NEAS', 'PSYCHE', 'VCO', 'VIPER']
-        # NOTE: DART and DAWN have irregular filenames and/or different directory structure
-        filename_match = INGEST_LDD_FILENAME_REGEX.search(ingest_ldd[0])
-        if filename_match is not None:
-            filename = filename_match.group()
+        _missions_absent_from_pds_page = ['dart', 'iras', 'lt', 'mgn', 'neas', 'psyche', 'vco', 'viper']
+        _namespace_match = NAMESPACE_FROM_INGEST_LDD_FILENAME_REGEX.search(ingest_ldd[0])
+        if _namespace_match is not None:
+            _namespace = _namespace_match.group().lower()
             if (
-                    not any(absent_mission in filename for absent_mission in MISSIONS_ABSENT_FROM_PDS_PAGE)
-                    and not any(skip_repo in filename for skip_repo in SKIP_REPOS)
-                    and 'EXAMPLE' not in filename
+                _namespace != 'example' and
+                not any(_namespace == _absent_mission for _absent_mission in _missions_absent_from_pds_page)
             ):
-                namespace_match = NAMESPACE_FROM_INGEST_LDD_FILENAME_REGEX.search(filename)
-                if namespace_match is not None:
-                    namespace = namespace_match.group().lower()
-                    QUALIFYING_INGEST_LDDS.append(namespace)
-                else:
-                    print(f'Failed to match regex for namespace in IngestLDD filename, {filename}')
+                _namespace_id_exceptions = {'spectral': 'sp'}
+                for _ns, _id in _namespace_id_exceptions.items():
+                    if _namespace == _ns:
+                        QUALIFYING_INGEST_LDDS.append(_id)
+                    else:
+                        QUALIFYING_INGEST_LDDS.append(_namespace)
         else:
-            print(f'Failed to match regex for XML in expected directory for {ingest_ldd[0]}')
+            logger.debug(f'Failed to match regex for XML in expected directory for {ingest_ldd[0]}')
     else:
-        print(f'PROBLEMATIC: More than one IngestLDD found {ingest_ldd}')
+        logger.debug(f'PROBLEMATIC: More than one IngestLDD found {ingest_ldd}')
 
 
 def extract_metadata(ingest_ldd):
