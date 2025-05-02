@@ -287,18 +287,18 @@ def get_webhelp_chapter_number(ns_id, specification):
     """
     # There are 5 chapters from "Intro" to "Attributes in the common namespace"
     # So, the chapters based off these IngestLDDs start from chapter 6
-    chapter_offset = 6
+    _chapter_offset = 6
     try:
-        ingest_ldd_index = QUALIFYING_INGEST_LDDS.index(ns_id)
-        webhelp_chapter_number = ingest_ldd_index + chapter_offset
+        _ingest_ldd_index = QUALIFYING_INGEST_LDDS.index(ns_id)
+        _webhelp_chapter_number = (2 * _ingest_ldd_index) + _chapter_offset
+        _webhelp_chapter_string = ''
         if specification == 'classes':
-            webhelp_chapter_string = get_webhelp_chapter_string(webhelp_chapter_number)
+            _webhelp_chapter_string = get_webhelp_chapter_string(_webhelp_chapter_number)
         elif specification == 'attributes':
-            webhelp_chapter_string = get_webhelp_chapter_string(webhelp_chapter_number + 1)
-
-        return webhelp_chapter_string
+            _webhelp_chapter_string = get_webhelp_chapter_string(_webhelp_chapter_number + 1)
+        return _webhelp_chapter_string
     except ValueError:
-        print(f'ERROR: {ns_id} not recognized as having an IngestLDD')
+        logger.debug(f'PROBLEM: {ns_id} not recognized as having an IngestLDD')
 
 
 def generate_report(ldd_summary, pds4_version, pds4_alpha_version, output, config):
