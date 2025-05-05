@@ -6,6 +6,8 @@ Tool to corral all the LDDs
 import logging
 import os
 
+import re
+
 import sys
 import traceback
 
@@ -25,7 +27,7 @@ from lasso.reports.branches.git_actions import clone_checkout_branch
 
 
 # LDDs In Development or repos to ignore
-SKIP_REPOS = ['dd-library', 'ldd-wave', 'ldd-template']
+SKIP_REPOS = ['dd-library', 'ldd-wave', 'ldd-template', 'PDS-Data-Dictionaries.github.io', 'PDS4-LDD-Issue-Repo']
 
 # Github Org containing Discipline LDDs
 GITHUB_ORG = 'pds-data-dictionaries'
@@ -52,6 +54,19 @@ LDD_FILES_THAT_MATTER = ['xsd', 'sch', 'xml', 'json', 'zip']
 
 # Default Issues URL
 ISSUES_URL = "https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues"
+
+# WebHelp URL for each namespace's specification of classes or attributes
+WEBHELP_URL = "https://pds.nasa.gov/datastandards/documents/dd/v1/PDS4_PDS_DD_{}/webhelp/all/#ch{}.html"
+
+# Regex to get the namespace from the IngestLDD path
+# NOTE: DART (and DAWN) has an irregular filename (and different directory structure)
+# thus, it won't match this regex, but DART is not on the mission LDD page anyway, which disqualifies it
+NAMESPACE_FROM_INGEST_LDD_FILENAME_REGEX = re.compile(r'(?<=src/PDS4_).*(?=_IngestLDD\.xml)')
+
+# See `check_qualifiers_for_ldds()` for qualifying conditions
+# NOTE: DAWN namespace is manually added because its IngestLDD doesn't follow the directory structure and thus isn't
+# found (but even if it were found, its filename is irregular and wouldn't match the regex above)
+QUALIFYING_INGEST_LDDS = ['dawn']
 
 # HTML list template
 LDD_TOC_TEMPLATE = '				<li><a href="#{}">{}</a></li>\n'
@@ -85,7 +100,9 @@ def generate_release(token, gh, args):
         # get the ingestLDD file from the repo
         _ingest_ldd = get_ingest_ldd(token, _repo, args.base_path + STAGING_PATH)
 
-        if _ingest_ldd and _repo.name != "ldd-template":
+        if _ingest_ldd and _repo.name not in SKIP_REPOS:
+            assess_ingest_ldd(_ingest_ldd)
+
             _ldd_assets = []
 
             # extract dictionary type and namespace id from ingestLDD
@@ -115,6 +132,10 @@ def generate_release(token, gh, args):
 
                 _ldd_summary_repo['assets'] = _ldd_assets
 
+    # sort list so that its order matches what's expected in WebHelp
+    global QUALIFYING_INGEST_LDDS
+    QUALIFYING_INGEST_LDDS.sort()
+
     # generate output report
     generate_report(_ldd_summary, args.pds4_version, _pds4_alpha_version, args.output, _config)
 
@@ -137,6 +158,56 @@ def get_ingest_ldd(token, repo, staging_path):
     cloned_repo = clone_checkout_branch(_remote_url, _staging, 'main')
 
     return LDDs.find_primary_ingest_ldd(f'{cloned_repo.working_tree_dir}/src')
+
+
+def assess_ingest_ldd(ingest_ldd):
+    """Assess if ns_id qualifies to go in QUALIFYING_INGEST_LDDS
+    """
+    ingest_ldd_path = get_first_ingest_ldd(ingest_ldd)
+    _namespace_match = NAMESPACE_FROM_INGEST_LDD_FILENAME_REGEX.search(ingest_ldd_path)
+
+    if _namespace_match is not None:
+        _namespace = _namespace_match.group().lower()
+        check_qualifiers_for_ldds(_namespace)
+    else:
+        logger.debug(f'Failed to match regex for XML in expected directory for {ingest_ldd[0]}')
+
+
+def get_first_ingest_ldd(ingest_ldd):
+    """Returns first item from list. If there is more than one item in this list, the logic of both this and
+    get_ingest_ldd should be revisited.
+    """
+    if len(ingest_ldd) > 1:
+        logger.debug(f'PROBLEMATIC: More than one IngestLDD found {ingest_ldd}')
+
+    return ingest_ldd[0]
+
+
+def check_qualifiers_for_ldds(namespace):
+    """Conditions are that it (1) has nominally valid IngestLDD, (2) appears on either the discipline or
+    mission LDD pages, and (3) has a repo at github.com/pds-data-dictionaries.
+    """
+    # discipline LDDs absent from PDS page is already covered from global variable, SKIP_REPOS
+    # some LDDs on the PDS pages do not have repos (e.g., orex), so they should not appear here anyway since the
+    # ingestLDD file is from the repository
+    _missions_absent_from_pds_page = ['dart', 'iras', 'lt', 'mgn', 'neas', 'psyche', 'vco', 'viper']
+    if (
+            namespace != 'example' and
+            not any(namespace == _absent_mission for _absent_mission in _missions_absent_from_pds_page)
+    ):
+        QUALIFYING_INGEST_LDDS.append(check_for_namespace_exceptions(namespace))
+
+
+def check_for_namespace_exceptions(namespace):
+    """Most IngestLDDs follow the format of PDS4_<ns_id>_IngestLDD.xml. Some one-offs (e.g., DART, DAWN) should be
+    addressed with its next release, but some others appear confused, whether it's our doing or theirs.
+    """
+    _namespace_id_exceptions = {'spectral': 'sp'}
+    for _ns, _id in _namespace_id_exceptions.items():
+        if namespace == _ns:
+            return _id
+        else:
+            return namespace
 
 
 def extract_metadata(ingest_ldd):
@@ -228,6 +299,32 @@ def get_latest_tag_for_pds4_version(dldd_repo, pds4_alpha_version):
     return _latest_release
 
 
+def get_webhelp_chapter_string(chapter_number):
+    if chapter_number < 10:
+        return '0' + str(chapter_number)
+    else:
+        return str(chapter_number)
+
+
+def get_webhelp_chapter_number(ns_id, specification):
+    """Determines what the webhelp chapter number will be, based off the list of IngestLDDs, which Steve uses to make the WebHelp files
+    """
+    # There are 5 chapters from "Intro" to "Attributes in the common namespace"
+    # So, the chapters based off these IngestLDDs start from chapter 6
+    _chapter_offset = 6
+    try:
+        _ingest_ldd_index = QUALIFYING_INGEST_LDDS.index(ns_id)
+        _webhelp_chapter_number = (2 * _ingest_ldd_index) + _chapter_offset
+        _webhelp_chapter_string = ''
+        if specification == 'classes':
+            _webhelp_chapter_string = get_webhelp_chapter_string(_webhelp_chapter_number)
+        elif specification == 'attributes':
+            _webhelp_chapter_string = get_webhelp_chapter_string(_webhelp_chapter_number + 1)
+        return _webhelp_chapter_string
+    except ValueError:
+        logger.debug(f'PROBLEM: {ns_id} not recognized as having an IngestLDD')
+
+
 def generate_report(ldd_summary, pds4_version, pds4_alpha_version, output, config):
     _ldd_html_block = ""
     _ldd_toc = ""
@@ -235,11 +332,27 @@ def generate_report(ldd_summary, pds4_version, pds4_alpha_version, output, confi
         _ldd_summary_repo = ldd_summary[_repo_name]
         _assets = _ldd_summary_repo['assets']
         _description = config[_ldd_summary_repo['repo'].name]['description']
+        _pystache_dict = {
+            'ns_id': _ldd_summary_repo['ns_id'],
+            'title': _ldd_summary_repo['name'],
+            'description': _description,
+            'release_date': '-',
+            'issues_url': ISSUES_URL,
+            'github_repo_url': _ldd_summary_repo['repo'].clone_url.replace('.git', ''),
+            'github_io_url': (
+                    _ldd_summary_repo['repo'].homepage or
+                    _ldd_summary_repo['repo'].clone_url
+                    .replace('.git', '')
+                    .replace('github.com/pds-data-dictionaries', 'pds-data-dictionaries.github.io')
+            ),
+            'webhelp_url_classes': WEBHELP_URL.format(
+                pds4_alpha_version, get_webhelp_chapter_number(_ldd_summary_repo['ns_id'], 'classes')),
+            'webhelp_url_attributes': WEBHELP_URL.format(
+                pds4_alpha_version, get_webhelp_chapter_number(_ldd_summary_repo['ns_id'], 'attributes'))
+        }
         if _assets:
             _pystache_dict = {
-                'ns_id': _ldd_summary_repo['ns_id'],
-                'title': _ldd_summary_repo['name'],
-                'description': _description,
+                **_pystache_dict,
                 'release_date': datetime.strftime(_ldd_summary_repo['release'].published_at, '%m/%d/%Y'),
                 'xsd_path': _assets['xsd'].replace(OUTPUT_PATH, ''),
                 'xsd_fname': os.path.basename(_assets['xsd']),
@@ -250,26 +363,26 @@ def generate_report(ldd_summary, pds4_version, pds4_alpha_version, output, confi
                 'json_path': _assets['json'].replace(OUTPUT_PATH, ''),
                 'json_fname': os.path.basename(_assets['json']),
                 'zip_path': _assets['zip'].replace(OUTPUT_PATH, ''),
-                'zip_fname': os.path.basename(_assets['zip']),
-                'issues_url': ISSUES_URL,
-                'github_url': _ldd_summary_repo['repo'].homepage or
-                              _ldd_summary_repo['repo'].clone_url.replace('.git', '')
+                'zip_fname': os.path.basename(_assets['zip'])
             }
-            _renderer = Renderer()
-            _template = resource_string(__name__, os.path.join(LDD_TEMPLATES_DIR, 'ldd.template.html'))
-            _ldd_html_block += _renderer.render(_template, _pystache_dict)
+            partial_template = """
+                        <ul>
+                            <li><a href="{{xsd_path}}">{{xsd_fname}}</a></li>
+                            <li><a href="{{sch_path}}">{{sch_fname}}</a></li>
+                            <li><a href="{{xml_path}}">{{xml_fname}}</a></li>
+                            <li><a href="{{json_path}}">{{json_fname}}</a></li>
+                            <li><a href="{{zip_path}}">{{zip_fname}}</a></li>
+                        </ul>"""
         else:
-            # Discipline LDD was not release. use alternate template
-            _pystache_dict = {
-                'ns_id': _ldd_summary_repo['ns_id'],
-                'title': _ldd_summary_repo['name'],
-                'description': _description,
-                'issues_url': ISSUES_URL,
-                'github_url': _ldd_summary_repo['repo'].homepage or _ldd_summary_repo['repo'].clone_url.replace('.git', '')
-            }
-            _renderer = Renderer()
-            _template = resource_string(__name__, os.path.join(LDD_TEMPLATES_DIR, 'ldd-alternate.template.html'))
-            _ldd_html_block += _renderer.render(_template, _pystache_dict)
+            # Discipline LDD was not released. Use alternate text in place of expected files.
+            partial_template = ('<i>A new version of this Local Data Dictionary was not generated with this version of '
+                                'the PDS4 Information Model. To submit a request to have the LDD generated, please '
+                                'submit a request to the <a href="https://pds.nasa.gov/?feedback=true">PDS Help Desk</a>, '
+                                'or create an issue in the <a href="{{issues_url}}">PDS4 LDD Issues Repository</a></i>')
+        # Render this LDD section
+        _renderer = Renderer(partials={'ldd_files': partial_template})
+        _template = resource_string(__name__, os.path.join(LDD_TEMPLATES_DIR, 'ldd.template.html'))
+        _ldd_html_block += _renderer.render(_template, _pystache_dict)
 
         # Build up LDD TOC
         _ldd_toc += LDD_TOC_TEMPLATE.format(_ldd_summary_repo['ns_id'], _ldd_summary_repo['name'])

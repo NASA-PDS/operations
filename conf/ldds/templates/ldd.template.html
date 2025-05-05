@@ -4,18 +4,20 @@
                 <p>
                     {{description}}
                 </p>
+                <p>
+                    <b>Issue Tracking:</b> <a href="{{issues_url}}">{{issues_url}}</a>
+                    <br>
+                    <b>Github Repo:</b> <a href="{{github_repo_url}}">{{github_repo_url}}</a>
+                    <br>
+                    <b>Read the Docs:</b> <a href="{{github_io_url}}">{{github_io_url}}</a>
+                    <br>
+                    <b>Specification (Classes):</b> <a href="{{webhelp_url_classes}}">{{webhelp_url_classes}}</a>
+                    <br>
+                    <b>Specification (Attributes):</b> <a href="{{webhelp_url_attributes}}">{{webhelp_url_attributes}}</a>
+                </p>
                 <ul>
                     <li><b>Last Updated:</b> {{release_date}}</li>
-                    <li><b>Issue Tracking:</b> <a href="{{issues_url}}">{{issues_url}}</a></li>
-                    <li><b>Github Repo:</b> <a href="{{github_url}}">{{github_url}}</a></li>
-                    <li><b>Data Dictionary Files:</b>
-                        <ul>
-                            <li><a href="{{xsd_path}}">{{xsd_fname}}</a></li>
-                            <li><a href="{{sch_path}}">{{sch_fname}}</a></li>
-                            <li><a href="{{xml_path}}">{{xml_fname}}</a></li>
-                            <li><a href="{{json_path}}">{{json_fname}}</a></li>
-                            <li><a href="{{zip_path}}">{{zip_fname}}</a></li>
-                        </ul>
+                    <li><b>Data Dictionary Files:</b> {{> ldd_files}}
                     </li>
                 </ul>
                 <p><a class="toTop">Back to top</a></p>
