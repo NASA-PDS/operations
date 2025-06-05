@@ -59,14 +59,12 @@ ISSUES_URL = "https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issue
 WEBHELP_URL = "https://pds.nasa.gov/datastandards/documents/dd/v1/PDS4_PDS_DD_{}/webhelp/all/#ch{}.html"
 
 # Regex to get the namespace from the IngestLDD path
-# NOTE: DART (and DAWN) has an irregular filename (and different directory structure)
-# thus, it won't match this regex, but DART is not on the mission LDD page anyway, which disqualifies it
+# NOTE: DART has an irregular filename thus it won't match this regex
+# but DART is not on the mission LDD page anyway, which disqualifies it
 NAMESPACE_FROM_INGEST_LDD_FILENAME_REGEX = re.compile(r'(?<=src/PDS4_).*(?=_IngestLDD\.xml)')
 
 # See `check_qualifiers_for_ldds()` for qualifying conditions
-# NOTE: DAWN namespace is manually added because its IngestLDD doesn't follow the directory structure and thus isn't
-# found (but even if it were found, its filename is irregular and wouldn't match the regex above)
-QUALIFYING_INGEST_LDDS = ['dawn']
+QUALIFYING_INGEST_LDDS = []
 
 # HTML list template
 LDD_TOC_TEMPLATE = '				<li><a href="#{}">{}</a></li>\n'
@@ -132,8 +130,10 @@ def generate_release(token, gh, args):
 
                 _ldd_summary_repo['assets'] = _ldd_assets
 
-    # sort list so that its order matches what's expected in WebHelp
+    # momentarily convert list to set to remove duplicates as a just-in-case
+    # then sort the list so that its order matches what's expected in WebHelp
     global QUALIFYING_INGEST_LDDS
+    QUALIFYING_INGEST_LDDS = list(set(QUALIFYING_INGEST_LDDS))
     QUALIFYING_INGEST_LDDS.sort()
 
     # generate output report
@@ -191,6 +191,8 @@ def check_qualifiers_for_ldds(namespace):
     # some LDDs on the PDS pages do not have repos (e.g., orex), so they should not appear here anyway since the
     # ingestLDD file is from the repository
     _missions_absent_from_pds_page = ['dart', 'iras', 'lt', 'mgn', 'neas', 'psyche', 'vco', 'viper']
+    # for b15.1 only: files are too large for oxygen to generate all webhelp files, so NH was removed
+    _missions_absent_from_pds_page.append('nh')
     if (
             namespace != 'example' and
             not any(namespace == _absent_mission for _absent_mission in _missions_absent_from_pds_page)
