@@ -25,7 +25,7 @@ Consult your operating system instructions or system administrator to install th
 
 We will install the operations too using Python [Pip](https://pip.pypa.io/en/stable/), the Python Package Installer. If you have Python on your system, you probably already have Pip; you can run `pip --help` or `pip3 -help` to check.
 
-It's best install the tools virtual environment, so it won’t interfere with—or be interfered by—other packages. To do so:
+It's best install the tools virtual environment, so it won't interfere with—or be interfered by—other packages. To do so:
 
 ```console
 $ # Clone the repo or do a git pull if it already exists
@@ -135,3 +135,244 @@ options:
   -c CONFIG, --config CONFIG
                         What to call the harvest XML config output (default harvest.cfg)
 ```
+
+# NSSDCA Status Checker
+
+This script monitors the status of PDS4 packages in NSSDCA and updates GitHub issues accordingly.
+
+## Features
+
+- Reads package information from a CSV file
+- Checks NSSDCA API for package status
+- Updates GitHub issues with status comments
+- Sends email notifications for failed packages
+- Updates CSV file with new statuses
+- Closes issues when all packages are ingested
+
+## Requirements
+
+- Python 3.6 or higher
+- GitHub token with repo access
+- Email password for pds-operator@jpl.nasa.gov
+
+## Installation
+
+1. Clone this repository
+2. Install the required packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## Configuration
+
+Set the following environment variables:
+- `GITHUB_TOKEN`: Your GitHub personal access token
+- `EMAIL_PASSWORD`: Password for pds-operator@jpl.nasa.gov email account
+
+## Input CSV Format
+
+The script expects a CSV file named `nssdca_status.csv` with the following columns:
+- `github_issue_number`: The GitHub issue number
+- `identifier`: The package identifier (e.g., urn:nasa:pds:gbo.ast.catalina.survey::1.0)
+- `nssdca_status`: Current NSSDCA status of the package
+
+Example:
+```csv
+github_issue_number,identifier,nssdca_status
+629,urn:nasa:pds:gbo.ast.catalina.survey::1.0,proffered
+```
+
+## Usage
+
+Run the script:
+```bash
+python nssdca_status_checker.py
+```
+
+The script will:
+1. Read the CSV file
+2. Check NSSDCA status for each package
+3. Update GitHub issues with comments
+4. Send email notifications for failed packages
+5. Update the CSV file with new statuses
+6. Close issues when all packages are ingested
+
+## Error Handling
+
+- Failed API calls are logged
+- Email sending errors are logged
+- Invalid CSV data is logged
+- GitHub API errors are logged
+
+## Notes
+
+- The script assumes all issues are in the NASA-PDS/operations repository
+- Email notifications are sent to pds-operator@jpl.nasa.gov
+- Project board status updates require additional GitHub API configuration
+
+# PDS4 Context Operations
+
+This directory contains operational scripts and tools for managing PDS4 context products.
+
+## Scripts
+
+### Context Duplicate Identifier Checker
+
+**Location**: `bin/context/check_duplicate_identifiers.py`
+
+A Python script that checks for duplicate `logical_identifier` values in PDS4 context XML files.
+
+#### Features
+
+- Recursively scans all XML files in the `data/pds4/context-pds4` directory
+- Extracts `logical_identifier` values from the `Identification_Area` section
+- Reports any duplicate identifiers found
+- Follows PEP8, linting, and Black formatting standards
+- Includes comprehensive error handling and logging
+- Returns appropriate exit codes for automation
+
+#### Requirements
+
+- Python 3.8 or higher
+- Standard library modules only (no external dependencies required)
+
+#### Usage
+
+Run the script from the operations directory:
+
+```bash
+cd operations
+
+# Check the default directory (data/pds4/context-pds4)
+python3 bin/context/check_duplicate_identifiers.py
+
+# Check a specific directory
+python3 bin/context/check_duplicate_identifiers.py /path/to/xml/files
+
+# Check with verbose output
+python3 bin/context/check_duplicate_identifiers.py --verbose
+
+# Check a specific directory with verbose output
+python3 bin/context/check_duplicate_identifiers.py /path/to/xml/files --verbose
+```
+
+#### Expected Output
+
+**If no duplicates are found:**
+```
+Scanning 1234 XML files in ../../../data/pds4/context-pds4...
+
+✅ No duplicate logical_identifiers found!
+```
+
+**If duplicates are found:**
+```
+Scanning 1234 XML files in /path/to/xml/files...
+
+❌ DUPLICATE LOGICAL_IDENTIFIERS FOUND:
+==================================================
+
+Logical Identifier: urn:nasa:pds:context:facility:laboratory.aps
+Found in 2 files:
+  - /path/to/xml/files/facility/laboratory.aps_1.0.xml
+  - /path/to/xml/files/facility/laboratory.aps_1.1.xml
+
+Total duplicate identifiers: 1
+```
+
+**With verbose output:**
+```
+Scanning 1234 XML files in /path/to/xml/files...
+  Found: urn:nasa:pds:context:facility:laboratory.aps in /path/to/xml/files/facility/laboratory.aps_1.0.xml
+  Found: urn:nasa:pds:context:facility:laboratory.aps in /path/to/xml/files/facility/laboratory.aps_1.1.xml
+  Found: urn:nasa:pds:context:target:planetary_system.solar_system in /path/to/xml/files/target/planetary_system.solar_system_1.0.xml
+  ...
+```
+
+#### Exit Codes
+
+- `0`: No duplicates found
+- `1`: Duplicates found or error occurred
+
+## Development
+
+### Code Formatting
+
+Format the code with Black:
+
+```bash
+cd operations
+black bin/context/check_duplicate_identifiers.py
+```
+
+### Linting
+
+Check code style with flake8:
+
+```bash
+cd operations
+flake8 bin/context/check_duplicate_identifiers.py
+```
+
+### Type Checking
+
+Run mypy for type checking:
+
+```bash
+cd operations
+mypy bin/context/check_duplicate_identifiers.py
+```
+
+### Running Tests
+
+Run the test suite:
+
+```bash
+cd operations
+pytest test/context/test_check_duplicate_identifiers.py -v
+```
+
+## How It Works
+
+1. **File Discovery**: Recursively finds all `.xml` files in the target directory
+2. **XML Parsing**: Uses `xml.etree.ElementTree` to parse each XML file
+3. **Identifier Extraction**: Looks for `logical_identifier` elements in the `Identification_Area` section
+4. **Namespace Handling**: Supports both namespaced and non-namespaced XML
+5. **Duplicate Detection**: Uses a `defaultdict` to track which files contain each identifier
+6. **Reporting**: Provides detailed output showing all duplicates and their locations
+
+## Error Handling
+
+The script handles various error conditions gracefully:
+
+- Missing or malformed XML files
+- Files without `logical_identifier` elements
+- Empty `logical_identifier` values
+- Permission errors when reading files
+
+## Example XML Structure
+
+The script expects XML files with this structure:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<Product_Context xmlns="http://pds.nasa.gov/pds4/pds/v1">
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:context:facility:laboratory.aps</logical_identifier>
+        <version_id>1.1</version_id>
+        <title>Argonne National Laboratory Advanced Photon Source</title>
+        <!-- ... other elements ... -->
+    </Identification_Area>
+    <!-- ... rest of document ... -->
+</Product_Context>
+```
+
+## Contributing
+
+When contributing to these scripts:
+
+1. Follow PEP8 style guidelines
+2. Use Black for code formatting
+3. Add type hints to all functions
+4. Write tests for new functionality
+5. Update documentation as needed

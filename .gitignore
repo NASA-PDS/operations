@@ -36,6 +36,7 @@ htmlcov
 *.iml
 .vscode
 *.sublime-*
+*.code-workspace
 
 
 # Shared objects (inc. Windows DLLs)
