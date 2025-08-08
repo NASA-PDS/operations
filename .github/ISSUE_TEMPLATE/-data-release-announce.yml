@@ -1,0 +1,55 @@
+name: "[data-release] PDS Data Release Lead Node Announcement"
+description: Issue for Lead Node only to provide main body of release announcement text.
+title: '[ANNOUNCE] <investigation_name> Release <release_number>'
+labels: "data-release,p.must-have,sprint-backlog"
+assignees: rchenatjpl
+projects: "NASA-PDS/19"
+
+body:
+
+  - type: input
+    attributes:
+      label: "Title of Release"
+      description: "Title of the release."
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: "Release Number (or ID)"
+      description: "Release number or identifier if periodic, e.g., OREx."
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: "Anticipated Release Date"
+      description: "Anticipated release date when this data will go public."
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: "Planned Release Date"
+      description: "Planned release date according to the data release calendar."
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: "Applicable Investigation(s)"
+      description: "Applicable investigation LID(s) relevant to this bundle."
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: "Release Announcement"
+      description: "Main body of release announcement. Be sure to include any information about delayed or missing data"
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: "Any Additional Information"
+      description: "Please provide any additional context or files that may be relevant for this release."
