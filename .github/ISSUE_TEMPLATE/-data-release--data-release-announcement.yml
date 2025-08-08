@@ -1,0 +1,152 @@
+name: "[data-release] PDS4 Data Release"
+description: Data release ingestion and/or community announcement for a PDS4 bundle or PDS3 data set
+title: '[RELEASE] <investigation_name>: <bundle_lidvid> release <release_number>'
+labels: "data-release,p.must-have,sprint-backlog"
+assignees: rchenatjpl
+projects: "NASA-PDS/19"
+
+body:
+
+  - type: markdown
+    attributes:
+      value: "## What type of release is this?"
+
+  - type: dropdown
+    id: release-version
+    attributes:
+      label: PDS4 Bundle or PDS3 Data Set?
+      multiple: false
+      options:
+        - "PDS4 Bundle"
+        - "PDS3 Data Set"
+    validations:
+      required: yes
+
+  - type: dropdown
+    id: release-type
+    attributes:
+      label: Mission Release or Aperiodic?
+      description: Is this is a regular ongoing mission release or an aperiodic release?
+      multiple: false
+      options:
+        - "Mission Data Release"
+        - "Aperiodic"
+    validations:
+      required: yes
+
+  - type: dropdown
+    id: release-announcement
+    attributes:
+      label: Ingest and Announce or Ingest Only?
+      description: Is a release announcement expected to the community mailing list? Or ingest-only?
+      multiple: false
+      options:
+        - "Ingest and Announce"
+        - "Ingest Only"
+    validations:
+      required: yes
+
+  - type: dropdown
+    id: doi
+    attributes:
+      label: Has DOI been released?
+      description: Has the DOI been released and made "Findable"?
+      multiple: false
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: yes
+      
+  - type: markdown
+    attributes:
+      value: "## Data Release Information"
+
+  - type: input
+    attributes:
+      label: "Identifier"
+      description: "Bundle LID or PDS3 Data Set ID for the data being released"
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: "Title"
+      description: "Title of the PDS4 Bundle or PDS3 Data Set to be released."
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: "Release Number (or ID)"
+      description: "Release number or identifier if periodic, e.g., OREx."
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: "Anticipated Release Date"
+      description: "Anticipated release date when this data will go public."
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: "Planned Release Date"
+      description: "Planned release date according to the data release calendar."
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: "Access URL"
+      description: "Default URL of the online PDS4 bundle or PDS3 Data Set for users to access the data."
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: "Alternate URL"
+      description: "URL for the PDS4 bundle or PDS3 Data Set if the default access URL is not desired on the legacy landing pages."
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: "Applicable Investigation(s)"
+      description: "Applicable investigation LID(s) relevant to this bundle."
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: "Applicable Instrument(s)"
+      description: "Applicable instrument LID(s) related to this bundle."
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: "Dates of Coverage"
+      description: "Provide the start and stop time of the coverage in the format `start_time - stop_time`."
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: "Additional Description / Text"
+      description: "Optional additional details or description related to this release."
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: "Data To Be Ingested"
+      description: "Data to be ingested into the Legacy PDS Registry for release. For PDS4: URLs to the bundles, collections, and all associated inventories or attach a zip of all applicable files. For PDS3: URLs to the catalog files that have changed or attach a zip of all applicable files."
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: "Additional Information"
+      description: "Please provide any additional context or files that may be relevant for this release."
