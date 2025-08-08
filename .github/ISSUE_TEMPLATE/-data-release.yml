@@ -1,6 +1,6 @@
 name: "[data-release] PDS Data Release"
 description: Data release for a PDS4 bundle or PDS3 data set
-title: '[RELEASE] <investigation_name>: <bundle_lidvid> release <release_number>'
+title: '[RELEASE] <investigation_name>: <bundle_lidvid_or_data_set_id> release <release_number>'
 labels: "data-release,p.must-have,sprint-backlog"
 assignees: rchenatjpl
 projects: "NASA-PDS/19"
@@ -111,14 +111,14 @@ body:
     validations:
       required: false
 
-  - type: textarea
+  - type: input
     attributes:
       label: "Applicable Investigation(s)"
       description: "Applicable investigation LID(s) relevant to this bundle."
     validations:
       required: true
 
-  - type: textarea
+  - type: input
     attributes:
       label: "Applicable Instrument(s)"
       description: "Applicable instrument LID(s) related to this bundle."
@@ -134,13 +134,6 @@ body:
 
   - type: textarea
     attributes:
-      label: "Additional Description / Text"
-      description: "Optional additional details or description related to this release."
-    validations:
-      required: false
-
-  - type: textarea
-    attributes:
       label: "Data To Be Ingested"
       description: "Data to be ingested into the Legacy PDS Registry for release. For PDS4: URLs to the bundles, collections, and all associated inventories or attach a zip of all applicable files. For PDS3: URLs to the catalog files that have changed or attach a zip of all applicable files."
     validations:
@@ -148,5 +141,12 @@ body:
 
   - type: textarea
     attributes:
-      label: "Additional Information"
+      label: "Additional Release Notes / Description / Text"
+      description: "Optional additional details or description related to this release if bundle or catalog metadata is not sufficient. Pertinent information like orbit or sol range, or other useful information encouraged."
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: "Any Additional Information"
       description: "Please provide any additional context or files that may be relevant for this release."
