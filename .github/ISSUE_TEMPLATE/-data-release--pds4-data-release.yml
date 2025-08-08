@@ -10,79 +10,79 @@ body:
     attributes:
       label: "Bundle LIDVID"
       description: "LIDVID of the bundle being released."
-      is_required: true
+      required: true
 
   - type: input
     attributes:
       label: "Bundle Title"
       description: "Default title of the bundle."
-      is_required: true
+      required: true
 
   - type: input
     attributes:
       label: "Alternate Title"
       description: "Alternate title if the default title is not desired."
-      is_required: false
+      required: false
 
   - type: input
     attributes:
       label: "Release Number (or ID)"
       description: "Release number or identifier if periodic, e.g., OREx."
-      is_required: true
+      required: true
 
   - type: input
     attributes:
       label: "Anticipated Date of Release"
       description: "Anticipated release date."
-      is_required: true
+      required: true
 
   - type: input
     attributes:
       label: "Expected Date of Release"
       description: "Expected release date according to the data release calendar."
-      is_required: true
+      required: true
 
   - type: input
     attributes:
       label: "Access URL"
       description: "Default URL of the online bundle for users to access the data."
-      is_required: true
+      required: true
 
   - type: input
     attributes:
       label: "Alternate URL"
       description: "URL for the bundle if the default access URL is not desired."
-      is_required: false
+      required: false
 
   - type: textarea
     attributes:
       label: "Applicable Investigation(s) (context LID)"
       description: "Applicable investigation LID(s) relevant to this bundle."
-      is_required: true
+      required: true
 
   - type: textarea
     attributes:
       label: "Applicable Instrument(s) (context LIDs)"
       description: "Applicable instrument(s) LID(s) related to this bundle."
-      is_required: true
+      required: true
 
   - type: input
     attributes:
       label: "Dates of Coverage"
       description: "Provide the start and stop time of the coverage in the format `start_time - stop_time`."
-      is_required: true
+      required: true
 
   - type: textarea
     attributes:
       label: "Additional Description / Text"
       description: "Optional additional details or description related to this release."
-      is_required: false
+      required: false
 
   - type: textarea
     attributes:
       label: "Bundles and Collections"
       description: "URLs to the bundles, collections, and all associated inventories or attach a zip of all applicable files."
-      is_required: true
+      required: true
 
   - type: markdown
     attributes:
