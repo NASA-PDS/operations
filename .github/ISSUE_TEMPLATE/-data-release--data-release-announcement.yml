@@ -1,5 +1,5 @@
-name: "[data-release] PDS4 Data Release"
-description: Data release ingestion and/or community announcement for a PDS4 bundle or PDS3 data set
+name: "[data-release] PDS Data Release"
+description: Data release for a PDS4 bundle or PDS3 data set
 title: '[RELEASE] <investigation_name>: <bundle_lidvid> release <release_number>'
 labels: "data-release,p.must-have,sprint-backlog"
 assignees: rchenatjpl
