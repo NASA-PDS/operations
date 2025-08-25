@@ -1,6 +1,6 @@
 name: "[data-release] PDS Data Release"
 description: Data release for a PDS4 bundle or PDS3 data set
-title: '[RELEASE] <investigation_name>: <bundle_lidvid_or_data_set_id> release <release_number>'
+title: '[RELEASE] <investigation_name>: <bundle_lidvid_or_data_set_id>'
 labels: "data-release,p.must-have,sprint-backlog"
 assignees: rchenatjpl
 projects: "NASA-PDS/19"
@@ -11,16 +11,17 @@ body:
     attributes:
       value: "## What type of release is this?"
 
-  - type: dropdown
-    id: release-version
+  - type: input
     attributes:
-      label: PDS4 Bundle or PDS3 Data Set?
-      multiple: false
-      options:
-        - "PDS4 Bundle"
-        - "PDS3 Data Set"
+      label: "Identifier"
+      description: "Bundle LID or PDS3 Data Set ID for the data being released"
     validations:
-      required: yes
+      required: true
+
+  - type: input
+    attributes:
+      label: "Title"
+      description: "Title of the PDS4 Bundle or PDS3 Data Set to be released if different from what is in the labels."
 
   - type: dropdown
     id: release-type
@@ -64,20 +65,6 @@ body:
 
   - type: input
     attributes:
-      label: "Identifier"
-      description: "Bundle LID or PDS3 Data Set ID for the data being released"
-    validations:
-      required: true
-
-  - type: input
-    attributes:
-      label: "Title"
-      description: "Title of the PDS4 Bundle or PDS3 Data Set to be released."
-    validations:
-      required: true
-
-  - type: input
-    attributes:
       label: "Release Number (or ID)"
       description: "Release number or identifier if periodic, e.g., OREx."
     validations:
@@ -101,8 +88,6 @@ body:
     attributes:
       label: "Access URL"
       description: "Default URL of the online PDS4 bundle or PDS3 Data Set for users to access the data."
-    validations:
-      required: true
 
   - type: input
     attributes:
@@ -114,14 +99,14 @@ body:
   - type: input
     attributes:
       label: "Applicable Investigation(s)"
-      description: "Applicable investigation LID(s) relevant to this bundle."
+      description: "Applicable PDS4 Context LID(s) or PDS3 MISSION_NAME(s) of investigation."
     validations:
       required: true
 
   - type: input
     attributes:
       label: "Applicable Instrument(s)"
-      description: "Applicable instrument LID(s) related to this bundle."
+      description: "Applicable PDS4 Context LID(s) or PDS3 INSTRUMENT_NAME(s) of instrument."
     validations:
       required: true
 
