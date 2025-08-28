@@ -7,6 +7,13 @@ projects: "NASA-PDS/19"
 
 body:
 
+  - type: checkboxes
+    attributes:
+      label: Confirm Pre-requisites
+      options:
+        - label: I confirm I have **checked the PDS DOI Search** and there is no permutation of this product LID(s) that has had a DOI reserved or released previously.**
+          required: true
+
   - type: textarea
     attributes:
       label: "Identifiers"
@@ -28,4 +35,4 @@ body:
   - type: textarea
     attributes:
       label: "Any Additional Information"
-      description: "Please provide any additional context or files that may be relevant for this release."
+      description: "Please provide any additional context or files that may be relevant for this release.
