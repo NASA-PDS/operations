@@ -9,6 +9,10 @@ body:
 
   - type: markdown
     attributes:
+      value: "## Pre-requisites"
+
+  - type: markdown
+    attributes:
       value: |
          **If you have reserved a DOI, you must have:**
            * updated the product metadata with the DOI
