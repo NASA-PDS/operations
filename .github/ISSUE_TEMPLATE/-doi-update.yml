@@ -1,0 +1,32 @@
+name: "[doi] Update a DOI"
+description: "Update an existing DOI's metadata."
+title: '[doi] Update DOI: <some identifying info here>'
+labels: "doi.update,p.must-have,sprint-backlog"
+assignees: rsjoyner
+projects: "NASA-PDS/19"
+
+body:
+
+  - type: textarea
+    attributes:
+      label: "Identifiers"
+      description: "List of LIDVIDs and their associated DOIs to be released"
+      placeholder: |
+        lidvid_1 - doi_1
+        lidvid_2 - doi_2
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: "Product Labels"
+      description: |
+        Either attach a ZIP of all the updated PDS4 labels associated with the DOIs to-be-updated, or provide
+        URLs.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: "Any Additional Information"
+      description: "Please provide any additional context or files that may be relevant for this release."
