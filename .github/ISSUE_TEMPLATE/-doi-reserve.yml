@@ -1,0 +1,31 @@
+name: "[dois] Reserve a DOI"
+description: Reserve a DOI while you are preparing your PDS4 labels prior to release.
+title: '[doi] Reserve DOI: <some identifying info here>'
+labels: "doi.reserve,p.must-have,sprint-backlog"
+assignees: rsjoyner
+projects: "NASA-PDS/19"
+
+body:
+
+  - type: textarea
+    attributes:
+      label: "Identifiers"
+      description: "List of LIDVIDs of products to reserve DOIs (separate with newlines)"
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: "DOI Reserve Spreadsheet"
+      description: |
+        Attach your completed spreadsheet template: https://github.com/NASA-PDS/doi-service/raw/refs/heads/main/docs/operations/DOI_reserve_template.xlsx
+
+        Tip: You can drag and drop files into the text box below.
+
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: "Any Additional Information"
+      description: "Please provide any additional context or files that may be relevant for this release."
