@@ -52,6 +52,10 @@ ldd-particle:
 ldd-proc:
   description: |
     The Processing_Information Dictionary contains detailed information regarding the history of processing performed on data product(s) in order to produce the current product.
+ldd-prov:
+  name: "Provenance"
+  description: |
+    he Provenance dictionary provides a PDS4 "Discipline_Area" insert for capturing provenance information.
 ldd-radar:
   name: Radar
   description: |
