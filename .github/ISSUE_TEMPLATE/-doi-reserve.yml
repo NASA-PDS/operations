@@ -11,7 +11,7 @@ body:
     attributes:
       label: Confirm Pre-requisites
       options:
-        - label: I confirm I have **checked the PDS DOI Search** and there is no permutation of this product LID(s) that has had a DOI reserved or released previously.**
+        - label: I confirm I have **checked the PDS DOI Search** and there is no permutation of this product LID(s) that has had a DOI reserved or released previously.
           required: true
 
   - type: textarea
