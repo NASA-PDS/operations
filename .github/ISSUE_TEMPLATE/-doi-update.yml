@@ -7,6 +7,17 @@ projects: "NASA-PDS/19"
 
 body:
 
+  - type: checkboxes
+    attributes:
+      label: Confirm Pre-requisites
+      options:
+        - label: I confirm the **new version of the data is available online**
+          required: true
+        - label: I confirm the **the new version of the data has been released through EN legacy registry**
+          required: true
+        - label: I confirm **the new version of the data has been loaded into our Node Registry and is searchable through the API**
+          required: true
+
   - type: textarea
     attributes:
       label: "Identifiers"
