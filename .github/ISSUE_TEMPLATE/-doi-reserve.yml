@@ -35,4 +35,4 @@ body:
   - type: textarea
     attributes:
       label: "Any Additional Information"
-      description: "Please provide any additional context or files that may be relevant for this release.
+      description: "Please provide any additional context or files that may be relevant for this release."
