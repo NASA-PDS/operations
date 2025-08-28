@@ -17,7 +17,7 @@ body:
          * sent the PDS4 labels to EN
          * EN has completed registering the data
       
-      **If you have legacy PDS4 data that has already been registered with EN**
+       **If you have legacy PDS4 data that has already been registered with EN**
          * no additional prerequisite needed
 
 - type: checkboxes
