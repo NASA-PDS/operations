@@ -68,7 +68,7 @@ body:
     attributes:
       label: "Release Number (or ID)"
       description: "Release number or identifier if periodic."
-      placehodler: "e.g. 31"
+      placeholder: "e.g. 31"
 
   - type: input
     attributes:
