@@ -22,6 +22,7 @@ body:
     attributes:
       label: "Title"
       description: "Title of the PDS4 Bundle or PDS3 Data Set to be released if different from what is in the labels."
+      placeholder: "e.g. 'JUNO Data Release 31' or for aperiodic, 'Pioneer 11: Trajectory'"
 
   - type: dropdown
     id: release-type
@@ -66,23 +67,20 @@ body:
   - type: input
     attributes:
       label: "Release Number (or ID)"
-      description: "Release number or identifier if periodic, e.g., OREx."
-    validations:
-      required: true
+      description: "Release number or identifier if periodic."
+      placehodler: "e.g. 31"
 
   - type: input
     attributes:
       label: "Anticipated Release Date"
-      description: "Anticipated release date when this data will go public."
+      description: "When this data will go public."
     validations:
       required: true
 
   - type: input
     attributes:
       label: "Planned Release Date"
-      description: "Planned release date according to the data release calendar."
-    validations:
-      required: true
+      description: "Planned Release Date if periodic according to the data release calendar."
 
   - type: input
     attributes:
@@ -99,7 +97,7 @@ body:
   - type: input
     attributes:
       label: "Applicable Investigation(s)"
-      description: "Applicable PDS4 Context LID(s) or PDS3 MISSION_NAME(s) of investigation."
+      description: "PDS4 Context LID(s) or PDS3 MISSION_NAME(s) of investigation that are relevant to the release."
     validations:
       required: true
 
