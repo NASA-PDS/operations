@@ -1,6 +1,6 @@
 name: "[data-release] PDS Data Release"
 description: Data release for a PDS4 bundle or PDS3 data set
-title: '[RELEASE] <investigation_name>: <bundle_lidvid_or_data_set_id>'
+title: '[RELEASE] <mission_name or "aperiodic">: <bundle_lidvid_or_data_set_id>'
 labels: "data-release,p.must-have,sprint-backlog"
 assignees: rchenatjpl
 projects: "NASA-PDS/19"
@@ -72,15 +72,15 @@ body:
 
   - type: input
     attributes:
-      label: "Anticipated Release Date"
+      label: "Actual Release Date"
       description: "When this data will go public."
     validations:
       required: true
 
   - type: input
     attributes:
-      label: "Planned Release Date"
-      description: "Planned Release Date if periodic according to the data release calendar."
+      label: "Anticipated Release Date"
+      description: "Anticipated Release Date (if periodic) according to the data release calendar."
 
   - type: input
     attributes:
