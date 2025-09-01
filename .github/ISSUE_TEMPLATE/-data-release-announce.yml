@@ -1,6 +1,6 @@
 name: "[data-release] PDS Data Release Lead Node Announcement"
 description: Issue for Lead Node only to provide main body of release announcement text.
-title: '[ANNOUNCE] <investigation_name> Release <release_number>'
+title: '[ANNOUNCE] <mission_name> Release <release_number>'
 labels: "data-release,p.must-have,sprint-backlog"
 assignees: rchenatjpl
 projects: "NASA-PDS/19"
@@ -32,13 +32,6 @@ body:
     attributes:
       label: "Planned Release Date"
       description: "Planned release date according to the data release calendar."
-    validations:
-      required: true
-
-  - type: input
-    attributes:
-      label: "Applicable Investigation(s)"
-      description: "Applicable investigation LID(s) relevant to this bundle."
     validations:
       required: true
 
