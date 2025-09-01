@@ -37,6 +37,11 @@ body:
 
   - type: textarea
     attributes:
+      label: "Applicable Data Release Issues"
+      description: "Links to the data release issues in GitHub applicable to this data release announcement."
+
+  - type: textarea
+    attributes:
       label: "Release Announcement"
       description: "Main body of release announcement. Be sure to include any information about delayed or missing data"
     validations:
