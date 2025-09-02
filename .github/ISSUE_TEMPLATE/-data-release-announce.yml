@@ -10,14 +10,14 @@ body:
   - type: input
     attributes:
       label: "Title of Release"
-      description: "Title of the release."
+      description: "The email subject of the release announcement."
     validations:
       required: true
 
   - type: input
     attributes:
       label: "Release Number (or ID)"
-      description: "Release number or identifier if periodic, e.g., OREx."
+      description: "Release number or identifier."
     validations:
       required: true
 
@@ -37,15 +37,16 @@ body:
 
   - type: textarea
     attributes:
-      label: "Applicable Data Release Issues"
-      description: "Links to the data release issues in GitHub applicable to this data release announcement."
-
-  - type: textarea
-    attributes:
       label: "Release Announcement"
       description: "Main body of release announcement. Be sure to include any information about delayed or missing data"
     validations:
-      required: false
+      required: true
+      
+  - type: textarea
+    attributes:
+      label: "Applicable Data Release Issues"
+      description: "Links to the data release issues in GitHub applicable to this data release announcement."
+
 
   - type: textarea
     attributes:
