@@ -23,15 +23,15 @@ body:
 
   - type: input
     attributes:
-      label: "Anticipated Release Date"
-      description: "Anticipated release date when this data will go public."
+      label: "Actual Release Date"
+      description: "When this data will go public."
     validations:
       required: true
 
   - type: input
     attributes:
-      label: "Planned Release Date"
-      description: "Planned release date according to the data release calendar."
+      label: "Anticipated Release Date"
+      description: "Anticipated Release Date according to the data release calendar."
     validations:
       required: true
 
