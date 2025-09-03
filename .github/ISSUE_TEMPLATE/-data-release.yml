@@ -9,8 +9,7 @@ body:
 
   - type: markdown
     attributes:
-      value: |
-        "## What type of release is this?"
+      value: "## What type of release is this?"
 
   - type: input
     attributes:
@@ -32,8 +31,8 @@ body:
       description: Is this is a regular ongoing mission release or an aperiodic release?
       multiple: false
       options:
-        - "Mission Data Release"
-        - "Aperiodic"
+        - "Regular Mission Release"
+        - "Aperiodic Release"
     validations:
       required: yes
 
@@ -41,8 +40,8 @@ body:
     id: release-announcement
     attributes:
       label: Announce?
-      description: Is a release announcement expected to go out to the community mailing list? |
-        Make sure to link this ticket in its corresponding [Announce] ticket.
+      description: Is a release announcement expected to go out to the community mailing list?
+        Link this ticket in its corresponding [Announce] ticket.
       options:
         - label: Yes, send an announcement for this data release
           required: false
@@ -50,7 +49,7 @@ body:
   - type: dropdown
     id: doi
     attributes:
-      label: Has DOI been released?
+      label: Released DOI?
       description: Has the DOI been released and made "Findable"?
       multiple: false
       options:
@@ -61,8 +60,7 @@ body:
       
   - type: markdown
     attributes:
-      value: |
-        "### Data Release Information"
+      value: "## Data Release Information"
 
   - type: input
     attributes:
