@@ -126,3 +126,18 @@ body:
     attributes:
       label: "Any Additional Information"
       description: "Please provide any additional context or files that may be relevant for this release"
+
+
+  - type: markdown
+    attributes:
+      value: |
+        ## For Internal EN Operations Team To Complete
+
+  - type: checkboxes
+    attributes:
+      label: Data Release Checklist
+      options:
+        - label: Ingest into legacy registry
+          required: true
+        - label: Update data release calendar
+          required: true
