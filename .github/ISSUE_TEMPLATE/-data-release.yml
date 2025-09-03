@@ -1,6 +1,6 @@
 name: "[data-release] PDS Data Release"
 description: Data release for a PDS4 bundle or PDS3 data set
-title: '[RELEASE] <mission_name or "aperiodic">: <bundle_lidvid_or_data_set_id>'
+title: '[RELEASE] <mission_name> <instrument_name> <release_name>
 labels: "data-release,p.must-have,sprint-backlog"
 assignees: rchenatjpl
 projects: "NASA-PDS/19"
@@ -9,20 +9,21 @@ body:
 
   - type: markdown
     attributes:
-      value: "## What type of release is this?"
+      value: |
+        "## What type of release is this?"
 
   - type: input
     attributes:
       label: "Identifier"
-      description: "Bundle LID or PDS3 Data Set ID for the data being released"
+      description: "PDS4 Bundle LID or PDS3 Data Set ID for the data being released"
     validations:
       required: true
 
   - type: input
     attributes:
       label: "Title"
-      description: "Title of the PDS4 Bundle or PDS3 Data Set to be released if different from what is in the labels."
-      placeholder: "e.g. 'JUNO Data Release 31' or for aperiodic, 'Pioneer 11: Trajectory'"
+      description: "Title of the PDS4 Bundle or PDS3 Data Set to be released if different from what is in the labels"
+      placeholder: "e.g. 'Psyche Neutron Spectrometer (NS) raw cruise data'"
 
   - type: dropdown
     id: release-type
@@ -36,17 +37,16 @@ body:
     validations:
       required: yes
 
-  - type: dropdown
+  - type: checkboxes
     id: release-announcement
     attributes:
-      label: Ingest and Announce or Ingest Only?
-      description: Is a release announcement expected to the community mailing list? Or ingest-only?
+      label: Announce?
+      description: Is a release announcement expected to go out to the community mailing list? |
+        Make sure to link this ticket in its corresponding [Announce] ticket.
       multiple: false
       options:
-        - "Ingest and Announce"
-        - "Ingest Only"
-    validations:
-      required: yes
+        - label: Yes, send an announcement for this data release
+          required: false
 
   - type: dropdown
     id: doi
@@ -62,74 +62,70 @@ body:
       
   - type: markdown
     attributes:
-      value: "## Data Release Information"
-
-  - type: input
-    attributes:
-      label: "Release Number (or ID)"
-      description: "Release number or identifier if periodic."
-      placeholder: "e.g. 31"
+      value: |
+        "### Data Release Information"
 
   - type: input
     attributes:
       label: "Actual Release Date"
-      description: "When this data will go public."
+      description: "When this data will go public"
     validations:
       required: true
 
   - type: input
     attributes:
       label: "Anticipated Release Date"
-      description: "Anticipated Release Date (if periodic) according to the data release calendar."
+      description: "Anticipated release date (according to the data release calendar)"
 
   - type: input
     attributes:
       label: "Access URL"
-      description: "Default URL of the online PDS4 bundle or PDS3 Data Set for users to access the data."
-
-  - type: input
-    attributes:
-      label: "Alternate URL"
-      description: "URL for the PDS4 bundle or PDS3 Data Set if the default access URL is not desired on the legacy landing pages."
+      description: "URL of the online PDS4 bundle or PDS3 Data Set for users to access the data"
     validations:
-      required: false
+      required: true
 
   - type: input
     attributes:
       label: "Applicable Investigation(s)"
-      description: "PDS4 Context LID(s) or PDS3 MISSION_NAME(s) of investigation that are relevant to the release."
+      description: "PDS4 Context LID(s) or PDS3 MISSION_NAME(s) of investigation that are relevant to the release"
     validations:
       required: true
 
   - type: input
     attributes:
       label: "Applicable Instrument(s)"
-      description: "Applicable PDS4 Context LID(s) or PDS3 INSTRUMENT_NAME(s) of instrument."
+      description: "Applicable PDS4 Context LID(s) or PDS3 INSTRUMENT_NAME(s) of instrument"
     validations:
       required: true
 
   - type: input
     attributes:
+      label: "Release Number (or ID)"
+      description: "Release number or identifier"
+      placeholder: "e.g. 31"
+
+  - type: input
+    attributes:
       label: "Dates of Coverage"
-      description: "Provide the start and stop time of the coverage in the format `start_time - stop_time`."
+      description: "The start and stop time of the coverage in the format `start_time - stop_time`"
     validations:
       required: true
 
   - type: textarea
     attributes:
       label: "Data To Be Ingested"
-      description: "Data to be ingested into the Legacy PDS Registry for release. For PDS4: URLs to the bundles, collections, and all associated inventories or attach a zip of all applicable files. For PDS3: URLs to the catalog files that have changed or attach a zip of all applicable files."
+      description: "Data to be ingested into the Legacy PDS Registry for release. For PDS4: URLs to the bundles, collections, and all associated inventories; or attach a zip of all applicable files. For PDS3: URLs to the catalog files that have changed or attach a zip of all applicable files."
     validations:
       required: true
 
   - type: textarea
     attributes:
       label: "Additional Release Notes / Description / Text"
-      description: "Optional additional details or description related to this release if bundle or catalog metadata is not sufficient. Pertinent information like orbit or sol range, or other useful information encouraged."
+      description: "Optional additional details or description related to this release if bundle or catalog metadata is not sufficient. Pertinent information like orbit or sol range or other useful information encouraged."
     validations:
       required: false
 
   - type: textarea
     attributes:
       label: "Any Additional Information"
-      description: "Please provide any additional context or files that may be relevant for this release."
+      description: "Please provide any additional context or files that may be relevant for this release"
