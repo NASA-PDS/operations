@@ -141,3 +141,7 @@ body:
           required: true
         - label: Update data release calendar
           required: true
+        - label: Verify DOI in metadata matches DOI in DOI search
+          required: true
+        - label: If DOI has not yet been released, ensure separate DOI release ticket exists.
+          required: true
