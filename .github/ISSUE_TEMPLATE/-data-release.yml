@@ -43,7 +43,6 @@ body:
       label: Announce?
       description: Is a release announcement expected to go out to the community mailing list? |
         Make sure to link this ticket in its corresponding [Announce] ticket.
-      multiple: false
       options:
         - label: Yes, send an announcement for this data release
           required: false
