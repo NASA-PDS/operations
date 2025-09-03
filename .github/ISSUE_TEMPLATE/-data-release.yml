@@ -7,77 +7,10 @@ projects: "NASA-PDS/19"
 
 body:
 
-  - type: markdown
-    attributes:
-      value: "## What type of release is this?"
-
   - type: input
     attributes:
       label: "Identifier"
       description: "PDS4 Bundle LID or PDS3 Data Set ID for the data being released"
-    validations:
-      required: true
-
-  - type: input
-    attributes:
-      label: "Title"
-      description: "Title of the PDS4 Bundle or PDS3 Data Set to be released if different from what is in the labels"
-      placeholder: "e.g. 'Psyche Neutron Spectrometer (NS) raw cruise data'"
-
-  - type: dropdown
-    id: release-type
-    attributes:
-      label: Mission Release or Aperiodic?
-      description: Is this is a regular ongoing mission release or an aperiodic release?
-      multiple: false
-      options:
-        - "Regular Mission Release"
-        - "Aperiodic Release"
-    validations:
-      required: yes
-
-  - type: checkboxes
-    id: release-announcement
-    attributes:
-      label: Announce?
-      description: Is a release announcement expected to go out to the community mailing list?
-        Link this ticket in its corresponding [Announce] ticket.
-      options:
-        - label: Yes, send an announcement for this data release
-          required: false
-
-  - type: dropdown
-    id: doi
-    attributes:
-      label: Released DOI?
-      description: Has the DOI been released and made "Findable"?
-      multiple: false
-      options:
-        - "Yes"
-        - "No"
-    validations:
-      required: yes
-      
-  - type: markdown
-    attributes:
-      value: "## Data Release Information"
-
-  - type: input
-    attributes:
-      label: "Actual Release Date"
-      description: "When this data will go public"
-    validations:
-      required: true
-
-  - type: input
-    attributes:
-      label: "Anticipated Release Date"
-      description: "Anticipated release date (according to the data release calendar)"
-
-  - type: input
-    attributes:
-      label: "Access URL"
-      description: "URL of the online PDS4 bundle or PDS3 Data Set for users to access the data"
     validations:
       required: true
 
@@ -103,6 +36,12 @@ body:
 
   - type: input
     attributes:
+      label: "Title"
+      description: "If different from the context product's title, the title of the PDS4 Bundle or PDS3 Data Set to be released "
+      placeholder: "e.g. 'Psyche Neutron Spectrometer (NS) raw cruise data'"
+
+  - type: input
+    attributes:
       label: "Dates of Coverage"
       description: "The start and stop time of the coverage in the format `start_time - stop_time`"
     validations:
@@ -114,6 +53,58 @@ body:
       description: "Data to be ingested into the Legacy PDS Registry for release. For PDS4: URLs to the bundles, collections, and all associated inventories; or attach a zip of all applicable files. For PDS3: URLs to the catalog files that have changed or attach a zip of all applicable files."
     validations:
       required: true
+
+  - type: input
+    attributes:
+      label: "Access URL"
+      description: "URL of the online PDS4 bundle or PDS3 Data Set for users to access the data"
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: "Actual Release Date"
+      description: "When this data will go public"
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: "Anticipated Release Date"
+      description: "Anticipated release date (according to the data release calendar)"
+
+  - type: checkboxes
+    id: release-announcement
+    attributes:
+      label: Don't announce?
+      description: The default is to send a release announcement to the community mailing list. Check below to not do this.
+      options:
+        - label: Do not send an announcement for this data release
+          required: false
+
+  - type: dropdown
+    id: release-type
+    attributes:
+      label: Regular or Aperiodic?
+      description: Is this is a regular ongoing mission release or an aperiodic release?
+      multiple: false
+      options:
+        - "Regular (Mission) Release"
+        - "Aperiodic Release"
+    validations:
+      required: yes
+
+  - type: dropdown
+    id: doi
+    attributes:
+      label: Released DOI?
+      description: Has the DOI been released and made "Findable"?
+      multiple: false
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: yes
 
   - type: textarea
     attributes:
