@@ -16,6 +16,13 @@ body:
 
   - type: input
     attributes:
+      label: "Applicable Investigation(s)"
+      description: "PDS4 Context LID(s) or PDS3 MISSION_NAME(s) of investigation that are relevant to the release"
+    validations:
+      required: true
+
+  - type: input
+    attributes:
       label: "Release Number (or ID)"
       description: "Release number or identifier."
     validations:
