@@ -1,0 +1,34 @@
+name: "[internal] Task"
+description: "Low level task or action that is often too granular for testing, but helps towards progress on an Epic or parent story"
+labels: "B16,i&t.skip,task"
+type: "Task"
+projects: "NASA-PDS/6,NASA-PDS/18"
+
+body:
+  - type: dropdown
+    id: check
+    attributes:
+      label: Are you sure this is not a new requirement or bug?
+      options:
+        - "No"
+        - "Yes"
+    validations:
+      required: true
+  - type: dropdown
+    id: task-type
+    attributes:
+      label: Task Type
+      description: If sub-task, be sure to select Epic (Parent issue in GitHub) from right panel after creation (Relationships -> Add Parent). If release theme, be sure to update label to be `theme` instead of `task`.
+      options:
+        - Sub-task
+        - Theme
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: 💡 Description
+      description: Enter description here. Make it detailed enough someone could actually know what you are doing, but if you spend too much time on this, it probably deserves it's own story.
+      placeholder: Tell us what is up
+    validations:
+      required: true
