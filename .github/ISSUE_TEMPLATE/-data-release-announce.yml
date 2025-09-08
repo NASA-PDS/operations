@@ -65,8 +65,5 @@ body:
       label: Data Release Checklist
       options:
         - label: Ingest into legacy registry
-          required: true
         - label: Create data release announcement web page
-          required: true
         - label: Send out data release announcement to subscribers
-          required: true
