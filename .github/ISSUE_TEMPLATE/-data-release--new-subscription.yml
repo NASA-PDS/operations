@@ -1,0 +1,32 @@
+name: "[data-release] PDS Data Release - New Subscription Item"
+description: Issue for Lead Node only to provide mission and instrument information for the subscription service.
+title: '[SUBSCRIPTION] Add <mission_name>'
+labels: "data-release,p.must-have,sprint-backlog"
+assignees: c-suh,rchenatjpl
+projects: "NASA-PDS/19"
+
+body:
+
+  - type: input
+    attributes:
+      label: "Mission"
+      description: "The name of the (new) mission to add to the subscription service."
+      placeholder: "e.g., Psyche Mission"
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: "Instrument(s)"
+      description: "PDS4 Context LID(s) of investigation(s) that are relevant to the release. To reserve a LID, go to https://github.com/NASA-PDS/operations/issues/new?template=-lid-request--reserve-pds4-lid.yml."
+      placeholder: "e.g., urn:nasa:pds:context:instrument:psyche.grs"
+    validations:
+      required: true
+  
+  - type: textarea
+    attributes:
+      label: "Description(s)"
+      description: "Short description of each instrument"
+      placeholder: "e.g., GRS - Gamma-Ray Spectrometer"
+    validations:
+      required: true
