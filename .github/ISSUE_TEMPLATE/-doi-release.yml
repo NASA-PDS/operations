@@ -36,6 +36,25 @@ body:
         - label: I confirm **the data has been loaded into our Node Registry and is searchable through the API**
           required: true
 
+  - type: dropdown
+    id: node
+    attributes:
+      label: Requesting Node
+      description: The Node requesting the DOI
+      multiple: false
+      options:
+        - "ATM"
+        - "ENG"
+        - "GEO"
+        - "IMG"
+        - "NAIF"
+        - "PPI"
+        - "RS"
+        - "RINGS"
+        - "SBN"
+    validations:
+      required: yes
+
   - type: textarea
     attributes:
       label: "Identifiers"
