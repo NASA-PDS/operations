@@ -14,6 +14,25 @@ body:
         - label: "I confirm I have **checked the PDS DOI Search** and there is no permutation of this product LID(s) that has had a DOI reserved or released previously."
           required: true
 
+  - type: dropdown
+    id: node
+    attributes:
+      label: Requesting Node
+      description: The Node requesting the DOI
+      multiple: false
+      options:
+        - "ATM"
+        - "ENG"
+        - "GEO"
+        - "IMG"
+        - "NAIF"
+        - "PPI"
+        - "RS"
+        - "RINGS"
+        - "SBN"
+    validations:
+      required: yes
+
   - type: textarea
     attributes:
       label: "Identifiers"
