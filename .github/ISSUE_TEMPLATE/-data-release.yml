@@ -2,7 +2,7 @@ name: "[data-release] PDS Data Release"
 description: Data release for a PDS4 bundle or PDS3 data set
 title: '[RELEASE] <mission_name> <instrument_name> <release_name>'
 labels: "data-release,p.must-have,sprint-backlog"
-assignees: rchenatjpl
+assignees: rchenatjpl,c-suh
 projects: "NASA-PDS/19"
 
 body:

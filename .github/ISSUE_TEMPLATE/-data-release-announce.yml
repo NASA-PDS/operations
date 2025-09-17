@@ -1,4 +1,4 @@
-name: "[data-release] PDS Data Release Lead Node Announcement"
+name: "[data-release] PDS Data Release - Lead Node Announcement"
 description: Issue for Lead Node only to provide main body of release announcement text.
 title: '[ANNOUNCE] <mission_name> Release <release_number>'
 labels: "data-release,p.must-have,sprint-backlog"
@@ -59,6 +59,12 @@ body:
     attributes:
       label: "Any Additional Information"
       description: "Please provide any additional context or files that may be relevant for this release."
+
+
+  - type: markdown
+    attributes:
+      value: |
+        ## For Internal EN Operations Team To Complete
 
   - type: checkboxes
     attributes:
