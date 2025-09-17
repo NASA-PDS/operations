@@ -7,6 +7,26 @@ projects: "NASA-PDS/19"
 
 body:
 
+  - type: dropdown
+    id: node
+    attributes:
+      label: Requesting Node
+      description: The Node requesting the DOI?
+      multiple: false
+      options:
+        - "Atmos"
+        - "Eng"
+        - "Geo"
+        - "Img"
+        - "Naif"
+        - "PPI"
+        - "RS"
+        - "Rings"
+        - "SBN"
+        - "Unk"
+    validations:
+      required: yes
+      
   - type: input
     attributes:
       label: "Identifier"
