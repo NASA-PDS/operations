@@ -72,10 +72,10 @@ body:
   - type: checkboxes
     id: release-announcement
     attributes:
-      label: Don't announce?
+      label: Opt Out of Announcement
       description: The default is to send a release announcement to the community mailing list. Check below to not do this.
       options:
-        - label: Do not send an announcement for this data release
+        - label: Opt out of data release announcement
           required: false
 
   - type: dropdown
