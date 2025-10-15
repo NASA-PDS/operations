@@ -2,7 +2,7 @@ name: "[doi] Reserve a DOI"
 description: Reserve a DOI while you are preparing your PDS4 labels prior to release.
 title: '[doi] Reserve DOI: <some identifying info here>'
 labels: "doi.reserve,p.must-have,sprint-backlog"
-assignees: rsjoyner
+assignees: c-suh
 projects: "NASA-PDS/19"
 
 body:
