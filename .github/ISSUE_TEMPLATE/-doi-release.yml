@@ -2,7 +2,7 @@ name: "[doi] Release a DOI"
 description: Release a DOI for a bundle, collection, or other PDS4 product.
 title: '[doi] Release DOI: <some identifying info here>'
 labels: "doi.release,p.must-have,sprint-backlog"
-assignees: rsjoyner
+assignees: c-suh
 projects: "NASA-PDS/19"
 
 body:
