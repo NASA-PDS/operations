@@ -69,17 +69,6 @@ body:
       label: "Anticipated Release Date"
       description: "Anticipated release date (according to the data release calendar)"
 
-  - type: checkboxes
-    id: release-announcement
-    attributes:
-      label: Opt Out of...
-      description: The default is to (1) send a release announcement to the community mailing list and (2) update the data release calendar. Check the relevant boxes to opt out of one or both of these.
-      options:
-        - label: ...data release announcement
-          required: false
-        - label: ...data release calendar update
-          required: false
-
   - type: dropdown
     id: release-type
     attributes:
@@ -92,15 +81,26 @@ body:
     validations:
       required: yes
 
+  - type: checkboxes
+    id: release-announcement
+    attributes:
+      label: Opt Out of...
+      description: The default is to (1) send a release announcement to the community mailing list and (2) update the data release calendar. Check the relevant boxes to opt out of one or both of these.
+      options:
+        - label: ...data release announcement
+          required: false
+        - label: ...data release calendar update
+          required: false
+
   - type: dropdown
     id: doi
     attributes:
-      label: Released DOI?
-      description: Has the DOI been released and made "Findable"?
+      label: Has DOI?
+      description: Does this data have a reserved DOI with "Draft" status? If so, it will be released to a "Findable" status with this data release.
       multiple: false
       options:
-        - "Yes"
-        - "No"
+        - "Yes, this data has a reserved DOI"
+        - "No, this data does not have a DOI"
     validations:
       required: yes
 
@@ -127,6 +127,6 @@ body:
       label: Data Release Checklist
       options:
         - label: Ingest into legacy registry
-        - label: Update data release calendar
         - label: Verify DOI in metadata matches DOI in DOI search
-        - label: If DOI has not yet been released, ensure separate DOI release ticket exists.
+        - label: Release DOI
+        - label: Update data release calendar

@@ -70,6 +70,5 @@ body:
     attributes:
       label: Data Release Checklist
       options:
-        - label: Ingest into legacy registry
         - label: Create data release announcement web page
         - label: Send out data release announcement to subscribers
