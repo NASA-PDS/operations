@@ -1,7 +1,7 @@
 name: "[doi] Update a DOI"
 description: "Update an existing DOI's metadata."
 title: '[doi] Update DOI: <some identifying info here>'
-labels: "doi.update,p.must-have,sprint-backlog"
+labels: "doi.update,p.must-have,i&t.skip"
 assignees: rchenatjpl
 projects: "NASA-PDS/19"
 

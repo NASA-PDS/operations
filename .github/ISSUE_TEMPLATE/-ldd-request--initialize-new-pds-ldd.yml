@@ -1,7 +1,7 @@
 name: "[ldd-request] Initialize New PDS LDD"
 description: Describe this issue template's purpose here.
 title: '[ldd-request] Create new LDD "<proposed namespace ID>"'
-labels: "enhancement,ldd-request,needs:triage,p.must-have,sprint-backlog"
+labels: "enhancement,ldd-request,needs:triage,p.must-have,i&t.skip"
 assignees: c-suh
 projects: "NASA-PDS/19"
 

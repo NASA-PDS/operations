@@ -1,7 +1,7 @@
 name: "[data-release] PDS Data Release - Lead Node Announcement"
 description: Issue for Lead Node only to provide main body of release announcement text.
 title: '[ANNOUNCE] <mission_name> Release <release_number>'
-labels: "data-release,p.must-have,sprint-backlog"
+labels: "data-release,p.must-have,i&t.skip"
 assignees: rchenatjpl
 projects: "NASA-PDS/19"
 
