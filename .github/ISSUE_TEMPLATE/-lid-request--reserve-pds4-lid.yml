@@ -1,7 +1,7 @@
 name: "[lid-request] Reserve PDS4 LID"
 description: Submit a PDS4 LID for approval
 title: "[lid-request] <replace this with proposed LID>"
-labels: lid-request,i&t.skip
+labels: "lid-request,i&t.skip"
 assignees: rchenatjpl
 projects: "NASA-PDS/19"
 
