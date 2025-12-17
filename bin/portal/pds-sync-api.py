@@ -115,14 +115,18 @@ def _download(product: dict, download_path: str, force: bool = False):
         return
 
     _logger.debug('Downloading label %s', label_url)
-    response = requests.get(label_url)
-    if response.status_code != HTTPStatus.OK:
-        _logger.warning('Unexpected status %d while trying to download %s; skipping', response.status_code, label_url)
+    try:
+        response = requests.get(label_url)
+        if response.status_code != HTTPStatus.OK:
+            _logger.warning('Unexpected status %d while trying to download %s; skipping', response.status_code, label_url)
+            return
+        os.makedirs(os.path.dirname(label_file), exist_ok=True)
+        with open(label_file, 'wb') as io:
+            for buf in response.iter_content(chunk_size=_bufsiz):
+                io.write(buf)
+    except requests.exceptions.RequestException as e:
+        _logger.warning('Network error while downloading %s: %s; skipping', label_url, e)
         return
-    os.makedirs(os.path.dirname(label_file), exist_ok=True)
-    with open(label_file, 'wb') as io:
-        for buf in response.iter_content(chunk_size=_bufsiz):
-            io.write(buf)
 
 
 def _download_labels(download_path: str, url: str, force: bool = False):
