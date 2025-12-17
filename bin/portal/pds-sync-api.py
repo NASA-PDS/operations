@@ -11,8 +11,8 @@
 # python3 bin/portal/pds-sync-api.py
 
 
-import logging, argparse, requests, os, hashlib, urllib
-from typing import Generator
+import logging, argparse, requests, os, hashlib, urllib, time
+from typing import Generator, Tuple, Optional, List
 from lxml import etree
 from http import HTTPStatus
 
@@ -29,6 +29,8 @@ _search_key      = 'ops:Harvest_Info.ops:harvest_date_time'
 _query_page_size = 50
 _psa_query       = '((product_class eq "Product_Context" or  product_class eq "Product_Bundle" or product_class eq "Product_Collection") and ops:Harvest_Info.ops:node_name like "PSA")'
 _bufsiz          = 512
+_max_retries     = 3
+_retry_delay     = 2  # seconds
 
 
 def _get_lidvid(product: dict) -> str:
@@ -102,34 +104,57 @@ def _already_downloaded(label_file: str, md5: str) -> bool:
     return False
 
 
-def _download(product: dict, download_path: str, force: bool = False):
+def _download(product: dict, download_path: str, force: bool = False) -> Tuple[bool, Optional[str]]:
     '''Download the XML label for the given `product` to `download_path`.
 
     Note that this'll skip labels that have already been downloaded unless `force` is True.
+
+    Returns a tuple of (success: bool, error_msg: Optional[str]).
     '''
     props = product['properties']
     label_url, md5 = props['ops:Label_File_Info.ops:file_ref'][0], props['ops:Label_File_Info.ops:md5_checksum'][0]
     label_file = os.path.join(download_path, urllib.parse.urlparse(label_url).path[1:])
     if not force and _already_downloaded(label_file, md5):
         _logger.debug("Already downloaded %s and it's intact, so skipping it", label_file)
-        return
+        return (True, None)
 
-    _logger.debug('Downloading label %s', label_url)
-    try:
-        response = requests.get(label_url)
-        if response.status_code != HTTPStatus.OK:
-            _logger.warning('Unexpected status %d while trying to download %s; skipping', response.status_code, label_url)
-            return
-        os.makedirs(os.path.dirname(label_file), exist_ok=True)
-        with open(label_file, 'wb') as io:
-            for buf in response.iter_content(chunk_size=_bufsiz):
-                io.write(buf)
-    except requests.exceptions.RequestException as e:
-        _logger.warning('Network error while downloading %s: %s; skipping', label_url, e)
-        return
+    # Retry logic: attempt download up to _max_retries times
+    last_error = None
+    for attempt in range(1, _max_retries + 1):
+        try:
+            _logger.debug('Downloading label %s (attempt %d/%d)', label_url, attempt, _max_retries)
+            response = requests.get(label_url)
+            if response.status_code != HTTPStatus.OK:
+                error_msg = f'Unexpected status {response.status_code}'
+                _logger.warning('%s while trying to download %s', error_msg, label_url)
+                last_error = error_msg
+                if attempt < _max_retries:
+                    _logger.info('Retrying in %d seconds...', _retry_delay)
+                    time.sleep(_retry_delay)
+                continue
+
+            os.makedirs(os.path.dirname(label_file), exist_ok=True)
+            with open(label_file, 'wb') as io:
+                for buf in response.iter_content(chunk_size=_bufsiz):
+                    io.write(buf)
+            _logger.debug('Successfully downloaded %s', label_url)
+            return (True, None)
+
+        except requests.exceptions.RequestException as e:
+            error_msg = f'Network error: {e}'
+            _logger.warning('%s while downloading %s', error_msg, label_url)
+            last_error = error_msg
+            if attempt < _max_retries:
+                _logger.info('Retrying in %d seconds...', _retry_delay)
+                time.sleep(_retry_delay)
+            continue
+
+    # All retries exhausted
+    _logger.error('Failed to download %s after %d attempts: %s', label_url, _max_retries, last_error)
+    return (False, last_error)
 
 
-def _download_labels(download_path: str, url: str, force: bool = False):
+def _download_labels(download_path: str, url: str, force: bool = False) -> List[Tuple[str, str]]:
     '''Query the API at `url` and create matching XML labels in `download_path`.
 
     This follows Jordan's algorithm in NASA-PDS/registry-legacy-solr#135, namely:
@@ -140,12 +165,19 @@ def _download_labels(download_path: str, url: str, force: bool = False):
     3.  If not, then download to `download_path`
 
     If `force` is True, all checks are skipped and labels are downloaded unconditionally.
+
+    Returns a list of (label_url, error_msg) tuples for failed downloads.
     '''
     _logger.info('Downloading labels from %s to %s', url, download_path)
+    failed_downloads = []
     for product in _get_esa_psa_products(url):
         lidvid = _get_lidvid(product)
         if not force and _exists_in_registry(lidvid, url): continue
-        _download(product, download_path, force)
+        success, error_msg = _download(product, download_path, force)
+        if not success:
+            label_url = product['properties']['ops:Label_File_Info.ops:file_ref'][0]
+            failed_downloads.append((label_url, error_msg))
+    return failed_downloads
 
 
 def easy_peasy(node_name: str, download_path: str, url: str, config: str, force: bool = False):
@@ -154,7 +186,20 @@ def easy_peasy(node_name: str, download_path: str, url: str, config: str, force:
     os.makedirs(download_path, exist_ok=True)
 
     _write_harvest_config(node_name, download_path, config)
-    _download_labels(download_path, url, force)
+    failed_downloads = _download_labels(download_path, url, force)
+
+    # Log summary of results
+    if failed_downloads:
+        _logger.error('=' * 80)
+        _logger.error('DOWNLOAD SUMMARY: %d label(s) failed to download after %d retries', len(failed_downloads), _max_retries)
+        _logger.error('=' * 80)
+        for label_url, error_msg in failed_downloads:
+            _logger.error('  - %s: %s', label_url, error_msg)
+        _logger.error('=' * 80)
+    else:
+        _logger.info('=' * 80)
+        _logger.info('DOWNLOAD SUMMARY: All labels downloaded successfully!')
+        _logger.info('=' * 80)
 
 
 def main():
