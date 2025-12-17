@@ -102,15 +102,15 @@ def _already_downloaded(label_file: str, md5: str) -> bool:
     return False
 
 
-def _download(product: dict, download_path: str):
+def _download(product: dict, download_path: str, force: bool = False):
     '''Download the XML label for the given `product` to `download_path`.
 
-    Note that this'll skip labels that have already been downloaded.
+    Note that this'll skip labels that have already been downloaded unless `force` is True.
     '''
     props = product['properties']
     label_url, md5 = props['ops:Label_File_Info.ops:file_ref'][0], props['ops:Label_File_Info.ops:md5_checksum'][0]
     label_file = os.path.join(download_path, urllib.parse.urlparse(label_url).path[1:])
-    if _already_downloaded(label_file, md5):
+    if not force and _already_downloaded(label_file, md5):
         _logger.debug("Already downloaded %s and it's intact, so skipping it", label_file)
         return
 
@@ -125,7 +125,7 @@ def _download(product: dict, download_path: str):
             io.write(buf)
 
 
-def _download_labels(download_path: str, url: str):
+def _download_labels(download_path: str, url: str, force: bool = False):
     '''Query the API at `url` and create matching XML labels in `download_path`.
 
     This follows Jordan's algorithm in NASA-PDS/registry-legacy-solr#135, namely:
@@ -134,21 +134,23 @@ def _download_labels(download_path: str, url: str):
     2.  If not, check if we already downloaded an XML file for in in `download_path`
         -   Use the filename and ops:Label_File_Info.ops:md5_checksum
     3.  If not, then download to `download_path`
+
+    If `force` is True, all checks are skipped and labels are downloaded unconditionally.
     '''
     _logger.info('Downloading labels from %s to %s', url, download_path)
     for product in _get_esa_psa_products(url):
         lidvid = _get_lidvid(product)
-        if _exists_in_registry(lidvid, url): continue
-        _download(product, download_path)
+        if not force and _exists_in_registry(lidvid, url): continue
+        _download(product, download_path, force)
 
 
-def easy_peasy(node_name: str, download_path: str, url: str, config: str):
+def easy_peasy(node_name: str, download_path: str, url: str, config: str, force: bool = False):
     '''Download ESA-PSA ("easy peasy") harvest XML files and a harvest cfg file.'''
     _logger.debug('Making output directory %s as needed', download_path)
     os.makedirs(download_path, exist_ok=True)
 
-    _write_harvest_config(node_name, download_path, config)    
-    _download_labels(download_path, url)
+    _write_harvest_config(node_name, download_path, config)
+    _download_labels(download_path, url, force)
 
 
 def main():
@@ -167,6 +169,10 @@ def main():
         '-c', '--config', default='harvest.cfg',
         help='What to call the harvest XML config output (default %(default)s)'
     )
+    parser.add_argument(
+        '-f', '--force', action='store_true',
+        help='Force download labels, skipping registry and already-downloaded checks'
+    )
     args = parser.parse_args()
 
     # If this were a "real program", we'd let logging be configurable
@@ -175,7 +181,7 @@ def main():
     # The PDS API is really finicky about trailing slashes
     url = args.url[0:-1] if args.url.endswith('/') else args.url
 
-    easy_peasy(args.node_name, args.download_path, url, args.config)
+    easy_peasy(args.node_name, args.download_path, url, args.config, args.force)
 
 
 if __name__ == '__main__':
