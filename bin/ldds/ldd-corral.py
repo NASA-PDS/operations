@@ -65,8 +65,9 @@ WEBHELP_LINK_TEXT = "PDS4 {}({}) WebHelp#ch{}"
 # but DART is not on the mission LDD page anyway, which disqualifies it
 NAMESPACE_FROM_INGEST_LDD_FILENAME_REGEX = re.compile(r'(?<=src/PDS4_).*(?=_IngestLDD\.xml)')
 
-# See `check_qualifiers_for_ldds()` for qualifying conditions
+# See `check_qualifiers_for_ldds()` for qualifying condition(s)
 QUALIFYING_INGEST_LDDS = []
+NAMESPACES_WITHOUT_INGESTLDD = ['dart', 'vco', 'viper']
 
 # HTML list template
 LDD_TOC_TEMPLATE = '				<li><a href="#{}">{}</a></li>\n'
@@ -198,18 +199,14 @@ def get_first_ingest_ldd(ingest_ldd):
 
 
 def check_qualifiers_for_ldds(namespace):
-    """Conditions are that it (1) has nominally valid IngestLDD, (2) appears on either the discipline or
-    mission LDD pages, and (3) has a repo at github.com/pds-data-dictionaries.
+    """The sole qualifier is that it has an IngestLDD.xml (from a repo at github.com/pds-data-dictionaries)
     """
-    # discipline LDDs absent from PDS page is already covered from global variable, SKIP_REPOS
-    # some LDDs on the PDS pages do not have repos (e.g., orex), so they should not appear here anyway since the
+    # Some LDDs on the PDS pages do not have repos (e.g., orex), so they should not appear here anyway since the
     # ingestLDD file is from the repository
-    _missions_absent_from_pds_page = ['dart', 'iras', 'lt', 'mgn', 'neas', 'psyche', 'vco', 'viper']
-    # for b15.1 only: files are too large for oxygen to generate all webhelp files, so NH was removed
-    _missions_absent_from_pds_page.append('nh')
+
     if (
             namespace != 'example' and
-            not any(namespace == _absent_mission for _absent_mission in _missions_absent_from_pds_page)
+            not any(namespace == _no_ingestldd for _no_ingestldd in NAMESPACES_WITHOUT_INGESTLDD)
     ):
         QUALIFYING_INGEST_LDDS.append(check_for_namespace_exceptions(namespace))
 
@@ -448,6 +445,10 @@ def main():
     parser.add_argument('--all_repos',
                         help='Clone and include all repos in corral run.',
                         action='store_true')
+    parser.add_argument('-n', '--no_ingestldd',
+                        help='Additional namespaces that don\'t have a <repo>/src/IngestLDD. Already included: "dart", "vco", and "viper".',
+                        nargs='*',
+                        metavar='namespace')
 
     args = parser.parse_args()
 
@@ -455,6 +456,10 @@ def main():
     if not token:
         logger.error(f'Github token must be provided or set as environment variable (GITHUB_TOKEN).')
         sys.exit(1)
+
+    if args.no_ingestldd:
+        global NAMESPACES_WITHOUT_INGESTLDD
+        NAMESPACES_WITHOUT_INGESTLDD += args.no_ingestldd
 
     try:
         # connect to github
