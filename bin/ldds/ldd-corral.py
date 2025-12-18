@@ -55,8 +55,10 @@ LDD_FILES_THAT_MATTER = ['xsd', 'sch', 'xml', 'json', 'zip']
 # Default Issues URL
 ISSUES_URL = "https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues"
 
-# WebHelp URL for each namespace's specification of classes or attributes
-WEBHELP_URL = "https://pds.nasa.gov/datastandards/documents/dd/v1/PDS4_PDS_DD_{}/webhelp/all/#ch{}.html"
+# WebHelp absolute path from PDS domain for each namespace's specification of classes or attributes
+WEBHELP_PATH = "/datastandards/documents/dd/v1/PDS4_PDS_DD_{}/webhelp/all/#ch{}.html"
+# Simplified text for WebHelp link
+WEBHELP_LINK_TEXT = "PDS4 {}({}) WebHelp#ch{}"
 
 # Regex to get the namespace from the IngestLDD path
 # NOTE: DART has an irregular filename thus it won't match this regex
@@ -334,6 +336,8 @@ def generate_report(ldd_summary, pds4_version, pds4_alpha_version, output, confi
         _ldd_summary_repo = ldd_summary[_repo_name]
         _assets = _ldd_summary_repo['assets']
         _description = config[_ldd_summary_repo['repo'].name]['description']
+        _webhelp_chapter_string_classes = get_webhelp_chapter_number(_ldd_summary_repo['ns_id'], 'classes')
+        _webhelp_chapter_string_attributes = get_webhelp_chapter_number(_ldd_summary_repo['ns_id'], 'attributes')
         _pystache_dict = {
             'ns_id': _ldd_summary_repo['ns_id'],
             'title': _ldd_summary_repo['name'],
@@ -347,10 +351,10 @@ def generate_report(ldd_summary, pds4_version, pds4_alpha_version, output, confi
                     .replace('.git', '')
                     .replace('github.com/pds-data-dictionaries', 'pds-data-dictionaries.github.io')
             ),
-            'webhelp_url_classes': WEBHELP_URL.format(
-                pds4_alpha_version, get_webhelp_chapter_number(_ldd_summary_repo['ns_id'], 'classes')),
-            'webhelp_url_attributes': WEBHELP_URL.format(
-                pds4_alpha_version, get_webhelp_chapter_number(_ldd_summary_repo['ns_id'], 'attributes'))
+            'webhelp_path_classes': WEBHELP_PATH.format(pds4_alpha_version, _webhelp_chapter_string_classes),
+            'webhelp_path_attributes': WEBHELP_PATH.format(pds4_alpha_version, _webhelp_chapter_string_attributes),
+            'webhelp_link_text_classes': WEBHELP_LINK_TEXT.format(pds4_version, pds4_alpha_version, _webhelp_chapter_string_classes),
+            'webhelp_link_text_attributes': WEBHELP_LINK_TEXT.format(pds4_version, pds4_alpha_version, _webhelp_chapter_string_attributes)
         }
         if _assets:
             _pystache_dict = {
