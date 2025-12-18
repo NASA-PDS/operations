@@ -55,7 +55,7 @@ ldd-proc:
 ldd-prov:
   name: "Provenance"
   description: |
-    he Provenance dictionary provides a PDS4 "Discipline_Area" insert for capturing provenance information.
+    The Provenance dictionary provides a PDS4 "Discipline_Area" insert for capturing provenance information.
 ldd-radar:
   name: Radar
   description: |
