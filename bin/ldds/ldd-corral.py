@@ -27,7 +27,7 @@ from lasso.reports.branches.git_actions import clone_checkout_branch
 
 
 # LDDs In Development or repos to ignore
-SKIP_REPOS = ['dd-library', 'ldd-wave', 'ldd-template', 'PDS-Data-Dictionaries.github.io', 'PDS4-LDD-Issue-Repo']
+SKIP_REPOS = ['dd-library', 'ldd-template', 'PDS-Data-Dictionaries.github.io', 'PDS4-LDD-Issue-Repo']
 
 # Github Org containing Discipline LDDs
 GITHUB_ORG = 'pds-data-dictionaries'
@@ -55,16 +55,19 @@ LDD_FILES_THAT_MATTER = ['xsd', 'sch', 'xml', 'json', 'zip']
 # Default Issues URL
 ISSUES_URL = "https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues"
 
-# WebHelp URL for each namespace's specification of classes or attributes
-WEBHELP_URL = "https://pds.nasa.gov/datastandards/documents/dd/v1/PDS4_PDS_DD_{}/webhelp/all/#ch{}.html"
+# WebHelp absolute path from PDS domain for each namespace's specification of classes or attributes
+WEBHELP_PATH = "/datastandards/documents/dd/v1/PDS4_PDS_DD_{}/webhelp/all/#ch{}.html"
+# Simplified text for WebHelp link
+WEBHELP_LINK_TEXT = "PDS4 {}({}) WebHelp#ch{}"
 
 # Regex to get the namespace from the IngestLDD path
 # NOTE: DART has an irregular filename thus it won't match this regex
 # but DART is not on the mission LDD page anyway, which disqualifies it
 NAMESPACE_FROM_INGEST_LDD_FILENAME_REGEX = re.compile(r'(?<=src/PDS4_).*(?=_IngestLDD\.xml)')
 
-# See `check_qualifiers_for_ldds()` for qualifying conditions
+# See `check_qualifiers_for_ldds()` for qualifying condition(s)
 QUALIFYING_INGEST_LDDS = []
+NAMESPACES_WITHOUT_INGESTLDD = ['dart', 'vco', 'viper']
 
 # HTML list template
 LDD_TOC_TEMPLATE = '				<li><a href="#{}">{}</a></li>\n'
@@ -96,45 +99,57 @@ def generate_release(token, gh, args):
         _dldd_repo = None
 
         # get the ingestLDD file from the repo
-        _ingest_ldd = get_ingest_ldd(token, _repo, args.base_path + STAGING_PATH)
+        if _repo.name in SKIP_REPOS:
+            logger.info(f'skipping {_repo.name}')
+        else:
+            _ingest_ldd = get_ingest_ldd(token, _repo, args.base_path + STAGING_PATH)
 
-        if _ingest_ldd and _repo.name not in SKIP_REPOS:
-            assess_ingest_ldd(_ingest_ldd)
+            if _ingest_ldd:
+                assess_ingest_ldd(_ingest_ldd)
 
-            _ldd_assets = []
+                _ldd_assets = []
 
-            # extract dictionary type and namespace id from ingestLDD
-            _ldd_name, _dict_type, _ns_id, _ns_version = extract_metadata(_ingest_ldd)
+                # extract dictionary type and namespace id from ingestLDD
+                _ldd_name, _dict_type, _ns_id, _ns_version = extract_metadata(_ingest_ldd)
 
-            # check if this is a discipline LDD
-            if args.all_repos or is_discipline_ldd(_repo, _dict_type, _config):
-                logger.info(f'LDD found {_repo.name}')
-                _ldd_summary_repo = _ldd_summary[_repo.name] = {}
-                _ldd_summary_repo['repo'] = _repo
+                # check if this is a discipline LDD
+                if args.all_repos or is_discipline_ldd(_repo, _dict_type, _config):
+                    logger.info(f'LDD found {_repo.name}')
+                    _ldd_summary_repo = _ldd_summary[_repo.name] = {}
+                    _ldd_summary_repo['repo'] = _repo
 
-                _ldd_summary_repo['name'] = _ldd_name
-                if 'name' in _config[_repo.name]:
-                    _ldd_summary_repo['name'] = _config[_repo.name]['name'] or _ldd_name
+                    _ldd_summary_repo['name'] = _ldd_name
+                    if 'name' in _config[_repo.name]:
+                        _ldd_summary_repo['name'] = _config[_repo.name]['name'] or _ldd_name
 
-                _ldd_summary_repo['ns_id'] = _ns_id
-                _dldd_repo = _repo.refresh()
+                    _ldd_summary_repo['ns_id'] = _ns_id
+                    _dldd_repo = _repo.refresh()
 
-                # get latest release
-                _ldd_summary_repo['release'] = get_latest_tag_for_pds4_version(_dldd_repo, _pds4_alpha_version)
+                    # get latest release
+                    _ldd_summary_repo['release'] = get_latest_tag_for_pds4_version(_dldd_repo, _pds4_alpha_version)
 
-                # let's download and unpack the release assets
-                _ldd_assets = prep_assets_for_release(_ldd_summary_repo['release'],
-                                                      os.path.join(args.base_path + args.output, RELEASE_SUBDIR,
-                                                                   _ldd_summary_repo['ns_id'],
-                                                                   'v' + _ns_version))
+                    # let's download and unpack the release assets
+                    _ldd_assets = prep_assets_for_release(_ldd_summary_repo['release'],
+                                                          os.path.join(args.base_path + args.output, RELEASE_SUBDIR,
+                                                                       _ldd_summary_repo['ns_id'],
+                                                                       'v' + _ns_version))
 
-                _ldd_summary_repo['assets'] = _ldd_assets
+                    _ldd_summary_repo['assets'] = _ldd_assets
 
     # momentarily convert list to set to remove duplicates as a just-in-case
     # then sort the list so that its order matches what's expected in WebHelp
     global QUALIFYING_INGEST_LDDS
     QUALIFYING_INGEST_LDDS = list(set(QUALIFYING_INGEST_LDDS))
     QUALIFYING_INGEST_LDDS.sort()
+
+    logger.debug('-' * 50)
+    logger.debug('These are the expected namespaces in the WebHelp docs:')
+    for i, x in enumerate(QUALIFYING_INGEST_LDDS):
+        logger.debug(f'{i}: {x}')
+    logger.debug('These are bookended by 5 then 2 chapters, and each namespace has 2 chapters.')
+    logger.debug('The formula for a chapter number is 2i+6 and 2i+7 with i=0-based list index. The formula accounts for the 5 preceding chapters.')
+    logger.debug(f'So, the total number of chapters should be 2 * ( {len(QUALIFYING_INGEST_LDDS)} - 1 ) + 9 = {2*(len(QUALIFYING_INGEST_LDDS)- 1)+9}.')
+    logger.debug('-' * 50)
 
     # generate output report
     generate_report(_ldd_summary, args.pds4_version, _pds4_alpha_version, args.output, _config)
@@ -184,18 +199,14 @@ def get_first_ingest_ldd(ingest_ldd):
 
 
 def check_qualifiers_for_ldds(namespace):
-    """Conditions are that it (1) has nominally valid IngestLDD, (2) appears on either the discipline or
-    mission LDD pages, and (3) has a repo at github.com/pds-data-dictionaries.
+    """The sole qualifier is that it has an IngestLDD.xml (from a repo at github.com/pds-data-dictionaries)
     """
-    # discipline LDDs absent from PDS page is already covered from global variable, SKIP_REPOS
-    # some LDDs on the PDS pages do not have repos (e.g., orex), so they should not appear here anyway since the
+    # Some LDDs on the PDS pages do not have repos (e.g., orex), so they should not appear here anyway since the
     # ingestLDD file is from the repository
-    _missions_absent_from_pds_page = ['dart', 'iras', 'lt', 'mgn', 'neas', 'psyche', 'vco', 'viper']
-    # for b15.1 only: files are too large for oxygen to generate all webhelp files, so NH was removed
-    _missions_absent_from_pds_page.append('nh')
+
     if (
             namespace != 'example' and
-            not any(namespace == _absent_mission for _absent_mission in _missions_absent_from_pds_page)
+            not any(namespace == _no_ingestldd for _no_ingestldd in NAMESPACES_WITHOUT_INGESTLDD)
     ):
         QUALIFYING_INGEST_LDDS.append(check_for_namespace_exceptions(namespace))
 
@@ -316,13 +327,12 @@ def get_webhelp_chapter_number(ns_id, specification):
     _chapter_offset = 6
     try:
         _ingest_ldd_index = QUALIFYING_INGEST_LDDS.index(ns_id)
-        _webhelp_chapter_number = (2 * _ingest_ldd_index) + _chapter_offset
-        _webhelp_chapter_string = ''
+        _webhelp_chapter_number = (2 * _ingest_ldd_index)
         if specification == 'classes':
-            _webhelp_chapter_string = get_webhelp_chapter_string(_webhelp_chapter_number)
+            _webhelp_chapter_number += _chapter_offset
         elif specification == 'attributes':
-            _webhelp_chapter_string = get_webhelp_chapter_string(_webhelp_chapter_number + 1)
-        return _webhelp_chapter_string
+            _webhelp_chapter_number += _chapter_offset + 1
+        return get_webhelp_chapter_string(_webhelp_chapter_number)
     except ValueError:
         logger.debug(f'PROBLEM: {ns_id} not recognized as having an IngestLDD')
 
@@ -334,6 +344,8 @@ def generate_report(ldd_summary, pds4_version, pds4_alpha_version, output, confi
         _ldd_summary_repo = ldd_summary[_repo_name]
         _assets = _ldd_summary_repo['assets']
         _description = config[_ldd_summary_repo['repo'].name]['description']
+        _webhelp_chapter_string_classes = get_webhelp_chapter_number(_ldd_summary_repo['ns_id'], 'classes')
+        _webhelp_chapter_string_attributes = get_webhelp_chapter_number(_ldd_summary_repo['ns_id'], 'attributes')
         _pystache_dict = {
             'ns_id': _ldd_summary_repo['ns_id'],
             'title': _ldd_summary_repo['name'],
@@ -347,10 +359,10 @@ def generate_report(ldd_summary, pds4_version, pds4_alpha_version, output, confi
                     .replace('.git', '')
                     .replace('github.com/pds-data-dictionaries', 'pds-data-dictionaries.github.io')
             ),
-            'webhelp_url_classes': WEBHELP_URL.format(
-                pds4_alpha_version, get_webhelp_chapter_number(_ldd_summary_repo['ns_id'], 'classes')),
-            'webhelp_url_attributes': WEBHELP_URL.format(
-                pds4_alpha_version, get_webhelp_chapter_number(_ldd_summary_repo['ns_id'], 'attributes'))
+            'webhelp_path_classes': WEBHELP_PATH.format(pds4_alpha_version, _webhelp_chapter_string_classes),
+            'webhelp_path_attributes': WEBHELP_PATH.format(pds4_alpha_version, _webhelp_chapter_string_attributes),
+            'webhelp_link_text_classes': WEBHELP_LINK_TEXT.format(pds4_version, pds4_alpha_version, _webhelp_chapter_string_classes),
+            'webhelp_link_text_attributes': WEBHELP_LINK_TEXT.format(pds4_version, pds4_alpha_version, _webhelp_chapter_string_attributes)
         }
         if _assets:
             _pystache_dict = {
@@ -416,23 +428,27 @@ def main():
                             description=__doc__)
 
     parser.add_argument('--output',
-                        help='directory to output the generated page and dictionaries',
+                        help='Directory to output the generated page and dictionaries',
                         default=OUTPUT_PATH)
     parser.add_argument('--github_org',
-                        help=('github org to search repos for discipline LDDs. NOTE: these repos must contain ' +
+                        help=('Github org to search repos for discipline LDDs. NOTE: these repos must contain ' +
                               'src/IngestLDD'),
                         default=GITHUB_ORG)
     parser.add_argument('--pds4_version',
                         help='PDS4 version to be used. Format example: 1.15.0.0',
                         required=True)
     parser.add_argument('--token',
-                        help='github token.')
+                        help='Github token.')
     parser.add_argument('--base_path',
                         help='Base file path for the staging and output paths.',
                         required=True)
     parser.add_argument('--all_repos',
                         help='Clone and include all repos in corral run.',
                         action='store_true')
+    parser.add_argument('-n', '--no_ingestldd',
+                        help='Additional namespaces that don\'t have a <repo>/src/IngestLDD. Already included: "dart", "vco", and "viper".',
+                        nargs='*',
+                        metavar='namespace')
 
     args = parser.parse_args()
 
@@ -440,6 +456,10 @@ def main():
     if not token:
         logger.error(f'Github token must be provided or set as environment variable (GITHUB_TOKEN).')
         sys.exit(1)
+
+    if args.no_ingestldd:
+        global NAMESPACES_WITHOUT_INGESTLDD
+        NAMESPACES_WITHOUT_INGESTLDD += args.no_ingestldd
 
     try:
         # connect to github
