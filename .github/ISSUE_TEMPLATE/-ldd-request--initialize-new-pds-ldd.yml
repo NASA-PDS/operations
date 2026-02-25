@@ -100,4 +100,3 @@ body:
         - [ ] If Discipline LDD...
           - [ ] update [LDD script config](https://github.com/NASA-PDS/en-ops-utils/blob/main/conf/ldds/config.yml)
           - [ ] create directories, index files, and symlinks for main website
-          - [ ] work with @jordanpadams to ping DD Stewards to establish CCB
