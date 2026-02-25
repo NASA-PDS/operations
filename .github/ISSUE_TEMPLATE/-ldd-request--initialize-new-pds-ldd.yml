@@ -99,6 +99,5 @@ body:
         - [ ] Add Lead Steward to pdsddstewards@jpl.nasa.gov email list
         - [ ] If Discipline LDD...
           - [ ] update [LDD script config](https://github.com/NASA-PDS/en-ops-utils/blob/main/conf/ldds/config.yml)
-          - [ ] create directory and index files for Git
-          - [ ] create symlink on all machines
+          - [ ] create directories, index files, and symlinks for main website
           - [ ] work with @jordanpadams to ping DD Stewards to establish CCB
