@@ -46,14 +46,14 @@ body:
   - type: textarea
     attributes:
       label: "Data To Be Ingested"
-      description: "Data to be ingested into the Legacy PDS Registry for release. For PDS4: URLs to the bundles, collections, and all associated inventories; or attach a zip of all applicable files. For PDS3: URLs to the catalog files that have changed or attach a zip of all applicable files."
+      description: "One URL to the standard-ish top-level PDS4 directory with bundle and collections (or PDS3 dir with voldesc and catalog files). Or a zip of such files. Or multiple URLs"
     validations:
       required: true
 
-  - type: input
+  - type: textarea
     attributes:
-      label: "Access URL"
-      description: "URL to give users searching for this data"
+      label: "Access URL for Search Results"
+      description: "Line 1: URL of the bundle (or dataset). Lines 2+ (optional): If a collection resolves to a URL(s) other than Line 1's, each Line 2+ is a pair: LID, URL for that LID."
     validations:
       required: true
 
