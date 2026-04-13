@@ -46,16 +46,21 @@ body:
   - type: textarea
     attributes:
       label: "Data To Be Ingested"
-      description: "Data to be ingested into the Legacy PDS Registry for release. For PDS4: URLs to the bundles, collections, and all associated inventories; or attach a zip of all applicable files. For PDS3: URLs to the catalog files that have changed or attach a zip of all applicable files."
+      description: "Ideally, one crawlable URL. Otherwise, a zip file. For PDS4: the top-level directory of the bundle or collection data to ingest. For PDS3: the directory of the catalog and voldesc files."
     validations:
       required: true
 
   - type: input
     attributes:
-      label: "Access URL"
-      description: "URL to give users searching for this data"
+      label: "Primary Access URL"
+      description: "Primary URL for Landing Page."
     validations:
       required: true
+
+  - type: textarea
+    attributes:
+      label: "Additional Access URL"
+      description: "(optional) If a collection resolves to a URL(s) other than Primary Access URL, add comma-separated URLs like `LID,URL`"
 
   - type: input
     attributes:
