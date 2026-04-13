@@ -50,12 +50,17 @@ body:
     validations:
       required: true
 
-  - type: textarea
+  - type: input
     attributes:
-      label: "Access URL for Search Results"
-      description: "Line 1: URL of the bundle (or dataset). Lines 2+ (optional): If a collection resolves to a URL(s) other than Line 1's, each Line 2+ is a pair: LID, URL for that LID."
+      label: "Primary Access URL"
+      description: "URL of the bundle (or dataset)."
     validations:
       required: true
+
+  - type: textarea
+    attributes:
+      label: "Additional Access URL"
+      description: "(optional) If a collection resolves to a URL(s) other than Primary Access URL, add comma-separated URLs like `LID,URL`"
 
   - type: input
     attributes:
