@@ -43,7 +43,7 @@ body:
       label: "Dates of Coverage"
       description: "The start and stop time of the coverage in the format `start_time - stop_time`"
 
-  - type: textarea
+  - type: input
     attributes:
       label: "Data To Be Ingested"
       description: "Ideally, one crawlable URL. Otherwise, a zip file. For PDS4: the top-level directory of the bundle or collection data to ingest. For PDS3: the directory of the catalog and voldesc files."
@@ -59,8 +59,8 @@ body:
 
   - type: textarea
     attributes:
-      label: "Additional Access URL"
-      description: "(optional) If a collection resolves to a URL(s) other than Primary Access URL, add comma-separated URLs like `LID,URL`"
+      label: "Additional Access URL(s)"
+      description: "(optional) If any collections or the bundle resolves to additional URLs other than Primary Access URL, list comma-separated `LID,URL`s"
 
   - type: input
     attributes:
