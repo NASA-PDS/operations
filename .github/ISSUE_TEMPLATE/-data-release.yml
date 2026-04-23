@@ -104,10 +104,9 @@ body:
       description: Select the DOI action for this data release. If 'Generate & release' is chosen, EN will also update the `bundle.xml`.
       multiple: false
       options:
+        - "None"
         - "Release existing DOI (Draft -> Findable)"
         - "Generate & release new DOI"
-      default:
-        - "None"  
     validations:
       required: yes
 
