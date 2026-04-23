@@ -100,12 +100,14 @@ body:
   - type: dropdown
     id: doi
     attributes:
-      label: Has DOI?
-      description: Does this data have a reserved DOI with "Draft" status? If so, it will be released to a "Findable" status with this data release.
+      label: Needs DOI Action?
+      description: Select the DOI action for this data release. If 'Generate & release' is chosen, EN will also update the `bundle.xml`.
       multiple: false
       options:
-        - "Yes, this data has a reserved DOI"
-        - "No, this data does not have a DOI"
+        - "Release existing DOI (Draft -> Findable)"
+        - "Generate & release new DOI"
+      default:
+        - "None"  
     validations:
       required: yes
 
