@@ -46,7 +46,7 @@ body:
       description: Please upload a TXT report or screenshot of PDS4 Validate Tool run on your bundle. NSSDCA only accepts valid PDS4 bundles. Be sure you run validate with the `-R pds4.bundle` flag enabled to ensure all integrity checks are completed successfully.
     validations:
       required: true
-      
+
   - type: textarea
     id: lidvids
     attributes:
@@ -54,7 +54,7 @@ body:
       description: Please list the bundle and collection LIDVIDs in this delivery package.
     validations:
       required: true
-      
+
   - type: markdown
     attributes:
       value: |
