@@ -1,0 +1,58 @@
+name: "[dum] Onboard a PDS Node"
+description: "Checklist for onboarding a PDS Node to Data Upload Manager (DUM)"
+title: '[dum] Onboard PDS Node, <node>'
+labels: "p.must-have,i&t.skip"
+assignees: c-suh
+projects: "NASA-PDS/19"
+
+body:
+
+  - type: dropdown
+    id: node
+    attributes:
+      label: "Requesting Node"
+      description: "The Node requesting the onboarding"
+      multiple: false
+      options:
+        - "ATM"
+        - "ENG"
+        - "GEO"
+        - "IMG"
+        - "NAIF"
+        - "PPI"
+        - "RS"
+        - "RINGS"
+        - "SBN"
+        - "SBN-UMD"
+    validations:
+      required: yes
+
+  - type: textarea
+    attributes:
+      label: "Node Members"
+      description: "List of Node members to onboard"
+      placeholder: |
+        node_member_1's first_name last_name 
+        node_member_2's first_name last_name 
+    validations:
+      required: true
+
+  - type: checkboxes
+    attributes:
+      label: "PDS Node To-Do List"
+      description: "To be checked off as items are completed. Some steps require coordination with ENG Node"
+      options:
+        - label: Securely send PDS Operator information for Cognito account
+        - label: Install DUM per https://nasa-pds.github.io/data-upload-manager/installation/index.html#
+        - label: Request client configuration values per https://nasa-pds.github.io/data-upload-manager/installation/index.html#client-configuration
+        - label: Upload weblogs
+
+
+  - type: checkboxes
+    attributes:
+      label: "PDS Engineering To-Do List"
+      description: "To be checked off as items are completed. Some steps require coordination with requesting Node"
+      options:
+        - label: Create the Cognito user(s)
+        - label: Add the Cognito user(s) to the appropriate group
+        - label: Securely send requesting node the client configuration values
