@@ -1,7 +1,7 @@
 name: "[subscription-service] PDS Data Release - New Subscription Item"
 description: Issue for Discipline Node to add an item to the PDS subscription service.
 title: '[SUBSCRIPTION] Add <mission_name>'
-labels: "data-release,p.must-have,sprint-backlog"
+labels: "data-release-ingestion,p.must-have,sprint-backlog"
 assignees: c-suh,rchenatjpl
 projects: "NASA-PDS/19"
 
